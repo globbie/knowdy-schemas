@@ -1,0 +1,19 @@
+{ns:knd
+    {class Communication Channel
+        [gloss
+            {en_EN communication channel}
+            {ru_RU канал коммуникации с персоной}
+         ]
+        {aggr:audio Voice Communication Channel}
+    }
+
+    {class Voice Communication Channel
+        [gloss
+           {ru_RU voice communication channel}
+           {en_EN голосовой канал связи}
+        ]
+    }
+
+}
+
+
