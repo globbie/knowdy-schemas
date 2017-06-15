@@ -35,5 +35,5 @@ mv "@CMAKE_CURRENT_BINARY_DIR@/_CPack_Packages/Linux/RPM/tmpBBroot" $RPM_BUILD_R
 %defattr(-,root,root,-)
 
 %attr(-,knowdy,knowdy) %dir %{knowdy_schemas_dir}
-@CPACK_PACKAGING_INSTALL_PREFIX@/%{knowdy_schemas_dir}/basic/*
+@CPACK_PACKAGING_INSTALL_PREFIX@/%{knowdy_schemas_dir}/*
 
