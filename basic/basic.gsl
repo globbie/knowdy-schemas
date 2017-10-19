@@ -1,4 +1,4 @@
-{schema r4s
+{schema Basic
 
 (class Object
     (gloss {ru_RU объект})
@@ -24,7 +24,32 @@
     (summary {ru_RU результат целенаправленной деятельности Агента,
                     пригодный для решения какой-либо задачи}))
 
+(class Role
+    (gloss {ru_RU роль})
+    (base Abstract Object))
 
+(class Relation
+    (gloss {ru_RU роль})
+    (base Abstract Object))
+
+(class Content Item
+    (gloss {ru_RU информация})
+    (base Abstract Object))
+
+(class Category
+    (gloss {ru_RU категория})
+    (str n)
+    (str id)
+    (children false)
+    (base Abstract Object))
+
+(class Product of Labor
+    (gloss {ru_RU продукт труда}))
+
+(class Material Product
+    (gloss {ru_RU изделие})
+    (str img)
+    (base Product of Labor))
 }
 
 
