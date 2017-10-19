@@ -1,4 +1,4 @@
-{schema r4s
+{schema Basic
 
     (class Consumer Device
         (gloss {ru_RU устройство бытовой техники})
@@ -18,10 +18,4 @@
         (gloss {ru_RU электрочайник})
         (base Kettle)
         (base Cooking Device))
-
-    (class G200S Electric Tea Kettle
-        (gloss {ru_RU электрочайник модели G200S})
-        (base Electric Tea Kettle
-              (model G200S (max_temp 120 (unit Celsius)))
-              (manufacturer Redmond)))
 }
