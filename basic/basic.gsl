@@ -1,55 +1,23 @@
-{schema Basic
+{schema knd-basic
 
 (class Object
-    (gloss {ru_RU объект})
+    [_gloss {ru_RU объект}]
     (summary {ru_RU совокупность сенсорных восприятий и
                     когнитивных представлений субъекта
                     о любой части внешнего мира}))
 
 (class Abstract Object
-    (gloss {ru_RU абстракция})
-    (summary {ru_RU абстрактное понятие, формируемое сознанием человека путем обобщения признаков конкретных объектов})
-    (summary {en_EN a general concept formed by extracting common features from specific examples})
+    [_gloss {ru_RU абстракция}]
+    (summary {ru_RU абстрактное понятие, формируемое сознанием человека
+                    путем обобщения признаков конкретных объектов})
+    (summary {en_EN a general concept formed by extracting common features
+                    from specific examples})
     (base Object))
 
-(class Category
-    (gloss {ru_RU категория})
-    (base Abstract Object)
-    (str n)
-    (str id)
-    (children false))
-
 (class Product of Labor
-    (gloss {ru_RU продукт труда})
+    [_gloss {ru_RU продукт труда}]
     (summary {ru_RU результат целенаправленной деятельности Агента,
                     пригодный для решения какой-либо задачи}))
-
-(class Role
-    (gloss {ru_RU роль})
-    (base Abstract Object))
-
-(class Relation
-    (gloss {ru_RU роль})
-    (base Abstract Object))
-
-(class Content Item
-    (gloss {ru_RU информация})
-    (base Abstract Object))
-
-(class Category
-    (gloss {ru_RU категория})
-    (str n)
-    (str id)
-    (children false)
-    (base Abstract Object))
-
-(class Product of Labor
-    (gloss {ru_RU продукт труда}))
-
-(class Material Product
-    (gloss {ru_RU изделие})
-    (str img)
-    (base Product of Labor))
 }
 
 

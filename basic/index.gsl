@@ -1,3 +1,4 @@
-{include basic}
-{include device}
+{-include basic}
+{-include device}
+{include proc}
 
