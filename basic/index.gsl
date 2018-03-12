@@ -1,4 +1,63 @@
-{-include basic}
+{include basic}
+{-include basic/geometry}
 {-include device}
-{include proc}
+{-include other}
+{-include basic/proc}
+{-include basic/taste}
+{-include plan}
+{-include glottie/index}
+
+{schema knd-basic
+
+(class Object
+    [_gloss {ru объект}
+            {ja 物体}]
+    (_summary {ru совокупность сенсорных восприятий и
+                    когнитивных представлений субъекта
+                    о любой части внешнего мира})
+     (aggr guid (c GUID)))
+
+(class Abstract Object
+    [_gloss {ru абстракция}
+            {ja 概念}]
+    (_summary {ru абстрактное понятие, формируемое сознанием человека
+                    путем обобщения признаков конкретных объектов})
+    (_summary {en_EN a general concept formed by extracting common features
+                    from specific examples})
+    (base Object))
+
+(class Physical Object
+    [_gloss {ru физический объект}]
+    (base Object)
+      (str img))
+
+(class GUID
+    [_gloss {ru уникальный идентификатор объекта}]
+    (num pk))
+
+(class Organic Object
+    [_gloss {ru органический объект}]
+    (base Physical Object))
+
+(class Product of Labor
+    [_gloss {ru продукт труда}]
+    (_summary {ru результат целенаправленной деятельности Агента,
+                    пригодный для решения какой-либо задачи}))
+
+(class Material Product
+    [_gloss {ru изделие}]
+    (base Physical Object)
+    (base Product of Labor))
+
+(class Geographical Region
+    [_gloss {ru географический регион}]
+    (base Abstract Object))
+
+(class Sensory Object
+    [_gloss {ru объект восприятия}]
+    (base Object))
+
+
+}
+
 

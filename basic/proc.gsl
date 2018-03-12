@@ -2,36 +2,42 @@
 
    (proc Creative Method
          [_gloss {ru созидательный процесс}]
-         (arg resource {c Material Resource})
-         (arg instr    {c Instrument})
+         (result Material Product)
+	 (arg resource {c Material Resource})
          (arg method   {c Knowledge})
+         (arg instr    {c Instrument})
 	 {run _cause
-	     {resource resource}}
-	 {-result {c Material Product}})
+	     {resource resource}})
 
    (proc Cooking
-         [_gloss {ru процесс приготовления пищи}]
+         [_gloss {ru приготовление пищи}
+	         {de Kochen}]
 	 (base Creative Method
             (resource {c Food Ingredient})
             (instr    {c Cooking Utensil})
             (method   {c Recipe}))
 	 (arg container {c Container}))
 
+   (proc make Beverage
+         [_gloss {ru приготовление напитка}]
+	 (base Cooking
+	    (container {c Tea Pot})))
+
     (proc Boiling
          [_gloss {ru вскипятить жидкость}])
 
-
     (proc make Tea
-        [_gloss {ru приготовить чай}]
-	   (base Cooking
-	       (container {c Tea Pot})
-	       (resource  {c Dry Tea Leaves}))
+        [_gloss {ru приготовление чая}]
+	   (base make Beverage
+	         (resource {c Dry Tea Leaves}))
+	   (result Tea Beverage)
            (arg boiling water
                 {run _get
 		     {c Boiling Water}})
            {run infuse Substance in Liquid
                 {container container}
                 {liquid boiling water}
-                {subst resource}} )
+                {subst resource}})
+
 
 }
