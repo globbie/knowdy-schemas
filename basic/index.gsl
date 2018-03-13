@@ -1,10 +1,12 @@
-{include basic}
-{-include basic/geometry}
+{include person}
+{-include geometry}
 {-include device}
+{include network}
 {-include other}
-{-include basic/proc}
-{-include basic/taste}
+{-include proc}
+{include taste}
 {-include plan}
+
 {-include glottie/index}
 
 {schema knd-basic

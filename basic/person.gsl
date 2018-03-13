@@ -1,0 +1,31 @@
+{schema knd
+
+(class Gender
+    [_gloss {ru гендерная принадлежность}]
+    (base Abstract Object))
+
+(class Personal Name
+    [_gloss {ru имя персоны}]
+    (base Abstract Object)
+    (str first-name)
+    (str patronymic)
+    (str last-name))
+
+(class Personal Biometrics
+    [_gloss {ru биометрические данные}]
+    (base Abstract Object)
+    (--ref birth (c Calendar Date)))
+
+(class User Contacts
+    [_gloss {ru контактные данные пользователя}]
+    (base Abstract Object)
+    (str mail (validate email_address))
+    (aggr phone (c Phone Contacts)))
+
+(class Phone Contacts
+    [_gloss {ru телефонные номера}]
+    (base Abstract Object)
+    (str prefix)
+    (str number))
+
+}
