@@ -12,51 +12,51 @@
 {schema knd-basic
 
 (class Object
-    [_gloss {ru объект}
-            {ja 物体}]
-    (_summary {ru совокупность сенсорных восприятий и
+    [_gloss {ru {t объект}}
+            {ja {t 物体}}]
+    (-_summary {ru {t совокупность сенсорных восприятий и
                     когнитивных представлений субъекта
-                    о любой части внешнего мира})
+                    о любой части внешнего мира}})
      (aggr guid (c GUID)))
 
 (class Abstract Object
-    [_gloss {ru абстракция}
-            {ja 概念}]
-    (_summary {ru абстрактное понятие, формируемое сознанием человека
-                    путем обобщения признаков конкретных объектов})
-    (_summary {en_EN a general concept formed by extracting common features
-                    from specific examples})
+    [_gloss {ru {t абстракция}}
+            {ja {t 概念}}]
+    (-_summary {ru {t абстрактное понятие, формируемое сознанием человека
+                     путем обобщения признаков конкретных объектов}})
+    (-_summary {en {t a general concept formed by extracting common features
+                     from   specific examples}})
     (base Object))
 
 (class Physical Object
-    [_gloss {ru физический объект}]
+    [_gloss {ru {t физический объект}}]
     (base Object)
       (str img))
 
 (class GUID
-    [_gloss {ru уникальный идентификатор объекта}]
+    [_gloss {ru {t уникальный идентификатор объекта}}]
     (num pk))
 
 (class Organic Object
-    [_gloss {ru органический объект}]
+    [_gloss {ru {t органический объект}}]
     (base Physical Object))
 
 (class Product of Labor
-    [_gloss {ru продукт труда}]
-    (_summary {ru результат целенаправленной деятельности Агента,
-                    пригодный для решения какой-либо задачи}))
+    [_gloss {ru {t продукт труда}}]
+    (-_summary {ru {t результат целенаправленной деятельности Агента,
+                    пригодный для решения какой-либо задачи}}))
 
 (class Material Product
-    [_gloss {ru изделие}]
+    [_gloss {ru {t изделие}}]
     (base Physical Object)
     (base Product of Labor))
 
 (class Geographical Region
-    [_gloss {ru географический регион}]
+    [_gloss {ru {t географический регион}}]
     (base Abstract Object))
 
 (class Sensory Object
-    [_gloss {ru объект восприятия}]
+    [_gloss {ru {t объект восприятия}}]
     (base Object))
 
 
