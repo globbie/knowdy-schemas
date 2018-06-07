@@ -1,33 +1,33 @@
 {schema knd-basic
 
    (proc Creative Method
-         [_gloss {ru созидательный процесс}]
+         [_gloss {ru {t созидательный процесс}}]
          (result Material Product)
-	 (arg resource {c Material Resource})
-         (arg method   {c Knowledge})
-         (arg instr    {c Instrument})
+	 [arg {resource {c Material Resource}}
+              {method   {c Knowledge}}
+              {instr    {c Instrument}}]
 	 {run _cause
 	     {resource resource}})
 
-   (proc Cooking
-         [_gloss {ru приготовление пищи}
-	         {de Kochen}]
+   (--proc Cooking
+         [_gloss {ru {t приготовление пищи}}
+	         {de {t Kochen}}]
 	 (base Creative Method
             (resource {c Food Ingredient})
             (instr    {c Cooking Utensil})
             (method   {c Recipe}))
 	 (arg container {c Container}))
 
-   (proc make Beverage
-         [_gloss {ru приготовление напитка}]
+   (-- proc make Beverage
+         [_gloss {ru {t приготовление напитка}}]
 	 (base Cooking
 	    (container {c Tea Pot})))
 
-    (proc Boiling
-         [_gloss {ru вскипятить жидкость}])
+    (-- proc Boiling
+         [_gloss {ru {t вскипятить жидкость}}])
 
-    (proc make Tea
-        [_gloss {ru приготовление чая}]
+    (-- proc make Tea
+        [_gloss {ru {t приготовление чая}}]
 	   (base make Beverage
 	         (resource {c Dry Tea Leaves}))
 	   (result Tea Beverage)

@@ -1,0 +1,107 @@
+{schema knd-basic
+
+(class Spatial Object
+  [_gloss {ru {t пространственный объект}}]
+  (base Abstract Object)
+)
+
+(class Geographical Region
+    [_gloss {ru {t географический регион}}]
+    (base Spatial Object))
+
+(class Country
+  [_gloss {ru {t страна}}]
+  (base Geographical Region)
+)
+
+(class Azerbaijan
+  [_gloss {ru {t Азербайджан}}]
+  (base Country)
+)
+
+(class America
+  [_gloss {ru {t Америка}}]
+  (base Geographical Region)
+)
+
+(class Asia
+  [_gloss {ru {t Азия}}]
+  (base Geographical Region)
+)
+
+(class Bulgaria
+  [_gloss {ru {t Болгария}}]
+  (base Country)
+)
+
+(class England
+  [_gloss {ru {t Англия}}]
+  (base Country)
+)
+
+(class Caucasus
+  [_gloss {ru {t Кавказ}}]
+  (base Geographical Region)
+)
+
+(class China
+  [_gloss {ru {t Китай}}]
+  (base Country)
+)
+
+(class France
+  [_gloss {ru {t Франция}}]
+  (base Country)
+)
+
+(class Georgia
+  [_gloss {ru {t Грузия}}]
+  (base Country)
+)
+(class Germany
+  [_gloss {ru {t Германия}}]
+  (base Country)
+)
+
+(class Israel
+  [_gloss {ru {t Израиль}}]
+  (base Country)
+)
+
+(class Italy
+  [_gloss {ru {t Италия}}]
+  (base Country)
+)
+
+(class Japan
+  [_gloss {ru {t Япония}}]
+  (base Country)
+)
+
+(class Mexico
+  [_gloss {ru {t Мексика}}]
+  (base Country)
+)
+
+(class Russia
+  [_gloss {ru {t Россия}}]
+  (base Country)
+)
+
+(class Spain
+  [_gloss {ru {t Испания}}]
+  (base Country)
+)
+
+(class Ukraine
+  [_gloss {ru {t Украина}}]
+  (base Country)
+)
+
+(class USA
+  [_gloss {ru {t США}}]
+  (base Country)
+)
+
+
+}

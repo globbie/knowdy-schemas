@@ -1,0 +1,23 @@
+{schema knd-basic
+
+(class Physical Mass Quantity
+    [_gloss {ru {t масса физического тела}}]
+    (base Abstract Object)
+    (str calc)
+    (num mass (impl))
+    (str unit)
+    (ref unitref (c Mass Measure Unit)))
+
+(class Mass Measure Unit
+    [_gloss {ru {t единица измерения массы}}]
+    (base Abstract Object))
+
+(class Gram
+    [_gloss {ru {t грамм}}]
+    (base Mass Measure Unit))
+
+(class Liter
+    [_gloss {ru {t литр}}]
+    (base Mass Measure Unit))
+
+}
