@@ -42,6 +42,11 @@
     [_gloss {ru {t информация}}]
     (base Abstract Object))
 
+(class Custom Class
+    [_gloss {ru {t класс с произвольной семантикой}}]
+    (base Abstract Object)
+)
+
 (class GUID
     [_gloss {ru {t уникальный идентификатор объекта}}]
     (base Abstract Object)

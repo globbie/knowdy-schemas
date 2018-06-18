@@ -14,6 +14,21 @@
   (base Geographical Region)
 )
 
+(class Republic
+  [_gloss {ru {t республика}}]
+  (base Geographical Region)
+)
+
+(class Abkhazia
+  [_gloss {ru {t Абхазия}}]
+  (base Country)
+)
+
+(class Armenia
+  [_gloss {ru {t Армения}}]
+  (base Country)
+)
+
 (class Azerbaijan
   [_gloss {ru {t Азербайджан}}]
   (base Country)
@@ -34,9 +49,24 @@
   (base Country)
 )
 
+(class Belarus
+  [_gloss {ru {t Беларусь}}]
+  (base Country)
+)
+
 (class England
   [_gloss {ru {t Англия}}]
   (base Country)
+)
+
+(class Europe
+  [_gloss {ru {t Европа}}]
+  (base Geographical Region)
+)
+
+(class Eastern Europe
+  [_gloss {ru {t восточная Европа}}]
+  (base Geographical Region)
 )
 
 (class Caucasus
@@ -63,6 +93,16 @@
   (base Country)
 )
 
+(class Greece
+  [_gloss {ru {t Греция}}]
+  (base Country)
+)
+
+(class India
+  [_gloss {ru {t Индия}}]
+  (base Country)
+)
+
 (class Israel
   [_gloss {ru {t Израиль}}]
   (base Country)
@@ -78,9 +118,24 @@
   (base Country)
 )
 
+(class Korea
+  [_gloss {ru {t Корея}}]
+  (base Country)
+)
+
 (class Mexico
   [_gloss {ru {t Мексика}}]
   (base Country)
+)
+
+(class Middle East
+  [_gloss {ru {t ближний Восток}}]
+  (base Geographical Region)
+)
+
+(class Ossetia
+  [_gloss {ru {t Оссетия}}]
+  (base Republic)
 )
 
 (class Russia
@@ -88,13 +143,32 @@
   (base Country)
 )
 
+(class Scandinavia
+  [_gloss {ru {t Скандинавия}}]
+  (base Geographical Region)
+)
+
 (class Spain
   [_gloss {ru {t Испания}}]
   (base Country)
 )
 
+(class Thailand
+  [_gloss {ru {t Таиланд}}]
+  (base Country)
+)
+
+(class Tatarstan
+  [_gloss {ru {t Татарстан}}]
+  (base Republic)
+)
+
 (class Ukraine
   [_gloss {ru {t Украина}}]
+  (base Country)
+)
+(class Uzbekistan
+  [_gloss {ru {t Узбекистан}}]
   (base Country)
 )
 
