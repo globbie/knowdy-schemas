@@ -17,7 +17,7 @@
     (base Taste))
 
 (class Hot Taste
-    [_gloss {ru {t острый вкус}}]
+    [_gloss {ru {t острое}}]
     (base Taste))
 
 (class Sour Taste
