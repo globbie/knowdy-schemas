@@ -76,9 +76,10 @@
     [!_gloss {ru {t деятельность}}]
     {!base Abstract Object}}
 
-{!rel Resource Access
+{--{!rel Resource Access
     [!_gloss {ru {t права доступа к ресурсам}}]
     {!subj user {!c Agent}}
     {!obj item {!c Object}}}
+--}
 
 }
