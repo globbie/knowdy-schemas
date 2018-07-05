@@ -1,12 +1,42 @@
 {schema knd-basic
 
+{!class Quantity
+    [!_gloss {ru {t количественная характеристика объекта}}]
+    {!base Abstract Object}
+}
+
+{!class Substance Quantity
+    [!_gloss {ru {t количественная характеристика вещества}}]
+    {!base Quantity}
+    {!num mass}
+    {!ref unitref {!c Mass Measure Unit}}}
+
+{!class Countable Quantity
+    [!_gloss {ru {t количественная характеристика счетных объектов}}]
+    {!base Quantity}
+    {!num count} }
+
 {!class Physical Mass Quantity
     [!_gloss {ru {t масса физического тела}}]
     {!base Abstract Object}
     {!str calc}
     {!num mass {!impl}}
+    {!num count}
     {!str unit}
     {!ref unitref {!c Mass Measure Unit}}}
+
+{!proc Compute Physical Mass
+    [!_gloss {ru {t расчет физической массы объекта}}]
+    {--result {c Substance Quantity}--}
+    [!arg {obj  {c Physical Object}}
+          {q    {c Quantity}}]
+    {--switch q
+            {base Substance Quantity
+                  {q{mass}} }
+            {base Countable Quantity
+                  {run _mult
+                      {quant {obj{mass}}}
+                      {times {q{count}}}} }--} }
 
 {!class Mass Measure Unit
     [!_gloss {ru {t единица измерения массы}}]
