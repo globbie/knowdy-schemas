@@ -20,6 +20,7 @@
     [!_gloss {ru {t масса физического тела}}]
     {!base Abstract Object}
     {!str calc}
+    {-- !ref measure-proc {c Mass Measurement Procedure} --}
     {!num mass {!impl}}
     {!num count}
     {!str unit}
