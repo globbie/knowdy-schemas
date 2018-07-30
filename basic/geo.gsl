@@ -138,6 +138,11 @@
   {!base Republic}
 }
 
+{!class Portugal
+  [!_gloss {ru {t Португалия}}]
+  {!base Country}
+}
+
 {!class Russia
   [!_gloss {ru {t Россия}}]
   {!base Country}
