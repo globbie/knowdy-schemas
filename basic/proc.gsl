@@ -1,43 +1,67 @@
 {schema knd-basic
 
-   (proc Creative Method
+   {!proc Process
+         [_gloss {ru {t процесс как изменение реальности}}]}
+
+   {!proc Natural Process
+       [_gloss {ru {t естественный процесс}}]
+       {is Process}}
+
+   {!proc Agent Driven Process
+       [_gloss {ru {t агентивный процесс}}]
+      {is Process}}
+
+   {!proc Mental Process
+      [_gloss {ru {t ментальный процесс}}]
+      {is Agent Driven Process}}
+
+   {!proc power on Electric Device
+        [_gloss {ru {t включить электроустройство}}]
+	   {is Agent Driven Process}
+           {arg device {c Electric Device}}
+           {result device}
+           {do activate interface
+               {interface {device {power-interface}}}}
+
+   {!proc Creative Method
          [_gloss {ru {t созидательный процесс}}]
-         (result Material Product)
+         {is Agent Driven Process}
+         {result Material Product}
 	 [arg {resource {c Material Resource}}
               {method   {c Knowledge}}
               {instr    {c Instrument}}]
-	 {run _cause
-	     {resource resource}})
+	 {do _cause
+	     {resource resource}}}
 
-   (--proc Cooking
+   {!proc Cooking
          [_gloss {ru {t приготовление пищи}}
 	         {de {t Kochen}}]
-	 (base Creative Method
-            (resource {c Food Ingredient})
-            (instr    {c Cooking Utensil})
-            (method   {c Recipe}))
-	 (arg container {c Container}))
+	 {is Creative Method
+            {resource {c Food Ingredient}}
+            {instr    {c Cooking Utensil}}
+            {method   {c Recipe}}}
+	 {arg container {c Container}}}
 
-   (-- proc make Beverage
+   {!proc make Beverage
          [_gloss {ru {t приготовление напитка}}]
-	 (base Cooking
-	    (container {c Tea Pot})))
+	 {is Cooking
+	    {container {c Tea Pot}}}}
 
-    (-- proc Boiling
-         [_gloss {ru {t вскипятить жидкость}}])
+    {!proc Boiling
+         [_gloss {ru {t вскипятить жидкость}}]}
 
-    (-- proc make Tea
+    {!proc make Tea
         [_gloss {ru {t приготовление чая}}]
-	   (base make Beverage
-	         (resource {c Dry Tea Leaves}))
-	   (result Tea Beverage)
-           (arg boiling water
-                {run _get
-		     {c Boiling Water}})
-           {run infuse Substance in Liquid
+	   {is make Beverage
+	         {resource {c Dry Tea Leaves}}}
+	   {result Tea Beverage}
+           {arg boiling water
+                {do _get
+		     {c Boiling Water}}}
+           {do infuse Substance in Liquid
                 {container container}
                 {liquid boiling water}
-                {subst resource}})
+                {subst resource}}}
 
 
 }
