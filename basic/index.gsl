@@ -14,7 +14,6 @@
 
 {schema knd-basic
 
-
 {!class Object
     [!_gloss {ru {t объект}}
              {ja {t 物体}}]
@@ -131,5 +130,11 @@
     {!subj user {!c Agent}}
     {!obj item {!c Object}}}
 --}
+
+{!class Encoded Data
+    [!_gloss {ru {t кодированная информация}}]
+    {is Information}
+    {str mimetype}
+    {!cdata body}}
 
 }

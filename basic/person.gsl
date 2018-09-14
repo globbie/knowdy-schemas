@@ -19,7 +19,7 @@
 {!class User Contacts
     [!_gloss {ru {t контактные данные пользователя}}]
     {!base Abstract Object}
-    {!str mail {!validate email_address}}
+    {!str mail}
     {!aggr phone {!c Phone Contacts}}}
 
 {!class Phone Contacts

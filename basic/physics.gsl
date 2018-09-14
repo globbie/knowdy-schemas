@@ -26,18 +26,19 @@
     {!str unit}
     {!ref unitref {!c Mass Measure Unit}}}
 
-{!proc Compute Physical Mass
+{-- {!proc Compute Physical Mass
     [!_gloss {ru {t расчет физической массы объекта}}]
-    {--result {c Substance Quantity}--}
+    {result {c Substance Quantity}}
     [!arg {obj  {c Physical Object}}
           {q    {c Quantity}}]
-    {--switch q
+    {switch q
             {base Substance Quantity
                   {q{mass}} }
             {base Countable Quantity
                   {run _mult
                       {quant {obj{mass}}}
-                      {times {q{count}}}} }--} }
+                      {times {q{count}}}} }} }
+--}
 
 {!class Mass Measure Unit
     [!_gloss {ru {t единица измерения массы}}]

@@ -1,13 +1,17 @@
 {schema knd
 
-{!class Web Link
-     [!_gloss {ru {t веб-ссылка}}]
+{!class URL
+     [!_gloss {ru {t идентификатор информационного ресурса}}]
      {!base Information}
-     {!str url}
      {!str auth}
      {!str protocol}
      {!str path}
      {!str options}
      {!str port}}
+
+{!class Web Link
+     [!_gloss {ru {t идентификатор информационного ресурса}}]
+     {is URL}
+     {!str url}}
 
 }
