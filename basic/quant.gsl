@@ -1,0 +1,47 @@
+{schema knd-basic
+
+{!class Number
+    [!_gloss {ru {t число}}]
+    {base Abstract Object}}
+
+{!class Number Zero
+    [!_gloss {ru {t число 0}}]
+    {base Number}}
+
+{!class Number One
+    [!_gloss {ru {t число 1}}]
+    {base Number}}
+
+{!class Number Two
+    [!_gloss {ru {t число 2}}]
+    {base Number}}
+
+{!class Number Three
+    [!_gloss {ru {t число 3}}]
+    {base Number}}
+
+{!class Number Four
+    [!_gloss {ru {t число 4}}]
+    {base Number}}
+
+{!class Number Five
+    [!_gloss {ru {t число 5}}]
+    {base Number}}
+
+{!class Number Six
+    [!_gloss {ru {t число 6}}]
+    {base Number}}
+
+{!class Number Seven
+    [!_gloss {ru {t число 7}}]
+    {base Number}}
+
+{!class Number Eight
+    [!_gloss {ru {t число 8}}]
+    {base Number}}
+
+{!class Number Nine
+    [!_gloss {ru {t число 9}}]
+    {base Number}}
+
+}
