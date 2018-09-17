@@ -52,4 +52,12 @@
     [!_gloss {ru {t литр}}]
     {!base Mass Measure Unit}}
 
+{!class Spatial Location
+    [!_gloss {ru {t локализация физического тела в пространстве}}]
+    {!base Abstract Object}
+    {!ref origin {c Physical Object}}
+    {str x}
+    {str y}
+    {str z}}
+
 }
