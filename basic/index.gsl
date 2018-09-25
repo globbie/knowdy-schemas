@@ -22,6 +22,7 @@
     {-- совокупность сенсорных восприятий и
         когнитивных представлений субъекта
         о любой части внешнего мира --}
+    {_state_top}
     {!str guid}}
 
 {!class Abstract Object
@@ -31,23 +32,22 @@
                      путем обобщения признаков конкретных объектов}}
                  {en {t a general concept formed by extracting common features
                        from   specific examples}}] --}
-    {!base Object}
-}
+    {!base Object}}
 
 {!class Physical Object
     [!_gloss {ru {t физический объект}}]
     {!base Object}
-    {!aggr location {c Spatial Location}}
-    {!str img {!concise 1}}}
+    {!inner location {c Spatial Location}}
+    {!str  img {!concise 1}}}
 
 {!class Information
     [!_gloss {ru {t информация}}]
-    {!base Abstract Object}}
+    {!base   Abstract Object}}
 
 {!class Collection
     [!_gloss {ru {t множество}}]
     {!base Abstract Object}
-    {!ref unit-type {c Object}}}
+    {!ref  unit-type {c Object}}}
 
 
 {!class Custom Class
@@ -79,8 +79,8 @@
     {!base Object}}
 
 {!class Agent
-    [!_gloss {ru {t субъект}}]}
-
+    [!_gloss {ru {t субъект}}]
+    {_state_top}}
 
 {!class Activity
     [!_gloss {ru {t деятельность}}]
@@ -89,7 +89,7 @@
 {--{!rel Resource Access
     [!_gloss {ru {t права доступа к ресурсам}}]
     {!subj user {!c Agent}}
-    {!obj item {!c Object}}}
+    {!obj item  {!c Object}}}
 --}
 
 {!class Encoded Data

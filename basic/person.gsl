@@ -20,7 +20,7 @@
     [!_gloss {ru {t контактные данные пользователя}}]
     {!base Abstract Object}
     {!str mail}
-    {!aggr phone {!c Phone Contacts}}}
+    {!inner phone {!c Phone Contacts}}}
 
 {!class Phone Contacts
     [!_gloss {ru {t телефонные номера}}]
