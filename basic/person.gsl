@@ -1,5 +1,30 @@
 {schema knd
 
+{!class User
+    [!_gloss {ru {t пользователь сервиса}}]
+    {!base Agent}
+    {!inner contacts {!c User Contacts}}
+    {!inner ident {!c User Ident}}
+    {-- !inner role {!c User Role} {!t set {!uniq service}} --}
+    {!inner biometrics {!c Personal Biometrics}}}
+
+{!class User Ident
+    [!_gloss {ru {t идентификация пользователя}}]
+    {!base Abstract Object}
+    {!num id}
+    {!inner cred {!c User Credentials} {!t set {!uniq service}}}
+    {!inner gender {!c Gender}}
+    {!inner name {!c Personal Name}}}
+
+{!class User Credentials
+    {!base Abstract Object}
+    {!str service}
+    {!str login}
+    {!str method}
+    {!str token [!_gloss {ru {t постоянный ключ доступа к ресурсу}}]}
+    {!str salt [!_gloss {ru {t случайные символы для усложнения пароля}}]}
+    {!str hash [!_gloss {ru {t вычисленный хэш от пароля}}]}}
+
 {!class Gender
     [!_gloss {ru {t гендерная принадлежность}}]
     {!base Abstract Object}}
