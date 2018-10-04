@@ -2,55 +2,64 @@
 
 {!class User
     [!_gloss {ru {t пользователь сервиса}}]
-    {!base Agent}
-    {!inner contacts {!c User Contacts}}
-    {!inner ident {!c User Ident}}
+    {is Agent}
+    {inner contacts {!c User Contacts}}
+    {inner ident {!c User Ident}}
     {-- !inner role {!c User Role} {!t set {!uniq service}} --}
-    {!inner biometrics {!c Personal Biometrics}}}
+    {inner biometrics {!c Personal Biometrics}}}
 
 {!class User Ident
     [!_gloss {ru {t идентификация пользователя}}]
-    {!base Abstract Object}
-    {!num id}
-    {!inner cred {!c User Credentials} {!t set {!uniq service}}}
-    {!inner gender {!c Gender}}
-    {!inner name {!c Personal Name}}}
+    {is Information}
+    {inner cred   {c User Credentials} {t set}}
+    {inner gender {c Gender}}
+    {inner name   {c Personal Name}}}
 
 {!class User Credentials
-    {!base Abstract Object}
-    {!str service}
-    {!str login}
-    {!str method}
-    {!str token [!_gloss {ru {t постоянный ключ доступа к ресурсу}}]}
-    {!str salt [!_gloss {ru {t случайные символы для усложнения пароля}}]}
-    {!str hash [!_gloss {ru {t вычисленный хэш от пароля}}]}}
+    [!_gloss {ru {t данные учетной записи}}]
+    {is Information}
+    {str service}
+    {str login}
+    {str token [!_gloss {ru {t постоянный ключ доступа к ресурсу}}]}
+    {str salt  [!_gloss {ru {t случайные символы для усложнения пароля}}]}
+    {str hash-method [!_gloss {ru {t алгоритм вычисления хеша}}]}
+    {bin hash  [!_gloss {ru {t вычисленный хеш от пароля}}]}}
 
 {!class Gender
     [!_gloss {ru {t гендерная принадлежность}}]
-    {!base Abstract Object}}
+    {is Information}}
 
 {!class Personal Name
     [!_gloss {ru {t имя персоны}}]
-    {!base Abstract Object}
-    {!str first}
-    {!str patronymic}
-    {!str last}}
+    {is Information}}
+
+{!class Nickname
+    [!_gloss {ru {t имя персоны}}]
+    {is Personal Name}
+    {str nick}}
+
+{!class Official Russian Citizen Name
+    [!_gloss {ru {t имя гражданина РФ}}]
+    {is Personal Name}
+    {str forename}
+    {str patronymic}
+    {str surname}}
+
+{!class Official Russian Female Name
+    {is Official Russian Citizen Name}
+    {str maiden-name}}
 
 {!class Personal Biometrics
     [!_gloss {ru {t биометрические данные}}]
     {!base Abstract Object}
-    {--ref birth {!c Calendar Date} --} }
+    {ref birth {!c Calendar Date}} }
 
 {!class User Contacts
     [!_gloss {ru {t контактные данные пользователя}}]
-    {!base Abstract Object}
-    {!str mail}
-    {!inner phone {!c Phone Contacts}}}
+    {is Information}
+    {inner email    {c Email Address} {t set}}
+    {inner geo-addr {c Geospatial Address} {t set}}
+    {inner phone    {c Phone Contacts} {t set}}}
 
-{!class Phone Contacts
-    [!_gloss {ru {t телефонные номера}}]
-    {!base Abstract Object}
-    {!str prefix}
-    {!str number}}
 
 }

@@ -2,6 +2,7 @@
 {include person}
 {include geo}
 {include quant}
+{include time}
 {include physics}
 {include geometry}
 {include building}
@@ -96,6 +97,7 @@
     [!_gloss {ru {t кодированная информация}}]
     {is Information}
     {str mimetype}
+    {bool is-binary}
     {!cdata body}}
 
 }
