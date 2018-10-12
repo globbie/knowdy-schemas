@@ -44,14 +44,24 @@
   {!base Geographical Region}
 }
 
-{!class Bulgaria
-  [!_gloss {ru {t Болгария}}]
+{!class Austria
+  [!_gloss {ru {t Австрия}}]
   {!base Country}
 }
 
 {!class Belarus
   [!_gloss {ru {t Беларусь}}]
   {!base Country}
+}
+
+{!class Bulgaria
+  [!_gloss {ru {t Болгария}}]
+  {!base Country}
+}
+
+{!class Buryatia
+  [!_gloss {ru {t Бурятия}}]
+  {!base Republic}
 }
 
 {!class England
@@ -76,6 +86,11 @@
 
 {!class China
   [!_gloss {ru {t Китай}}]
+  {!base Country}
+}
+
+{!class Finland
+  [!_gloss {ru {t Финляндия}}]
   {!base Country}
 }
 
@@ -133,6 +148,11 @@
   {!base Geographical Region}
 }
 
+{!class Norway
+  [!_gloss {ru {t Норвегия}}]
+  {!base Country}
+}
+
 {!class Ossetia
   [!_gloss {ru {t Оссетия}}]
   {!base Republic}
@@ -155,6 +175,11 @@
 
 {!class Spain
   [!_gloss {ru {t Испания}}]
+  {!base Country}
+}
+
+{!class Sweden
+  [!_gloss {ru {t Швеция}}]
   {!base Country}
 }
 
