@@ -29,6 +29,26 @@
     [!_gloss {ru {t гендерная принадлежность}}]
     {is Information}}
 
+{!class Sex
+    [!_gloss {ru {t пол}}]
+    {is Information}}
+
+{!class Female Gender
+    [!_gloss {ru {t женский гендер}}]
+    {is Gender}}
+
+{!class Male Gender
+    [!_gloss {ru {t мужской гендер}}]
+    {is Gender}}
+
+{!class Female Sex
+    [!_gloss {ru {t женский пол}}]
+    {is Sex}}
+
+{!class Male Sex
+    [!_gloss {ru {t мужской пол}}]
+    {is Sex}}
+
 {!class Personal Name
     [!_gloss {ru {t имя персоны}}]
     {is Information}}
@@ -52,12 +72,14 @@
 {!class Personal Biometrics
     [!_gloss {ru {t биометрические данные}}]
     {!base Abstract Object}
-    {ref birth {!c Calendar Date}} }
+    {!date birth-date}
+    {!ref sex {c Sex}}}
 
 {!class User Contacts
     [!_gloss {ru {t контактные данные пользователя}}]
     {is Information}
-    {inner email    {c Email Address} {t set}}
+    {--inner email    {c Email Address} {t set}--}
+    {str email}
     {inner geo-addr {c Geospatial Address} {t set}}
     {inner phone    {c Phone Contacts} {t set}}}
 
