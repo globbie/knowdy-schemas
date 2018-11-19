@@ -7,11 +7,18 @@
 
 {!class Nutritional Value
     [!_gloss {ru {t пищевая ценность}}]
-    {base Information}
+    {is Information}
+    {ref source {c Authoritative Source} {impl}}
     {num energy}
     {float carbs}
     {float fat}
     {float protein}}
+
+{!class Authoritative Source
+    {is Agent}}
+
+{!class USDA
+    {is Authoritative Source}}
 
 {!class Fruit
     {is Edible Object}}
