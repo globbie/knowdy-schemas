@@ -1,5 +1,9 @@
 
 {include person}
+
+{include food}
+{include fruit}
+
 {include geo}
 {include quant}
 {include time}
@@ -39,7 +43,7 @@
     [!_gloss {ru {t физический объект}}]
     {!base Object}
     {!inner location {c Spatial Location}}
-    {!str  img {!concise 1}}}
+    {!str img {!concise 1}}}
 
 {!class Information
     [!_gloss {ru {t информация}}]

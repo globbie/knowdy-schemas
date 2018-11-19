@@ -1,0 +1,19 @@
+{schema knd-basic
+
+{!class Edible Object
+    {is Organic Object}
+    {inner nutr {c Nutritional Value} {t set}}
+}
+
+{!class Nutritional Value
+    [!_gloss {ru {t пищевая ценность}}]
+    {base Information}
+    {num energy}
+    {float carbs}
+    {float fat}
+    {float protein}}
+
+{!class Fruit
+    {is Edible Object}}
+
+}

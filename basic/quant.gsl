@@ -1,5 +1,12 @@
 {schema knd-basic
 
+{--{!class nn42
+   {_c {nn10
+           {mult nn4}}
+        {add nn2}}
+}
+--}
+
 {!class Number
     [!_gloss {ru {t число}}]
     {base Abstract Object}}
