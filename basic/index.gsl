@@ -1,10 +1,10 @@
-
 {include person}
 
-{include food}
-{include fruit}
+{--{include food}
+{include fruit}--}
 
 {include geo}
+{include lang}
 {include quant}
 {include time}
 {include physics}
@@ -27,7 +27,7 @@
     {-- совокупность сенсорных восприятий и
         когнитивных представлений субъекта
         о любой части внешнего мира --}
-    {_state_top}
+    {--_state_top--}
     {!str guid}}
 
 {!class Abstract Object
@@ -37,32 +37,36 @@
                      путем обобщения признаков конкретных объектов}}
                  {en {t a general concept formed by extracting common features
                        from   specific examples}}] --}
-    {!base Object}}
+    {is Object}}
 
 {!class Physical Object
     [!_gloss {ru {t физический объект}}]
-    {!base Object}
+    {is Object}
     {!inner location {c Spatial Location}}
     {!str img {!concise 1}}}
 
 {!class Information
     [!_gloss {ru {t информация}}]
-    {!base   Abstract Object}}
+    {is   Abstract Object}}
+
+{!class System
+    [!_gloss {ru {t система}}]
+    {is Abstract Object}}
 
 {!class Collection
     [!_gloss {ru {t множество}}]
-    {!base Abstract Object}
-    {!ref  unit-type {c Object}}}
+    {is Abstract Object}
+    {!ref unit-type {c Object}}}
 
 
 {!class Custom Class
     [!_gloss {ru {t класс с произвольной семантикой}}]
-    {!base Abstract Object}
+    {is Abstract Object}
 }
 
 {!class Organic Object
     [!_gloss {ru {t органический объект}}]
-    {!base Physical Object}}
+    {is Physical Object}}
 
 {!class Product of Labor
     [!_gloss {ru {t продукт труда}}]
@@ -72,16 +76,16 @@
 
 {!class Material Product
     [!_gloss {ru {t изделие}}]
-    {!base Physical Object}
-    {!base Product of Labor}}
+    {is Physical Object}
+    {is Product of Labor}}
 
 {!class Group
     [!_gloss {ru {t группа объектов}}]
-    {!base Abstract Object}}
+    {is Abstract Object}}
 
 {!class Sensory Object
     [!_gloss {ru {t объект восприятия}}]
-    {!base Object}}
+    {is Object}}
 
 {!class Agent
     [!_gloss {ru {t субъект}}]
@@ -89,7 +93,7 @@
 
 {!class Activity
     [!_gloss {ru {t деятельность}}]
-    {!base Abstract Object}}
+    {is Abstract Object}}
 
 {--{!rel Resource Access
     [!_gloss {ru {t права доступа к ресурсам}}]

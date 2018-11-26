@@ -9,7 +9,7 @@
              {fat 0.17}
              {protein 0.26}}]}}
 
-{!class Bananas
+{!class Banana
     {is Fruit 
         [!nutr
            {USDA
