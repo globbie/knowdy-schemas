@@ -3,7 +3,7 @@
 {!class Edible Object
     {is Organic Object}
     {inner nutr {c Nutritional Value} {t set}}
-}
+    {procref prepar {_proc Food Processing}}}
 
 {!class Nutritional Value
     [!_gloss {ru {t пищевая ценность}}]

@@ -1,73 +1,71 @@
 {schema knd-basic
 
    {!proc Process
-         [!_gloss {ru {t процесс как изменение реальности}}]}
+       [_gloss {ru {t процесс как изменение реальности}}]}
+
+
+   {-- result _new_obj  _new_obj_state _new_proc _new_proc_state --}
 
    {!proc Natural Process
-       [!_gloss {ru {t естественный процесс}}]
+       [_gloss {ru {t естественный процесс}}]
        {is Process}}
 
    {!proc Agent Driven Process
-       [!_gloss {ru {t агентивный процесс}}]
-      {is Process}}
+      [_gloss {ru {t агентивный процесс}}]
+      {is Process}
+      [arg {agent {_c Agent}}]}
+
+   {!proc Physical Impact Process
+      [_gloss {ru {t процесс физического воздействия на объект}}]
+      {is Agent Driven Process}
+      [arg {obj {_c Physical Object}}]}
 
    {!proc Mental Process
-      [!_gloss {ru {t ментальный процесс}}]
+      [_gloss {ru {t ментальный процесс}}]
       {is Agent Driven Process}}
 
- {--  {!proc power on Electric Device
-        [!_gloss {ru {t включить электроустройство}}]
-	   {is Agent Driven Process}
-           [!arg {kettle {c Tea Kettle}
-                         {do fill Container
-                             {substance {c Potable Water}}
-                             {container kettle}}}]
-           {do activate interface
-               {interface {device kettle}}}
+{--   {!proc turn on Electric Device
+        [_gloss {ru {t включить электроустройство}}]
+	{is Agent Driven Process}
+        [arg
+            {device {_c Consumer Device}}]
+        {do activate interface
+            {interface {device {power-interface}}}}}
 --}
 
- {---  {!proc Creative Method
-         [!_gloss {ru {t созидательный процесс}}]
-         {is Agent Driven Process}
-         {result Material Product}
-	 [!arg {resource {c Material Resource}}
-               {method   {c Knowledge}}
-               {instr    {c Instrument}}]
-	 {do _cause
-	     {resource resource}}}
----}
+ {--  {!proc activate interface
+          [_gloss {ru {t активировать интерфейс устройства}}]
+          {is Agent Driven Process}
+          [arg
+              {interface {_c Device Interface}}]
+          {do _physical_impact
+              {_obj {interface}}}}
+--}
 
-{---
-    {!proc Cooking
-         [!_gloss {ru {t приготовление пищи}}
-	         {de {t Kochen}}]
-	 {is Creative Method
-            {resource {c Food Ingredient}}
-            {instr    {c Cooking Utensil}}
-            {method   {c Recipe}}}
-	 {arg container {c Container}}}
+    {!proc Creative Process
+         [_gloss {ru {t созидательный процесс}}]
+         {is     Agent Driven Process}
+         {--effect Material Object--}
+         [arg    {resource {_c Material Resource}}
+                 {method   {_c Knowledge}}
+                 {instr    {_c Instrument}}]}
 
-   {!proc make Beverage
-         [!_gloss {ru {t приготовление напитка}}]
-	 {is Cooking
-	    {container {c Tea Pot}}}}
+    {!proc change physical state
+           [_gloss {ru {t процесс изменения физического состояния объекта}}]
+           {is     Physical Impact Process}
+           {--effect {_state {obj}}--}
+           [arg    {resource {_c Material Resource}}
+                   {instr    {_c Instrument}}]}
 
-    {!proc Boiling
-         [!_gloss {ru {t вскипятить жидкость}}]}
+   {!proc Food Processing
+      [_gloss {ru {t изготовление пищевого продукта}}]
+      {is Agent Driven Process}}
 
-    {!proc make Tea
-        [!_gloss {ru {t приготовление чая}}]
-	   {is make Beverage
-	         {resource {c Dry Tea Leaves}}}
-	   {result Tea Beverage}
-           {arg 
-           {arg boiling water
-                {do _boil
-		     {c Boiling Water}}}
-           {do infuse Substance in Liquid
-                {container container}
-                {liquid boiling water}
-                {subst resource}}}
----}
+{--
+                     {do fill Container
+                            {substance {c Potable Water}}
+                            {container kettle}}}]
+--}
+
 
 }

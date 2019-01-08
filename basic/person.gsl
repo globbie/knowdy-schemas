@@ -73,6 +73,9 @@
     [!_gloss {ru {t биометрические данные}}]
     {!base Abstract Object}
     {!date birth-date}
+    {num age
+        {proc
+           {do _subtract}}}
     {!ref sex {c Sex}}}
 
 {!class User Contacts

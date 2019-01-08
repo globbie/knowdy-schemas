@@ -1,7 +1,7 @@
 {include person}
 
-{--{include food}
-{include fruit}--}
+{include food}
+{--{include fruit}--}
 
 {include geo}
 {include lang}
@@ -15,7 +15,8 @@
 {-- include device --}
 
 {-- include plan --}
-{-- include proc --}
+
+{include proc}
 
 {-- include glottie/index --}
 
@@ -82,6 +83,9 @@
 {!class Group
     [!_gloss {ru {t группа объектов}}]
     {is Abstract Object}}
+
+{!class Linear Sequence
+    {is Group}}
 
 {!class Sensory Object
     [!_gloss {ru {t объект восприятия}}]
