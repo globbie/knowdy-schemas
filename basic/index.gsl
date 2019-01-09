@@ -80,6 +80,14 @@
     {is Physical Object}
     {is Product of Labor}}
 
+{!class Instrument
+    [!_gloss {ru {t инструмент}}]
+    {is Material Product}}
+
+{!class Material Resource
+    [!_gloss {ru {t материальный ресурс}}]
+    {is Material Product}}
+
 {!class Group
     [!_gloss {ru {t группа объектов}}]
     {is Abstract Object}}

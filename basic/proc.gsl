@@ -3,7 +3,6 @@
    {!proc Process
        [_gloss {ru {t процесс как изменение реальности}}]}
 
-
    {-- result _new_obj  _new_obj_state _new_proc _new_proc_state --}
 
    {!proc Natural Process
@@ -47,7 +46,7 @@
          {is     Agent Driven Process}
          {--effect Material Object--}
          [arg    {resource {_c Material Resource}}
-                 {method   {_c Knowledge}}
+                 {method   {_c Information}}
                  {instr    {_c Instrument}}]}
 
     {!proc change physical state
