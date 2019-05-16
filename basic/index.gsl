@@ -1,6 +1,6 @@
 {include person}
 
-{include food}
+{--include food--}
 {--{include fruit}--}
 
 {include geo}
@@ -14,9 +14,9 @@
 
 {-- include device --}
 
-{-- include plan --}
 
 {include proc}
+{include plan}
 
 {-- include glottie/index --}
 

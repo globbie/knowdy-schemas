@@ -3,8 +3,6 @@
    {!proc Process
        [_gloss {ru {t процесс как изменение реальности}}]}
 
-   {-- result _new_obj  _new_obj_state _new_proc _new_proc_state --}
-
    {!proc Natural Process
        [_gloss {ru {t естественный процесс}}]
        {is Process}}
@@ -56,9 +54,21 @@
            [arg    {resource {_c Material Resource}}
                    {instr    {_c Instrument}}]}
 
-   {!proc Food Processing
-      [_gloss {ru {t изготовление пищевого продукта}}]
-      {is Agent Driven Process}}
+    {!proc Food Processing
+       [_gloss {ru {t изготовление пищевого продукта}}]
+       {is Agent Driven Process}}
+
+   {!proc add physical object
+       [_gloss {ru {t добавление физического объекта}}]
+       {is Agent Driven Process}}
+
+   {!proc say
+       [_gloss {ru {t сказать}}]
+       {is Agent Driven Process}}
+
+   {!proc speak
+       [_gloss {ru {t говорить}}]
+       {is Agent Driven Process}}
 
 {--
                      {do fill Container

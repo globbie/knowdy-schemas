@@ -11,7 +11,7 @@
 
 {!class Country
   [!_gloss {ru {t страна}}]
-  {!base Geographical Region}
+  {is Geographical Region}
 }
 
 {!class Republic
@@ -51,7 +51,7 @@
 
 {!class Belarus
   [!_gloss {ru {t Беларусь}}]
-  {!base Country}
+  {is Country}
 }
 
 {!class Bulgaria
