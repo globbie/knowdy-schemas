@@ -16,7 +16,7 @@
 
 
 {include proc}
-{include plan}
+{--include plan--}
 
 {-- include glottie/index --}
 
@@ -50,6 +50,10 @@
     [!_gloss {ru {t информация}}]
     {is   Abstract Object}}
 
+{!class Situation
+    [!_gloss {ru {t ситуация}}]
+    {is Abstract Object}}
+
 {!class System
     [!_gloss {ru {t система}}]
     {is Abstract Object}}
@@ -59,15 +63,32 @@
     {is Abstract Object}
     {!ref unit-type {c Object}}}
 
-
 {!class Custom Class
     [!_gloss {ru {t класс с произвольной семантикой}}]
-    {is Abstract Object}
-}
+    {is Abstract Object}}
 
 {!class Organic Object
     [!_gloss {ru {t органический объект}}]
     {is Physical Object}}
+
+{!class Eukaryote
+    {is Organic Object}}
+
+{!class Plant
+    [!_gloss {ru {t растение}}]
+    {is Eukaryote}}
+
+{!class Fungi
+    [!_gloss {ru {t гриб}}]
+    {is Eukaryote}}
+
+{!class Animal Organism
+    [!_gloss {ru {t живой организм}}]
+    {is Eukaryote}}
+
+{!class Fish
+    [!_gloss {ru {t рыба}}]
+    {is Animal Organism}}
 
 {!class Product of Labor
     [!_gloss {ru {t продукт труда}}]
