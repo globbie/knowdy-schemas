@@ -50,6 +50,10 @@
     [!_gloss {ru {t информация}}]
     {is   Abstract Object}}
 
+{!class Digital Object
+    [!_gloss {ru {t цифровой объект}}]
+    {is Information}}
+
 {!class Situation
     [!_gloss {ru {t ситуация}}]
     {is Abstract Object}}
