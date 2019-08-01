@@ -1,6 +1,10 @@
 {include person}
 
-{--include food--}
+{include taste}
+{include color}
+
+{include food}
+
 {--{include fruit}--}
 
 {include geo}
@@ -44,6 +48,7 @@
     [!_gloss {ru {t физический объект}}]
     {is Object}
     {!inner location {c Spatial Location}}
+    {ref color {c Color}}
     {!str img {!concise 1}}}
 
 {!class Information
@@ -131,12 +136,6 @@
 {!class Activity
     [!_gloss {ru {t деятельность}}]
     {is Abstract Object}}
-
-{--{!rel Resource Access
-    [!_gloss {ru {t права доступа к ресурсам}}]
-    {!subj user {!c Agent}}
-    {!obj item  {!c Object}}}
---}
 
 {!class Encoded Data
     [!_gloss {ru {t кодированная информация}}]

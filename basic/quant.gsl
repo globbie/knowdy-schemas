@@ -51,4 +51,16 @@
     [!_gloss {ru {t число 9}}]
     {base Number}}
 
+{!class Number Ten
+    [!_gloss {ru {t число 10}}]
+    {base Number}}
+
+{!class Number Eleven
+    [!_gloss {ru {t число 11}}]
+    {base Number}}
+
+{!class Number Twelve
+    [!_gloss {ru {t число 12}}]
+    {base Number}}
+
 }
