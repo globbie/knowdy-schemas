@@ -1,21 +1,20 @@
 {schema knd-basic
 
     {!class Consumer Device
-        [!_gloss {ru {t устройство бытовой техники}}
+        [_gloss {ru {t устройство бытовой техники}}
                 {en {t consumer electronics device}}]
-        {!str model [!_gloss {ru {t наименование модели}}]}
-        {!str manufacturer [!_gloss {ru {t производитель}}]}}
+        {!str model [_gloss {ru {t наименование модели}}]}
+        {!str manufacturer [_gloss {ru {t производитель}}]}}
 
     {!class Cooking Device
-        [!_gloss {ru {t устройство для приготовления пищи}}]
-        {!base Consumer Device}}
+        [_gloss {ru {t устройство для приготовления пищи}}]
+        {is Consumer Device}}
 
     {!class Kettle
-        [!_gloss {ru {t чайник}}]
-        {!base Cooking Device}}
+        [_gloss {ru {t чайник}}]
+        {is Cooking Device}}
 
     {!class Electric Tea Kettle
-        [!_gloss {ru {t электрочайник}}]
-        {!base Kettle}
-        {!base Cooking Device}}
+        [_gloss {ru {t электрочайник}}]
+        {is Kettle}}
 }

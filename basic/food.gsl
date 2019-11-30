@@ -3,11 +3,11 @@
 {!class Edible Object
     {is Organic Object}
     {inner nutr {c Nutritional Value} {t set}}
-    {procref prepar {_proc Food Processing}}
+    {proc-ref prepar {_proc Food Processing}}
     {ref taste {c Taste}}}
 
 {!class Nutritional Value
-    [!_gloss {ru {t пищевая ценность}}]
+    [_gloss {ru {t пищевая ценность}}]
     {is Information}
     {ref source {c Authoritative Source} {impl}}
     {num energy}
@@ -20,8 +20,5 @@
 
 {!class USDA
     {is Authoritative Source}}
-
-{!class Fruit
-    {is Edible Object}}
 
 }

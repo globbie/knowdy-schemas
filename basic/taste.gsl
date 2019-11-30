@@ -1,31 +1,31 @@
 {schema knd
 
 {!class Taste
-    [!_gloss {ru {t вкусовое восприятие}}]
+    [_gloss {ru {t вкусовое восприятие}}]
     {is Sensory Object}}
 
 {!class Plain Taste
-    [!_gloss {ru {t пресный вкус}}]
+    [_gloss {ru {t пресный вкус}}]
     {is Taste}}
 
 {!class Sweet Taste
-    [!_gloss {ru {t сладкий вкус}}]
+    [_gloss {ru {t сладкий вкус}}]
     {is Taste}}
 
 {!class Salty Taste
-    [!_gloss {ru {t соленый вкус}}]
+    [_gloss {ru {t соленый вкус}}]
     {is Taste}}
 
 {!class Hot Taste
-    [!_gloss {ru {t острое}}]
+    [_gloss {ru {t острое}}]
     {is Taste}}
 
 {!class Sour Taste
-    [!_gloss {ru {t кислый вкус}}]
+    [_gloss {ru {t кислый вкус}}]
     {is Taste}}
 
 {!class Astringent  Taste
-    [!_gloss {ru {t вяжущий вкус}}]
+    [_gloss {ru {t вяжущий вкус}}]
     {is Taste}}
 
 }
