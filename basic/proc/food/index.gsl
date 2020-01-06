@@ -1,0 +1,13 @@
+{schema knd-basic
+
+  {!proc Food Processing
+         [_gloss {ru {t изготовление пищевого продукта}}]
+     {is Agent Driven Process}
+     {effect Food Product}}
+
+  {!proc Baking
+         [_gloss {ru {t процесс выпекания}}]
+     {is Food Processing}
+     {effect Baked Food Product}}
+
+}

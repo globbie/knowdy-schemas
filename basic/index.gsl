@@ -14,8 +14,8 @@
 {include nature}
 {include geo}
 {include food}
-{include building}
-{include toys}
+
+{include product/index}
 
 {-- include device --}
 
@@ -24,7 +24,7 @@
 {include network}
 {include communication}
 
-{include proc}
+{include proc/index}
 
 {schema knd-basic
 
@@ -103,25 +103,6 @@
 {!class Fish
     [_gloss {ru {t рыба}}]
     {is Animal Organism}}
-
-{!class Product of Labor
-    [_gloss {ru {t продукт труда}}]
-    {-- [_summary {ru {t результат целенаправленной деятельности Агента,
-                      пригодный для решения какой-либо задачи}}] --}
-    {str purpose}}
-
-{!class Material Product
-    [_gloss {ru {t изделие}}]
-    {is Physical Object}
-    {is Product of Labor}}
-
-{!class Instrument
-    [_gloss {ru {t инструмент}}]
-    {is Material Product}}
-
-{!class Material Resource
-    [_gloss {ru {t материальный ресурс}}]
-    {is Material Product}}
 
 {!class Group
     [_gloss {ru {t группа объектов}}]

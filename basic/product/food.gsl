@@ -1,10 +1,14 @@
 {schema knd-basic
 
 {!class Edible Object
-    {is Organic Object}
-    {inner nutr {c Nutritional Value} {t set}}
+    {is Organic Object}}}
+
+{!class Food Product
+    {is Material Product}
+    {is Edible Object}
+    {inner    nutr   {c Nutritional Value} {t set}}
     {proc-ref prepar {_proc Food Processing}}
-    {ref taste {c Taste}}}
+    {ref      taste  {c Taste}}}
 
 {!class Nutritional Value
     [_gloss {ru {t пищевая ценность}}]

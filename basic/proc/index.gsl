@@ -1,3 +1,5 @@
+{include food/index}
+
 {schema knd-basic
 
    {!proc Process
@@ -60,7 +62,7 @@
     {!proc Creative Process
          [_gloss {ru {t созидательный процесс}}]
          {is     Agent Driven Process}
-         {--effect Material Object--}
+         {effect Material Product}
          [arg    {resource {_c Material Resource}}
                  {method   {_c Information}}
                  {instr    {_c Instrument}}]}
@@ -71,10 +73,6 @@
            {--effect {_state {obj}}--}
            [arg    {resource {_c Material Resource}}
                    {instr    {_c Instrument}}]}
-
-    {!proc Food Processing
-       [_gloss {ru {t изготовление пищевого продукта}}]
-       {is Agent Driven Process}}
 
    {!proc add physical object
        [_gloss {ru {t добавление физического объекта}}]
