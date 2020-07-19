@@ -26,13 +26,13 @@
     {str name}}
 
 {!class Chinese Language
-    [_gloss {ru {t китайский}}
+        [_gloss {ru {t китайский}}
              {en {t Chinese}}]
     {is Natural Language
         [code {ISO 639-1 {name zh}}] }}
 
 {!class English Language
-    [_gloss {ru {t английский}}
+        [_gloss {ru {t английский}}
              {en {t English}} ]
     {is Natural Language
         [code {ISO 639-1 {name en}}] }}

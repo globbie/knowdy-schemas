@@ -2,7 +2,8 @@
 
   {!class Color
     [_gloss {ru {t объект цветового восприятия}}]
-    {is Sensory Object}}
+    {is Sensory Object}
+    {str intensity}}
 
   {!class White Color
     [_gloss {ru {t белый}}]
@@ -10,6 +11,14 @@
 
   {!class Black Color
     [_gloss {ru {t черный}}]
+    {is Color}}
+
+  {!class Gray Color
+    [_gloss {ru {t серый}}]
+    {is Color}}
+
+  {!class Brown Color
+    [_gloss {ru {t коричневый}}]
     {is Color}}
 
   {!class Red Color
@@ -24,18 +33,21 @@
           [_gloss {ru {t синий}}]
       {is Color}}
 
-
   {!class Yellow Color
           [_gloss {ru {t желтый}}]
+      {is Color}}
+
+  {!class Light Wheat Color
+          [_gloss {ru {t светло-пшеничный}}]
       {is Color}}
 
   {!class Orange Color
           [_gloss {ru {t оранжевый}}]
       {is Color}}
 
-
-  {!class Red Hair Color
-          [_gloss {ru {t рыжий цвет волос}}]
-      {is Color}}
+  {!class Dark Orange
+          [_gloss {ru {t темно-оранжевый}}]
+      {is Orange Color
+          {intensity low}}}
 
 }

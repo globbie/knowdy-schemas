@@ -1,7 +1,7 @@
 {schema knd-basic
 
 {!class Edible Object
-    {is Organic Object}}}
+    {is Organic Object}}
 
 {!class Food Product
     {is Material Product}

@@ -1,0 +1,19 @@
+{schema knd-basic
+
+{!class Fish
+        [_gloss {ru {t рыба}}]
+    {is Animal Organism}}
+
+{!class Flatfish
+        [_gloss {ru{t камбала}}]
+     {is Fish}}
+
+{!class Carp
+        [_gloss {ru{t карп}}]
+     {is Fish}}
+
+{!class Salmon
+        [_gloss {ru{t лосось}}]
+     {is Fish}}
+
+}

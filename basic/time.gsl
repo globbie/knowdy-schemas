@@ -1,10 +1,26 @@
 {schema knd-basic
 
 {!class Calendar Date
-[_gloss {ru {t календарная дата}}]
+        [_gloss {ru {t календарная дата}}]
     {is Information}
-    {num year}
-    {num month}
-    {num date} }
+        {num year}
+        {num month}
+        {num date} }
+
+{!class TimeView
+        [_gloss {ru {t восприятие временного процесса}}]
+    {is Abstraction}}
+
+{!class Abstract TimeView
+        [_gloss {ru {t отвлеченное восприятие временного процесса}}]
+    {is TimeView}}
+
+{!class Directed TimeView
+        [_gloss {ru {t однонаправленное восприятие временного процесса}}]
+    {is TimeView}}
+
+{!class Continual TimeView
+        [_gloss {ru {t длительное, многонаправленное восприятие временного процесса}}]
+    {is TimeView}}
 
 }

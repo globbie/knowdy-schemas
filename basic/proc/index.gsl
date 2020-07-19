@@ -1,4 +1,5 @@
-{include food/index}
+{include phase}
+{include move}
 
 {schema knd-basic
 
@@ -10,36 +11,57 @@
        {is Process}}
 
    {!proc Motion
-      [_gloss {ru {t перемещение физического объекта в пространстве}}]
+          [_gloss {ru {t перемещение физического объекта в пространстве}}]
       {is Process}
-      [arg {Obj       {_c Physical Object}}
-           {TargetLoc {_c Spatial Location}} ]
+      [arg {obj       {_c Physical Matter}}
+           {targetLoc {_c Spatial Location}} ]
       [do {_move
-             {obj      TObj}
+             {obj      obj}
              {where-to TargetLoc}} ]}
 
    {!proc Agent Driven Process
-      [_gloss {ru {t агентивный процесс}}]
+          [_gloss {ru {t агентивный процесс}}]
       {is Process}
       [arg {agent {_c Agent}}]}
 
-   {!proc Transportation Process
-      [_gloss {ru {t процесс активного перемещения физического объекта}}]
-      {is  Physical Impact Process}
-      [arg {Obj       {_c Physical Object}}
-           {TargetLoc {_c Spatial Location}} ]
-      [do {_move
-             {obj      TObj}
-             {where-to TargetLoc}} ]}
+   {!proc Human Agent Driven Process
+          [_gloss {ru {t процесс, инициируемый человеком}}]
+      {is Process}
+      [arg {agent {_c Human}}]}
+
+   {!proc Agent Driven Obj Process
+          [_gloss {ru {t агентивный процесс воздействия на внешний объект}}]
+      {is Agent Driven Process}
+      [arg {agent {_c Agent}}
+           {obj   {_c Object}}]}
+
+   {!proc Human Agent Driven Obj Process
+          [_gloss {ru {t процесс воздействия человека на внешний объект}}]
+      {is Agent Driven Obj Process}}
 
    {!proc Physical Impact Process
-      [_gloss {ru {t процесс физического воздействия на объект}}]
-      {is Agent Driven Process}
-      [arg {obj {_c Physical Object}}]}
+          [_gloss {ru {t процесс физического воздействия на объект}}]
+      {is Agent Driven Obj Process}
+      [arg {obj {_c Physical Matter}}]}
 
    {!proc Mental Process
-      [_gloss {ru {t ментальный процесс}}]
+          [_gloss {ru {t ментальный процесс}}]
       {is Agent Driven Process}}
+
+   {!proc Mental Obj Process
+          [_gloss {ru {t ментальный процесс с внешним объектом}}]
+      {is Agent Driven Obj Process}}
+
+   {!proc Feel Necessity
+          [_gloss {ru {t осознавать потребность}}]
+      {is Mental Process}}
+
+   {!proc Have Material Possessions
+          [_gloss {ru {t владеть, обладать материальными ценностями}}]
+      {is Mental Process}}
+   {-- агент осознает, что только он может распоряжаться
+       определенными объектами внешнего мира
+       и что другие агенты должны быть согласны с этим --}
 
 {--   {!proc turn on Electric Device
         [_gloss {ru {t включить электроустройство}}]
@@ -60,12 +82,12 @@
 --}
 
     {!proc Creative Process
-         [_gloss {ru {t созидательный процесс}}]
-         {is     Agent Driven Process}
-         {effect Material Product}
-         [arg    {resource {_c Material Resource}}
-                 {method   {_c Information}}
-                 {instr    {_c Instrument}}]}
+           [_gloss {ru {t созидательный процесс}}]
+           {is     Agent Driven Process}
+           {effect Material Product}
+           [arg    {resource {_c Material Resource}}
+                   {method   {_c Information}}
+                   {instr    {_c Instrument}}]}
 
     {!proc change physical state
            [_gloss {ru {t процесс изменения физического состояния объекта}}]
@@ -79,12 +101,12 @@
        {is Agent Driven Process}}
 
    {!proc say
-       [_gloss {ru {t сказать}}]
-       {is Agent Driven Process}}
+          [_gloss {ru {t сказать}}]
+       {is Human Agent Driven Process}}
 
    {!proc speak
-       [_gloss {ru {t говорить}}]
-       {is Agent Driven Process}}
+          [_gloss {ru {t говорить}}]
+       {is Human Agent Driven Process}}
 
 
 }

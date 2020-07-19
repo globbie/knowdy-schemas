@@ -1,0 +1,9 @@
+{schema knd
+
+{!class Biological Mother
+    {is Female Human}}
+
+{!class Biological Father
+    {is Male Human}}
+
+}

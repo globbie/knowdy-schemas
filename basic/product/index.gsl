@@ -1,26 +1,45 @@
 {include building}
-{include food}
+{include clothing}
+{include container}
+
+{include food/index}
+
 {include toys}
+{include vehicle}
 
 {schema knd-basic
 
 {!class Product of Labor
-    [_gloss {ru {t продукт труда}}]
+        [_gloss {ru {t продукт труда}}]
     {-- [_summary {ru {t результат целенаправленной деятельности Агента,
                       пригодный для решения какой-либо задачи}}] --}
     {str purpose}}
 
 {!class Material Product
-    [_gloss {ru {t изделие}}]
-    {is Physical Object}
-    {is Product of Labor}}
+        [_gloss {ru {t изделие}}]
+    {is Physical Matter}
+    {is Product of Labor}
+    {str design}}
+
+{!class Solid State Material Product
+        [_gloss {ru {t твердотельное изделие}}]
+    {is Solid Physical Object}
+    {is Material Product}}
 
 {!class Instrument
-    [_gloss {ru {t инструмент}}]
-    {is Material Product}}
+        [_gloss {ru {t инструмент}}]
+     {is Solid State Material Product}}
 
 {!class Material Resource
-    [_gloss {ru {t материальный ресурс}}]
+        [_gloss {ru {t материальный ресурс}}]
     {is Material Product}}
+
+{!class Pencil
+        [_gloss {ru {t карандаш}}]
+    {is Instrument}}
+
+{!class Oven
+        [_gloss {ru {t духовой шкаф}}]
+    {is Instrument}}
 
 }

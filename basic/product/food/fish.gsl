@@ -1,0 +1,15 @@
+{schema knd-basic
+
+{!class Flatfish / Food
+        [_gloss {ru{t камбала}}]
+     {is Fish Product}}
+
+{!class Carp / Food
+        [_gloss {ru{t карп}}]
+     {is Fish Product}}
+
+{!class Salmon / Food
+        [_gloss {ru{t лосось}}]
+     {is Fish Product}}
+
+}

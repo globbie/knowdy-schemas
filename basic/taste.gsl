@@ -1,11 +1,19 @@
 {schema knd
 
 {!class Taste
-    [_gloss {ru {t вкусовое восприятие}}]
+        [_gloss {ru {t вкусовое восприятие}}]
     {is Sensory Object}}
 
 {!class Plain Taste
-    [_gloss {ru {t пресный вкус}}]
+        [_gloss {ru {t пресный вкус}}]
+    {is Taste}}
+
+{!class Pleasant Taste
+        [_gloss {ru {t приятный вкус}}]
+    {is Taste}}
+
+{!class Unpleasant Taste
+        [_gloss {ru {t неприятный вкус}}]
     {is Taste}}
 
 {!class Sweet Taste
@@ -17,7 +25,11 @@
     {is Taste}}
 
 {!class Hot Taste
-    [_gloss {ru {t острое}}]
+    [_gloss {ru {t острый вкус}}]
+    {is Taste}}
+
+{!class Bitter Taste
+    [_gloss {ru {t горький вкус}}]
     {is Taste}}
 
 {!class Sour Taste

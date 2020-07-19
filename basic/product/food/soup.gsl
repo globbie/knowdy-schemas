@@ -1,0 +1,11 @@
+{schema knd-basic
+
+{!class Soup
+        [_gloss {ru {t суп}}]
+    {is Food Product}}
+
+{!class Borscht
+        [_gloss {ru {t борщ}}]
+    {is Soup}}
+
+}

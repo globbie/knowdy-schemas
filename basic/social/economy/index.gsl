@@ -1,0 +1,19 @@
+{schema knd-basic
+
+{!class  Market #place
+         [_gloss {ru {t рынок, место общественной торговли}}]
+    {is  Abstraction}}
+
+{!class  Market #economy
+         [_gloss {ru {t рыночная экономика}}]
+    {is  Activity}}
+
+{!class  Price
+         [_gloss {ru {t цена товара}}]
+    {is  Measure}}
+
+{!class  Low Price
+         [_gloss {ru {t низкая, более выгодная цена}}]
+    {is  Price}}
+
+}

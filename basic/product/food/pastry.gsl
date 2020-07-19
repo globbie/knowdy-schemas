@@ -1,0 +1,24 @@
+{schema knd-basic
+
+{!class Pastry
+        [_gloss {ru {t мучная выпечка}}]
+    {is Baked Food Product}}
+
+{!class Pie
+        [_gloss {ru {t пирог}}]
+    {is Pastry}
+    {is Container}
+    {inner stuffing {c Food Product Stuffing}}}
+
+{!proc make Pie
+         [_gloss {ru {t приготовление пирога}}]
+         {is Baking}
+         {effect Pie}
+         [arg    {body      {_c Dough}}
+                 {stuffing  {_c Food Product Stuffing}}]}
+
+{!class Cake
+        [_gloss {ru {t торт}}]
+    {is Pastry}}
+
+}

@@ -1,0 +1,56 @@
+
+{!class Green apples
+    {is Fruit 
+        [nutr {USDA
+            {energy 42}
+            {carbs 9.8}
+            {fats 0.1}
+            {protein 0.4}
+        }]
+        {img 70}}
+    [_gloss {de {t Яблоки зеленые}}
+        {en {t Green apples}}
+        {et {t Rohelised õunad}}
+        {he {t תפוחי עץ זנים ירוקים}}
+        {lt {t Obuoliai}}
+        {lv {t Zaļie āboli}}
+        {ru {t Яблоки зеленые}}]
+}
+
+
+{!class Apples Granny Smith
+    {is Fruit 
+        [nutr {USDA
+            {energy 49}
+            {carbs 11.6}
+            {fats 0.1}
+            {protein 0.4}
+        }]
+    [_gloss {de {t Äpfel Granny Smith}}
+        {en {t Apples Granny Smith}}
+        {he {t תפוחים}}
+        {ru {t Яблоки Гренни смит}}]
+}
+
+
+{!class Plum / Californian
+    {is Fruit 
+        [nutr {USDA
+            {energy 276}
+            {carbs 65.7}
+            {fats 0.1}
+            {protein 2}
+        }]
+        [_gloss {ru {t Слива калифорнийская}}]
+}
+
+
+{!class Dried apples
+    [_gloss {ru {t Яблоко сушеное}}]
+    {is Fruit
+        [nutr {USDA
+            {energy 253}
+            {carbs 59}
+            {fats 0.1}
+            {protein 2.2}
+        }] }}

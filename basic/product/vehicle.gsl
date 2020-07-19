@@ -1,0 +1,45 @@
+{schema knd-basic
+
+{!class Vehicle
+        [_gloss {ru {t транспортное средство}}]
+     {is Solid State Material Product}}
+
+{!class Road Vehicle
+        [_gloss {ru {t транспорт для передвижения по дорогам}}]
+     {is Vehicle}}
+
+{!class Railroad Vehicle
+        [_gloss {ru {t транспорт для передвижения по рельсам}}]
+     {is Vehicle}}
+
+{!class Monorail Vehicle
+        [_gloss {ru {t монорельсовый транспорт}}]
+     {is Vehicle}}
+
+{!class Aerial Lift
+        [_gloss {ru    {t подвесной транспорт}}
+                {en_UK {t cable car}}]
+     {is Vehicle}}
+
+{!class Water Vehicle
+        [_gloss {ru {t транспорт для передвижения по воде}}]
+     {is Vehicle}}
+
+{!class Aircraft Vehicle
+        [_gloss {ru {t транспорт для передвижения по воздуху}}]
+     {is Vehicle}}
+
+{!class Spacecraft Vehicle
+        [_gloss {ru {t космический транспорт}}]
+     {is Vehicle}}
+
+{!class Automobile
+        [_gloss {ru {t автомобиль}}]
+     {is Road Vehicle}}
+
+{!class Bicycle
+        [_gloss {ru {t велосипед}}]
+     {is Road Vehicle}}
+
+
+}

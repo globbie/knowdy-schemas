@@ -1,11 +1,11 @@
 {schema knd-basic
 
 {!class Spatial Location
-    [_gloss {ru {t пространственное положение}}]
+        [_gloss {ru {t пространственное положение}}]
     {is Abstraction}}
 
 {!class 3D Spatial Location
-    [_gloss {ru {t локализация физического тела в пространстве}}]
+        [_gloss {ru {t локализация физического тела в пространстве}}]
     {is Spatial Location}
     {ref origin {c 3D Spatial Location}}
     {num x}
@@ -13,7 +13,7 @@
     {num z}}
 
 {!class Substance Quantity
-    [_gloss {ru {t количественная характеристика вещества}}]
+        [_gloss {ru {t количественная характеристика вещества}}]
     {is Quantity}
     {num mass}
     {ref unitref {c Mass Measure Unit}}}
@@ -22,6 +22,31 @@
     [_gloss {ru {t количественная характеристика счетных объектов}}]
     {is Quantity}
     {num count} }
+
+{!class Physical Aggregate State
+        [_gloss {ru {t агрегатное состояние вещества}}]
+    {is Abstraction}}
+
+{!class Liquid State
+        [_gloss {ru {t жидкое состояние вещества}}]
+    {is Physical Aggregate State}}
+
+{!class Solid State
+        [_gloss {ru {t твердое состояние вещества}}]
+    {is Physical Aggregate State}}
+
+{!class Gas State
+        [_gloss {ru {t газообразное состояние вещества}}]
+    {is Physical Aggregate State}}
+
+{!class Volatile Gas State
+        [_gloss {ru {t летучее газообразное состояние}}
+                {en {t easily evaporated gas state}}]
+    {is Gas State}}
+
+{!class Plasma State
+        [_gloss {ru {t плазменное состояние вещества}}]
+    {is Physical Aggregate State}}
 
 {!class Physical Mass Quantity
     [_gloss {ru {t масса физического тела}}]
@@ -36,7 +61,7 @@
 {-- {proc Compute Physical Mass
     [_gloss {ru {t расчет физической массы объекта}}]
     {result {c Substance Quantity}}
-    [arg {obj  {c Physical Object}}
+    [arg  {obj  {c Physical Matter}}
           {q    {c Quantity}}]
     {switch q
             {base Substance Quantity

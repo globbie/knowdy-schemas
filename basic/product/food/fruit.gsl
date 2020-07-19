@@ -1,0 +1,281 @@
+{schema knd-basic
+
+{!class Apple
+        [_gloss {ru {t яблоко}}]
+    {is Fruit
+        {mass-avg 125}
+        [nutr {USDA
+            {energy 43}
+            {carbs 10.1}
+            {fat 0.1}
+            {protein 0.4}
+        }]}}
+
+{!class Apricot
+        [_gloss {ru {t абрикос}}]
+    {is Fruit 
+        {mass-avg 40}
+        [nutr {USDA
+            {energy 41}
+            {carbs 9}
+            {fat 0.1}
+            {protein 0.9}
+        }]}}
+
+{!class Avocado
+        [_gloss {ru {t авокадо}}]
+    {is Fruit 
+        {mass-avg 180}
+        [nutr {USDA
+            {energy 148}
+            {carbs 1.8}
+            {fat 14.7}
+            {protein 2}
+        }]}}
+
+{!class Banana
+        [_gloss {ru {t банан}}]
+    {is Fruit
+        {mass-avg 146}
+        [nutr {USDA
+            {energy 94}
+            {carbs 21.8}
+            {fat 0.1}
+            {protein 1.5}
+        }]}}
+
+{!class Grapefruit
+    [_gloss {ru {t грейпфрут}}]
+    {is Fruit
+        {mass-avg 300}
+        [nutr {USDA
+            {energy 42}
+            {carbs 11}
+            {fat 0.1}
+            {protein 0.8}
+        }] }}
+
+{!class Grapes
+        [_gloss {ru {t Виноград}}]
+    {is Fruit 
+        [nutr {USDA
+            {energy 69}
+            {carbs 17.2}
+            {fat 0.16}
+            {protein 0.72}
+        }] }}
+
+{!class Guava
+        [_gloss {ru {t Гуава}}]
+    {is Fruit 
+        [nutr {USDA
+            {energy 68}
+            {carbs 8.9}
+            {fat 1.0}
+            {protein 2.6}
+        }]}}
+
+{!class Lemon
+    [_gloss {ru {t Лимон}}]
+    {is Fruit 
+        {mass-avg 100}
+        [nutr {USDA
+            {energy 18}
+            {carbs 3}
+            {fat 0.1}
+            {protein 0.9}
+        }] }}
+
+{!class Kiwi
+    [_gloss{ru {t Киви}}]
+    {is Fruit 
+        {mass-avg 85}
+        [nutr {USDA
+            {energy 48}
+            {carbs 8.1}
+            {fat 0.5}
+            {protein 0.8}
+        }]}}
+
+{!class Lime
+    [_gloss {ru {t Лайм}}]
+    {is Fruit 
+        {mass-avg 70}
+        [nutr {USDA
+            {energy 20}
+            {carbs 4}
+            {fat 0.1}
+            {protein 0.8}
+        }]}}
+
+{!class Mandarine
+    [_gloss {ru {t Мандарин}}]
+    {is Fruit
+        {mass-avg 140}
+        [nutr {USDA
+            {energy 33}
+            {carbs 7.5}
+            {fat 0.2}
+            {protein 0.8}
+        }]}}
+
+{!class Mango
+    [_gloss {ru {t Манго}}]
+    {is Fruit 
+        [nutr {USDA
+            {energy 60}
+            {carbs 15}
+            {fat 0.4}
+            {protein 0.8}
+        }] }}
+
+{!class Melon
+        [_gloss {ru {t Дыня}}]
+    {is Fruit 
+        {mass-avg 1000}
+        [nutr {USDA
+            {energy 38}
+            {carbs 9.1}
+            {fat 0}
+            {protein 0.6}
+        }] }}
+
+{!class Nectarine
+        [_gloss {ru {t Нектарин}}]
+    {is Fruit 
+        [nutr {USDA
+            {energy 48}
+            {carbs 11.8}
+            {fat 0.2}
+            {protein 0.9}
+        }]}}
+
+{!class Orange
+    [_gloss {ru {t апельсин}}]
+    {is Fruit 
+        {mass-avg 150}
+        [nutr {USDA
+            {energy 38}
+            {carbs 8.1}
+            {fat 0.2}
+            {protein 0.9}
+        }]}}
+
+{!class Orange pulp
+    [_gloss {ru {t мякоть апельсина}}]
+    {is Orange
+        [nutr {USDA
+            {energy 55}
+            {carbs 12.5}
+            {fat 0.2}
+            {protein 0.9}
+        }]}}
+
+{!class Peach
+        [_gloss {ru {t Персик}}]
+    {is Fruit 
+        {mass-avg 250}
+        [nutr {USDA
+            {energy 43}
+            {carbs 9.5}
+            {fat 0.1}
+            {protein 0.9}
+        }]}}
+
+{!class Pear
+    [_gloss {ru {t Груша}}]
+    {is Fruit 
+        {mass-avg 120}
+        [nutr {USDA
+            {energy 42}
+            {carbs 9.5}
+            {fat 0.3}
+            {protein 0.4}
+        }] }}
+
+{!class Pineapple
+    [_gloss {ru {t ананас}}]
+    {is Fruit
+        {mass-avg 1000}
+        [nutr {USDA
+            {energy 57}
+            {carbs 13.5}
+            {fat 0.1}
+            {protein 0.5}
+        }]}}
+
+{!class Pomegranate
+        [_gloss {ru {t Гранат}}]
+    {is Fruit 
+        [nutr {USDA
+            {energy 83}
+            {carbs 19}
+            {fat 1.2}
+            {protein 1.7}
+        }] }}
+
+{!class Quince
+        [_gloss {ru {t Айва}}]
+    {is Fruit 
+        [nutr {USDA
+            {energy 40}
+            {carbs 9.8}
+            {fat 0.5}
+            {protein 0.6}
+        }] }}
+
+{!class Physalis
+    [_gloss  {ru {t Физалис}}]
+    {is Berries
+        [nutr {USDA
+            {energy 32}
+            {carbs 3.9}
+            {fat 1.0}
+            {protein 1.0}
+        }]
+        {img 70}}
+}
+
+{!class Plum
+    [_gloss {ru {t Слива}}]
+    {is Fruit 
+        [nutr {USDA
+            {energy 42}
+            {carbs 9.6}
+            {fat 0.3}
+            {protein 0.8}
+        }] }}
+
+{!class Raisins
+        [_gloss {ru {t Изюм}}]
+    {is Dried fruit 
+        [nutr {USDA
+            {energy 262}
+            {carbs 66}
+            {fat 0}
+            {protein 1.8}
+        }] }}
+
+{!class Dried Apricots
+    [_gloss {ru {t Курага}}]
+    {is Dried fruit 
+        {mass-avg 8}
+        [nutr {USDA
+            {energy 228}
+            {carbs 51}
+            {fat 0.3}
+            {protein 5.2}
+        }] }}
+
+{!class Prunes
+    [_gloss {ru {t Чернослив}}]
+    {is Dried fruit 
+        {mass-avg 6}
+        [nutr {USDA
+            {energy 240}
+            {carbs 57.8}
+            {fat 0}
+            {protein 2.3}
+        }] }}
+
+}

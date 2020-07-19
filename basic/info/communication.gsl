@@ -3,14 +3,29 @@
 {!class Communication Activity
     {is Activity}}
 
+{!class Encoded Data
+        [_gloss {ru {t кодированная информация}}]
+    {is     Information}
+    {str    mimetype}
+    {bool   is-binary}
+    {cdata  body}}
+
 {!class Chat
     {is Communication Activity}}
 
+{!class Discourse Ref
+    {is Information}}
+
 {!class Message Author
-    {is Agent}}
+    {is Agent}
+    {is Discourse Ref}}
 
 {!class Message Addressee
-    {is Agent}}
+    {is Agent}
+    {is Discourse Ref}}
+
+{!class Message Ref Obj
+    {is Discourse Ref}}
 
 {!class Discourse Context
     {is Information}}
