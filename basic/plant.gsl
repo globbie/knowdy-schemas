@@ -4,4 +4,8 @@
         [_gloss {ru {t дерево}}]
     {is Plant}}
 
+{!class Edible Plant
+        [_gloss {ru {t съедобное растение}}]
+    {is Plant}}
+
 }
