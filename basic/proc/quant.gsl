@@ -1,0 +1,25 @@
+{schema knd-basic
+
+{-- образует упорядоченную линейную последовательность --}
+{!proc Quant Increment
+       [_gloss {ru {t операция инкремента, увеличения на 1}}]
+   {is Mental Process}
+       {-- effect seq {_c Number} --}
+       [arg {base   {_c Number}}
+            {result {_c Number}} ]}
+
+{!proc Quant Decrement
+       [_gloss {ru {t операция декремента, уменьшения на 1}}]
+   {is Mental Process}
+       {-- effect seq {_c Number} --}
+       [arg {base   {_c Number}}
+            {result {_c Number}} ]}
+
+{!proc Quant Addition
+       [_gloss {ru {t операция сложения}}]
+   {is Mental Process}
+       {-- effect sum {_c Number} --}
+       [arg {base     {_c Number}}
+            {addendum {_c Number}}]}
+
+}

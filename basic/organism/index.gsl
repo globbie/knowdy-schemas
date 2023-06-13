@@ -18,6 +18,10 @@
         [_gloss {ru {t волосы}}]
     {is Organic Object}}
 
+{!class Human Skin
+        [_gloss {ru {t кожа}}]
+    {is Organic Object}}
+
 {!class Human Teeth
         [_gloss {ru {t зубы}}]
     {is Organic Object}}

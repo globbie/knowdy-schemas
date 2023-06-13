@@ -1,4 +1,8 @@
 {include lang}
 {include network}
+{include software}
+{include hardware}
 {include communication}
+{include content}
 {include user}
+{include biometrics}

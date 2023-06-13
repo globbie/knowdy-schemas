@@ -5,12 +5,7 @@
 
 {!class Natural Language
     {is Communication System}
-    {-- inner ident {c Language Identity} --}
     {inner code {c Language Id Code} {t set}}}
-
-{-- class Language Identity
-    {is Information}
-    {inner code {c Language Id Code} {t set}} --}
 
 {!class Code Standard
     {is Information}

@@ -1,18 +1,26 @@
+{include timeflow}
 {include phase}
+
+{include sensory}
+{include mental}
+
+{include social}
+
 {include move}
+{include quant}
 
 {schema knd-basic
 
    {!proc Process
-       [_gloss {ru {t процесс как изменение реальности}}]}
+          [_gloss {ru {t процесс как изменение реальности}}]}
 
    {!proc Natural Process
-       [_gloss {ru {t естественный процесс}}]
-       {is Process}}
+          [_gloss {ru {t естественный процесс, без явного агента-каузатора}}]
+      {is Process}}
 
    {!proc Motion
           [_gloss {ru {t перемещение физического объекта в пространстве}}]
-      {is Process}
+      {is Natural Process}
       [arg {obj       {_c Physical Matter}}
            {targetLoc {_c Spatial Location}} ]
       [do {_move
@@ -20,93 +28,56 @@
              {where-to TargetLoc}} ]}
 
    {!proc Agent Driven Process
-          [_gloss {ru {t агентивный процесс}}]
+          [_gloss {ru {t агентивный процесс с участием каузатора}}]
       {is Process}
       [arg {agent {_c Agent}}]}
 
    {!proc Human Agent Driven Process
           [_gloss {ru {t процесс, инициируемый человеком}}]
-      {is Process}
-      [arg {agent {_c Human}}]}
+      {is Agent Driven Process
+          {agent Human}}}
 
    {!proc Agent Driven Obj Process
-          [_gloss {ru {t агентивный процесс воздействия на внешний объект}}]
+          [_gloss {ru {t агентивный процесс, направленный на внешний объект}}]
       {is Agent Driven Process}
-      [arg {agent {_c Agent}}
-           {obj   {_c Object}}]}
+      [arg {obj   {_c Object}}
+           {benef {_c Agent}}]}
 
    {!proc Human Agent Driven Obj Process
           [_gloss {ru {t процесс воздействия человека на внешний объект}}]
-      {is Agent Driven Obj Process}}
+      {is Agent Driven Obj Process}
+      {is Human Agent Driven Process}}
 
    {!proc Physical Impact Process
           [_gloss {ru {t процесс физического воздействия на объект}}]
-      {is Agent Driven Obj Process}
-      [arg {obj {_c Physical Matter}}]}
-
-   {!proc Mental Process
-          [_gloss {ru {t ментальный процесс}}]
-      {is Agent Driven Process}}
-
-   {!proc Mental Obj Process
-          [_gloss {ru {t ментальный процесс с внешним объектом}}]
-      {is Agent Driven Obj Process}}
-
-   {!proc Feel Necessity
-          [_gloss {ru {t осознавать потребность}}]
-      {is Mental Process}}
-
-   {!proc Have Material Possessions
-          [_gloss {ru {t владеть, обладать материальными ценностями}}]
-      {is Mental Process}}
-   {-- агент осознает, что только он может распоряжаться
-       определенными объектами внешнего мира
-       и что другие агенты должны быть согласны с этим --}
-
-{--   {!proc turn on Electric Device
-        [_gloss {ru {t включить электроустройство}}]
-	{is Agent Driven Process}
-        [arg
-            {device {_c Consumer Device}}]
-        {do activate interface
-            {interface {device {power-interface}}}}}
---}
-
- {--  {!proc activate interface
-          [_gloss {ru {t активировать интерфейс устройства}}]
-          {is Agent Driven Process}
-          [arg
-              {interface {_c Device Interface}}]
-          {do _physical_impact
-              {_obj {interface}}}}
---}
+      {is Agent Driven Obj Process
+          {obj Physical Matter}}}
 
     {!proc Creative Process
            [_gloss {ru {t созидательный процесс}}]
-           {is     Agent Driven Process}
+       {is Agent Driven Process}
            {effect Material Product}
            [arg    {resource {_c Material Resource}}
                    {method   {_c Information}}
-                   {instr    {_c Instrument}}]}
+                   {instr    {_c Tool}}]}
 
     {!proc change physical state
            [_gloss {ru {t процесс изменения физического состояния объекта}}]
-           {is     Physical Impact Process}
+       {is Physical Impact Process}
            {--effect {_state {obj}}--}
            [arg    {resource {_c Material Resource}}
-                   {instr    {_c Instrument}}]}
+                   {instr    {_c Tool}}]}
 
    {!proc add physical object
-       [_gloss {ru {t добавление физического объекта}}]
+          [_gloss {ru {t добавление физического объекта}}]
        {is Agent Driven Process}}
 
-   {!proc say
-          [_gloss {ru {t сказать}}]
-       {is Human Agent Driven Process}}
-
-   {!proc speak
-          [_gloss {ru {t говорить}}]
-       {is Human Agent Driven Process}}
-
-
+   {!class ProcLog
+       {is Information}
+       {str startAt}
+       {str pausedAt}
+       {str endAt}
+       {str agent}
+       {-- proc-ref proc {_proc Process} --}
+   }
 }

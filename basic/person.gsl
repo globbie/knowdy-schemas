@@ -4,7 +4,7 @@
         [_gloss {ru {t человек}}]
     {is Agent}
     {is Human Organism}
-    {inner biometrics {c Personal Biometrics}}}
+    {inner biometrics {c Personal Biometrics} {idx}}}
 
 {!class Gender
         [_gloss {ru {t гендерная принадлежность}}]
@@ -57,18 +57,19 @@
 {!class Personal Biometrics
         [_gloss {ru {t биометрические данные}}]
     {is Abstraction}
+    {ref  system {c Biometrics System} {impl}}
     {date birth-date}
-    {num age}
-    {---    {proc
-              {do _subtract}} ---}
-    {ref sex {c Sex}}}
+    {num  age}
+    {ref  sex {c Sex} {idx}}}
 
 {!class Female Human
     {is Human
-        {biometrics {sex Female Sex}}}}
+        {biometrics Legacy Biometrics
+                    {sex Female Sex}}}}
 
 {!class Male Human
     {is Human
-        {biometrics {sex Male Sex}}}}
+        {biometrics Legacy Biometrics
+                    {sex Male Sex}}}}
 
 }

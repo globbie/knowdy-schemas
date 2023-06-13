@@ -20,7 +20,7 @@
         [_gloss {ru {t фаза прерванного процесса (без возможности продолжения)}}]
     {is Proc Phase View}}
 
-{!class Finalized Proc Phase View
+{!class Completed Proc Phase View
         [_gloss {ru {t фаза результативного завершения процесса}}]
     {is Proc Phase View}}
 

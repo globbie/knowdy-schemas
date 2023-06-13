@@ -1,0 +1,12 @@
+{schema knd-basic
+
+   {!proc Communication Process
+          [_gloss {ru {t осуществлять коммуникацию}}]
+      {is Social Process}
+      [arg {msg   {_c Situation}} ] }
+
+   {!proc Speaking Process
+          [_gloss {ru {t говорить}}]
+      {is  Communication Process}}
+
+}

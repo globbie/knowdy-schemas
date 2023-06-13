@@ -1,0 +1,10 @@
+{schema knd-basic
+
+{!class Biometrics System
+    {is System}}
+
+{!class Legacy Biometrics
+    {is Biometrics System
+        {name LB}}}
+
+}

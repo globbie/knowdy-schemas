@@ -2,35 +2,63 @@
 
 {!class User
         [_gloss {ru {t пользователь сервиса}}]
-    {is Agent}
+    {is Agent
+        {_pred S1
+               {class Info Service {!var service}}
+               {do Make Use
+                   {subj _this}
+                   {obj  service}}}
+    }
     {inner contacts   {c User Contacts}}
     {inner ident      {c User Ident}}
-    {-- inner role    {c User Role} {t set {uniq service}} --} }
+    {ref   device     {c Hardware Device}  {t set}}
+    {inner soft       {c Software Stack}   {t set}}
+    {inner ip-allow   {c IP Address v4}    {t set}}
+    {str   lang                            {t set}} }
+
+{!class Observer
+        [_gloss {ru {t роль наблюдателя}}]
+    {is User}}
+
+{!class Contributor
+        [_gloss {ru {t роль автора}}]
+    {is User}}
+
+{!class Reviewer
+        [_gloss {ru {t роль рецензента}}]
+    {is User}}
+
+{!class Expert
+        [_gloss {ru {t роль эксперта}}]
+    {is User}}
 
 {!class User Ident
         [_gloss {ru {t идентификация пользователя}}]
     {is Information}
-    {inner cred   {c User Credentials} {t set}}
+    {inner cred   {c User Credentials}}
     {ref   gender {c Gender}}
     {inner name   {c Personal Name}}}
 
 {!class User Credentials
-        [_gloss {ru {t данные учетной записи}}]
+        [_gloss {ru {t аутентификационные данные учетной записи}}]
     {is Information}
     {str service}
     {str login}
-    {str token [_gloss {ru {t постоянный ключ доступа к ресурсу}}]}
-    {str salt  [_gloss {ru {t случайные символы для усложнения пароля}}]}
-    {str hash-method [_gloss {ru {t алгоритм вычисления хеша}}]}
-    {bin hash  [_gloss {ru {t вычисленный хеш от пароля}}]}}
+    {str token
+         [_gloss {ru {t постоянный ключ доступа к ресурсу}}]
+         {impl}}
+    {str salt
+         [_gloss {ru {t случайные символы для усложнения пароля}}]}
+    {str hash-method
+         [_gloss {ru {t алгоритм вычисления хеша}}]}
+    {bin hash
+         [_gloss {ru {t вычисленный хеш от пароля}}]}}
 
 {!class User Contacts
         [_gloss {ru {t контактные данные пользователя}}]
     {is Information}
-    {--inner email    {c Email Address} {t set}--}
-    {str email}
-    {inner geo-addr {c Geospatial Address} {t set}}
-    {inner phone    {c Phone Contacts} {t set}}}
-
-
+    {inner email      {c Email Address}      {t set}}
+    {inner messenger  {c Messenger Account}  {t set}}
+    {inner geo-addr   {c Geospatial Address} {t set}}
+    {inner phone      {c Phone Contacts}     {t set}} }
 }

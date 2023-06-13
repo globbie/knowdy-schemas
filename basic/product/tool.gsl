@@ -1,0 +1,33 @@
+{schema knd-basic
+
+{!class Tool
+        [_gloss {ru {t приспособление}}]
+     {is Solid State Material Product
+         {_pred S1
+               {class Human {!var agent}}
+               {do Make Use
+                   {subj agent}
+                   {obj  _this}}}
+      }}
+
+{!class Visual Tool
+        [_gloss {ru {t визуальное приспособление}}]
+     {is Tool}}
+
+{!class Pencil
+        [_gloss {ru {t карандаш}}]
+    {is Tool}}
+
+{!class Oven
+        [_gloss {ru {t духовой шкаф}}]
+    {is Tool}}
+
+{!class Magnifying Lens
+        [_gloss {ru {t увеличительная линза}}]
+    {is Visual Tool}}
+
+{!class Binoculars
+        [_gloss {ru {t бинокль}}]
+    {is Visual Tool}}
+
+}

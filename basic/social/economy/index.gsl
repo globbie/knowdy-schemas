@@ -16,4 +16,12 @@
          [_gloss {ru {t низкая, более выгодная цена}}]
     {is  Price}}
 
+{!class  Financial Asset
+         [_gloss {ru {t финансовый актив}}]
+     {is Abstraction}}
+
+{!class  Profit
+         [_gloss {ru {t доход, прибыль}}]
+    {is  Financial Asset}}
+
 }

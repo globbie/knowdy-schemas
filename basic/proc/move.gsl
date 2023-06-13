@@ -1,22 +1,25 @@
 {schema knd-basic
 
 {!proc Transportation Process
-      [_gloss {ru {t процесс активного перемещения физического объекта}}]
-      {is  Physical Impact Process}
-      [arg {Obj       {_c Physical Matter}}
-           {TargetLoc {_c Spatial Location}} ]
-      [do {_move
-             {obj      TObj}
-             {where-to TargetLoc}} ]}
+       [_gloss {ru {t процесс активного перемещения физического объекта}}]
+   {is Physical Impact Process
+       {obj Solid Physical Object}}
+       [do {_move
+                {obj      TObj}
+                {where-to TargetLoc}} ]}
 
 {!proc Throw
-   {is Transportation Process}}
+   {is Transportation Process
+       {agent Human}}}
 
 {!proc Throw #once
    {is Throw}}
 
-
 {!proc Drop
+   {is Transportation Process}}
+
+{!proc Manual Carrying
+       [_gloss {ru {t перенос груза на руках}}]
    {is Transportation Process}}
 
 }

@@ -1,0 +1,19 @@
+{include communicate}
+
+{schema knd-basic
+
+   {!proc Social Process
+          [_gloss {ru {t осуществлять социальное взаимодействие}}]
+      {is Human Agent Driven Process} }
+
+   {!proc Provide Help
+          [_gloss {ru {t  помогать}}]
+      {is Social Process}  }
+
+   {!proc Planning Process
+          [_gloss {ru {t  планирование}}]
+      {is Social Process}
+      [arg {situation  {_c Situation}}
+           {timeFrame  {_c Time Line View}} ]}
+
+}

@@ -1,0 +1,18 @@
+{schema knd-basic
+
+   {!proc Mental Process
+          [_gloss {ru {t ментальный процесс}}]
+      {is Agent Driven Process}}
+
+   {!proc Mental Obj Process
+          [_gloss {ru {t ментальный процесс с внешним объектом}}]
+      {is Agent Driven Obj Process}}
+
+   {!proc Feel Necessity
+          [_gloss {ru {t осознавать потребность}}]
+      {is Mental Process}
+      [arg {target  {_c Situation}}] }
+
+
+
+}

@@ -1,4 +1,4 @@
-{schema knd-basic
+{schema knd
 
 {!class Communication Activity
     {is Activity}}
@@ -11,6 +11,9 @@
     {cdata  body}}
 
 {!class Chat
+    {is Communication Activity}}
+
+{!class Discussion
     {is Communication Activity}}
 
 {!class Discourse Ref
@@ -32,15 +35,20 @@
 
 {!class Message
     {is Information}
-    {ref author    {c Message Author}}
-    {ref addressee {c Message Addressee}}
-    {ref stimulus  {c Message}}
-    {ref activity  {c Communication Activity}}
+    {ref  author    {c Message Author}}
+    {ref  addressee {c Message Addressee}}
+    {ref  stimulus  {c Message}}
+    {ref  activity  {c Communication Activity}}
     {text subj {idx}}
     {text body {idx}} }
 
 {!class Chat Message
     {is Message
         {activity Chat}}}
+
+{!class Comment
+    {is Message
+        {activity Discussion}}
+    {ref topic {c Concept}}}
 
 }

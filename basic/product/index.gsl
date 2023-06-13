@@ -1,11 +1,14 @@
 {include building}
+{include vehicle}
+
 {include clothing}
 {include container}
+{include tool}
+{include media}
 
 {include food/index}
 
-{include toys}
-{include vehicle}
+{include game}
 
 {schema knd-basic
 
@@ -14,6 +17,11 @@
     {-- [_summary {ru {t результат целенаправленной деятельности Агента,
                       пригодный для решения какой-либо задачи}}] --}
     {str purpose}}
+
+{!class Intellectual Product
+        [_gloss {ru {t продукт интеллектуального труда}}]
+    {is Information}
+    {is Product of Labor}}
 
 {!class Material Product
         [_gloss {ru {t изделие}}]
@@ -26,20 +34,14 @@
     {is Solid Physical Object}
     {is Material Product}}
 
-{!class Instrument
-        [_gloss {ru {t инструмент}}]
-     {is Solid State Material Product}}
+{-- part - whole
+{!class Solid Structure
+        [_gloss {ru {t структура физического изделия}}]
+    {is Solid Physical Object}}
+--}
 
 {!class Material Resource
         [_gloss {ru {t материальный ресурс}}]
     {is Material Product}}
-
-{!class Pencil
-        [_gloss {ru {t карандаш}}]
-    {is Instrument}}
-
-{!class Oven
-        [_gloss {ru {t духовой шкаф}}]
-    {is Instrument}}
 
 }

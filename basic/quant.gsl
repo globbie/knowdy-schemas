@@ -24,60 +24,108 @@
         [_gloss {ru {t единственное количество}}]
     {is Quantity}}
 
+{-- абсолютная метрика количества, использующая единицы измерения,
+    в отличие от метрик относительных (много/мало) --}
 {!class Number
-    [_gloss {ru {t число}}]
-    {is Quantity}}
+        [_gloss {ru {t число}}]
+    {is Quantity}
+    {rel incr
+         {proc Quant Increment
+               {impl-arg base}
+               {self     result}} }}
+
+{!class Normal Number
+        [_gloss {ru {t нормализованное число}}]
+    {is Number}
+    {num base-ten-position}
+    {num numval}}
 
 {!class Number Zero
-    [_gloss {ru {t число 0}}]
-    {is Number}}
+        [_gloss {ru {t число 0}}]
+    {is Normal Number
+        {numval 0}}}
 
 {!class Number One
-    [_gloss {ru {t число 1}}]
-    {is Number}}
+        [_gloss {ru {t число 1}}]
+    {is Normal Number
+        {base-ten-position 1}
+        {numval 1}}}
 
 {!class Number Two
-    [_gloss {ru {t число 2}}]
-    {is Number}}
+        [_gloss {ru {t число 2}}]
+    {is Normal Number
+        {incr Number One}
+        {numval 2}}}
 
 {!class Number Three
-    [_gloss {ru {t число 3}}]
-    {is Number}}
+        [_gloss {ru {t число 3}}]
+    {is Normal Number
+        {incr Number Two}
+        {numval 3}}}
 
 {!class Number Four
-    [_gloss {ru {t число 4}}]
-    {is Number}}
+        [_gloss {ru {t число 4}}]
+    {is Normal Number
+        {incr Number Three}
+        {numval 4}}}
 
 {!class Number Five
-    [_gloss {ru {t число 5}}]
-    {is Number}}
+        [_gloss {ru {t число 5}}]
+    {is Normal Number
+        {numval 5}}}
 
 {!class Number Six
-    [_gloss {ru {t число 6}}]
-    {is Number}}
+        [_gloss {ru {t число 6}}]
+    {is Normal Number
+        {numval 6}}}
 
 {!class Number Seven
-    [_gloss {ru {t число 7}}]
-    {is Number}}
+        [_gloss {ru {t число 7}}]
+    {is Normal Number
+        {numval 7}}}
 
 {!class Number Eight
-    [_gloss {ru {t число 8}}]
-    {is Number}}
+        [_gloss {ru {t число 8}}]
+    {is Normal Number
+        {numval 8}}}
 
 {!class Number Nine
-    [_gloss {ru {t число 9}}]
-    {is Number}}
+        [_gloss {ru {t число 9}}]
+    {is Normal Number
+        {numval 9}}}
 
 {!class Number Ten
-    [_gloss {ru {t число 10}}]
-    {is Number}}
+        [_gloss {ru {t десять, число 10}}]
+    {is Normal Number
+        {base-ten-position 2}
+        {numval 10}}}
 
 {!class Number Eleven
-    [_gloss {ru {t число 11}}]
-    {is Number}}
+        [_gloss {ru {t число 11}}]
+    {is Normal Number}}
 
 {!class Number Twelve
-    [_gloss {ru {t число 12}}]
-    {is Number}}
+        [_gloss {ru {t число 12}}]
+    {is Normal Number}}
+
+{!class Number Hundred
+        [_gloss {ru {t сто = число 100}}]
+    {is Normal Number
+        {base-ten-position 3}}}
+
+{!class Number Thousand
+        [_gloss {ru {t тысяча = число 1000}}]
+    {is Normal Number
+        {base-ten-position 4}}}
+
+{!class Number Million
+        [_gloss {ru {t миллион = число 1,000,000}}]
+    {is Normal Number
+        {base-ten-position 7}}}
+
+{!class Number Billion
+        [_gloss {ru {t  миллиард = число 1,000,000,000}}]
+    {is Normal Number
+        {base-ten-position 10}}}
 
 }

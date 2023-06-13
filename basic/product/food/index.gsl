@@ -17,6 +17,7 @@
 {!class Food Product
     {is Material Product}
     {is Edible Object}
+    {proc-ref prepar {proc Food Processing}}
     {inner    nutr   {c Nutritional Value} {t set}}
     {ref      taste  {c Taste}}}
 
@@ -48,7 +49,8 @@
 {!class Nutritional Value
     [_gloss {ru {t пищевая ценность}}]
     {is Information}
-    {ref source {c Authoritative Source} {impl}}
+    {ref source {c Authoritative Source} {impl} {req}}
+    {proc-ref prepar {proc Food Processing}}
     {num energy}
     {float carbs}
     {float fat}
@@ -62,7 +64,8 @@
 
 {!class Processed Food Product
       [_gloss {ru {t пищевой продукт}}]
-        {is Food Product}}
+        {is Food Product
+            {prepar Food Processing}}}
 
 {!class Solid State Food Product
       [_gloss {ru {t твердый пищевой продукт}}]
@@ -80,7 +83,8 @@
 {!class Food Product Stuffing
         [_gloss {ru {t начинка для закрытых блюд}}]
     {is Food Product
-        {purpose  provide main ingredient to a dish}}}
+        {purpose  provide main ingredient to a dish}}
+    {-- def {class Food Product {inst FP}}--} }
 
 {!proc make Food Product Stuffing
        [_gloss {ru {t приготовление начинки}}]
@@ -129,6 +133,7 @@
     [_gloss {ru {t Сухофрукты}}]
     {is Food Product 
         [nutr {USDA
+            {prepar Food Processing}
             {energy 359}
             {carbs 83}
             {fat 2.7}
