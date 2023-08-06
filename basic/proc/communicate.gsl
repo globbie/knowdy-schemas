@@ -9,4 +9,8 @@
           [_gloss {ru {t говорить}}]
       {is  Communication Process}}
 
+   {!proc Challenge Smb
+          [_gloss {ru {t предлагать состязание}}]
+      {is Communication Process}  }
+
 }

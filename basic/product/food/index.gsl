@@ -63,14 +63,13 @@
     {is Authoritative Source}}
 
 {!class Processed Food Product
-      [_gloss {ru {t пищевой продукт}}]
+        [_gloss {ru {t пищевой продукт}}]
         {is Food Product
             {prepar Food Processing}}}
 
 {!class Solid State Food Product
       [_gloss {ru {t твердый пищевой продукт}}]
-        {is Food Product}
-        {is Solid Physical Object}}
+        {is Food Product}}
 
 {!class Liquid State Food Product
         [_gloss {ru {t жидкий пищевой продукт}}]

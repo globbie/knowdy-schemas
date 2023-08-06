@@ -16,6 +16,19 @@
         [_gloss {ru {t будущее}}]
     {is Time Line View}}
 
+{!class Today
+        [_gloss {ru {t текущий день в момент речи}}]
+    {is Present Moment}}
+
+{!class Yestersday
+        [_gloss {ru {t вчера, предыдущий день от момента речи}}]
+    {is Past}}
+
+{!class Tomorrow
+        [_gloss {ru {t завтра, следующий день от момента речи}}]
+    {is Future}}
+
+
 {!class Calendar Date
         [_gloss {ru {t календарная дата}}]
     {is Information}

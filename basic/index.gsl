@@ -69,7 +69,7 @@
     {inner  aggr-state      {c Physical Aggregate State}}}
 
 {!class Solid Physical Object
-    [_gloss {ru {t твердый физический объект}}]
+        [_gloss {ru {t твердый физический объект}}]
     {is     Physical Matter}
     {ref    flatshape {c 2D Shape}}
     {ref    shape     {c 3D Shape}}
@@ -123,18 +123,18 @@
 
 {!class Organic Object
         [_gloss {ru {t органический объект}}]
-    {is Physical Matter}}
+    {is Solid Physical Object}}
 
 {!class Eukaryote
     {is Organic Object}}
 
 {!class Plant
-    [_gloss {ru {t растение}}]
+       [_gloss {ru {t растение}}]
     {is Eukaryote}}
 
 {!class Fungi
-    [_gloss {ru {t гриб}}]
-    {is Eukaryote}}
+        [_gloss {ru {t гриб}}]
+    {is Organic Object}}
 
 {!class Group
         [_gloss {ru {t группа объектов}}]

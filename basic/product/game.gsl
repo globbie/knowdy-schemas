@@ -1,11 +1,11 @@
 {schema knd-basic
 
 {!class Gaming Object
-    [_gloss {ru {t игровой объект}}]
+        [_gloss {ru {t игровой объект}}]
     {is Material Product}}
 
-{!class Ball
-    [_gloss {ru {t мяч}}]
-    {is Gaming Object}}
+{!class Gaming Ball
+        [_gloss {ru {t мяч для игр}}]
+    {is Solid State Material Product}}
 
 }
