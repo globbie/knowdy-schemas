@@ -13,7 +13,8 @@
        {agent Human}}}
 
 {!proc Throw #once
-   {is Throw}}
+       [_gloss {ru {t однократное бросание предмета}}]
+    {is Throw}}
 
 {!proc Drop
    {is Transportation Process}}
