@@ -29,10 +29,10 @@
 {!class Number
         [_gloss {ru {t число}}]
     {is Quantity}
-    {rel incr
+    {rel incr-of
          {proc Quant Increment
-               {impl-arg base}
-               {self     result}} }}
+               {subj next}
+               {impl-arg base}} }}
 
 {!class Normal Number
         [_gloss {ru {t нормализованное число}}]
@@ -54,19 +54,19 @@
 {!class Number Two
         [_gloss {ru {t число 2}}]
     {is Normal Number
-        {incr Number One}
+        {incr-of Number One}
         {numval 2}}}
 
 {!class Number Three
         [_gloss {ru {t число 3}}]
     {is Normal Number
-        {incr Number Two}
+        {incr-of Number Two}
         {numval 3}}}
 
 {!class Number Four
         [_gloss {ru {t число 4}}]
     {is Normal Number
-        {incr Number Three}
+        {incr-of Number Three}
         {numval 4}}}
 
 {!class Number Five

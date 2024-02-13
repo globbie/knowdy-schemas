@@ -38,7 +38,7 @@
 
 {-- Agent vs Object / Me vs It --}
 {!class Agent
-        [_gloss {ru {t субъект}}]
+        [_gloss {ru {t деятель, субъект действия} {abbr ДЕЯТ}}]
     {is Concept}}
 
 {!class Object
@@ -63,17 +63,17 @@
         [_gloss {ru {t физическая материя}}]
     {is     Object}
     {str    img  {concise 1}}
-    {inner  color           {c Color}}
-    {inner  temperature     {c Absolute Temperature}}
-    {inner  temperature-rel {c Relative Temperature}}
-    {inner  aggr-state      {c Physical Aggregate State}}}
+    {inner  color           {cls Color}}
+    {inner  temperature     {cls Absolute Temperature}}
+    {inner  temperature-rel {cls Relative Temperature}}
+    {inner  aggr-state      {cls Physical Aggregate State}}}
 
 {!class Solid Physical Object
         [_gloss {ru {t твердый физический объект}}]
     {is     Physical Matter}
-    {ref    flatshape {c 2D Shape}}
-    {ref    shape     {c 3D Shape}}
-    {inner  location  {c Spatial Location}}
+    {ref    flatshape {cls 2D Shape}}
+    {ref    shape     {cls 3D Shape}}
+    {inner  location  {cls Spatial Location}}
     {str    img       {concise 1}}}
 
 {!class Physical Substance
@@ -115,7 +115,7 @@
 {!class Collection
     [_gloss {ru {t множество}}]
     {is Abstraction}
-    {ref unit-type {c Object}}}
+    {ref unit-type {cls Object}}}
 
 {!class Custom Class
     [_gloss {ru {t класс с произвольной семантикой}}]
@@ -150,8 +150,8 @@
 {!class  Activity
          [_gloss    {ru {t деятельность}}]
     {is  Abstraction}
-    {ref emotion {c Agent Emotion}}
-    {ref dynamics {c Change Dynamics}}}
+    {ref emotion  {cls Agent Emotion}}
+    {ref dynamics {cls Change Dynamics}}}
 
 {!class  Change Dynamics
          [_gloss    {ru {t динамика изменений состояния}}]

@@ -1,0 +1,29 @@
+{schema knd
+
+{-- отношения между объектами
+    как состояния вещей во времени,
+    определенные теми или иными событиями, фактами --}
+
+{!rel Social Relation}
+
+{!rel Biological Kinship
+  {is Social Relation}}
+
+{!rel Direct Biological Kinship
+      [gloss {ru {t прямое биологическое родство}}]
+  {is Biological Kinship}
+      [arg {mother  {_c Female Human}}
+           {father  {_c Male Human}}
+           {child   {_c Human Being}}]
+      
+}
+
+{!rel Parental Relation
+      [gloss {ru {t отношение родительской социальной опеки}}]
+  {is Social Relation}}
+
+{!rel Property Ownership
+  {is Social Relation}}
+
+
+}

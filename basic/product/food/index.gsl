@@ -24,7 +24,7 @@
 {!proc Food Processing
        [_gloss {ru {t изготовление пищевого продукта}}]
    {is Creative Process}
-   {effect Food Product}}
+   [effect {product {_c Food Product}}] }
 
 {!class Dish
         [_gloss {ru {t кулинарное блюдо}}]
@@ -38,13 +38,13 @@
 {!proc Cooking
        [_gloss {ru {t приготовление блюда}}]
    {is Creative Process}
-   {effect Dish}}
+   [effect {dish {_c  Dish}}]}
 
 {!proc Baking
        [_gloss {ru {t процесс выпекания}}]
    {is Cooking
        {-- instr Oven --}}
-   {effect Baked Food Product}}
+   [effect {product {_c Baked Food Product}}] }
 
 {!class Nutritional Value
     [_gloss {ru {t пищевая ценность}}]
@@ -88,7 +88,7 @@
 {!proc make Food Product Stuffing
        [_gloss {ru {t приготовление начинки}}]
    {is Food Processing}
-   {effect Food Product Stuffing}
+   [effect {stuffing {_c  Food Product Stuffing}}]
    [arg    {resource  {_c Edible Object}}]}
 
 {!class Nourishing Stuffing
@@ -104,7 +104,7 @@
 {!proc make Sweet Stuffing
        [_gloss {ru {t приготовление сладкой начинки}}]
    {is make Food Product Stuffing}
-   {effect Sweet Stuffing}
+   [effect {stuffing {_c  Sweet Stuffing}}]
    [arg    {aux-resource  {_c Sugar}}]}
 
 {!class Fruit Stuffing
@@ -115,7 +115,7 @@
 {!proc make Fruit Stuffing
        [_gloss {ru {t приготовление фруктовой начинки}}]
    {is make Sweet Stuffing}
-   {effect Fruit Stuffing}
+   [effect {stuffing {_c  Fruit Stuffing}}]
    [arg {resource {_c Fruit}}]}
 
 {!class Berry Stuffing
@@ -125,7 +125,7 @@
 {!proc make Berry Stuffing
        [_gloss {ru {t приготовление ягодной начинки}}]
    {is make Sweet Stuffing}
-   {effect Berry Stuffing}
+   [effect {stuffing {_c  Berry Stuffing}}]
    [arg {resource {_c Berries}}]}
 
 {!class Dried fruit
@@ -207,7 +207,7 @@
 {!proc Rye Flour Making
        [_gloss {ru {t приготовление ржаной муки}}]
    {is Baking}
-   {effect Rye Flour}
+   [effect {product {_c  Rye Flour}}]
    [arg {resource {_c Rye}}]}
 
 {!class Poultry
@@ -261,7 +261,7 @@
 {!proc make Dough
        [_gloss {ru {t приготовление теста}}]
    {is Food Processing}
-   {effect Dough}
+   [effect {dough {_c Dough}}]
    [arg {body  {_c Flour}}
         {water {_c Drinking Water}}]}
 

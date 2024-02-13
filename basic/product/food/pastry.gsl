@@ -11,11 +11,11 @@
     {inner stuffing {c Food Product Stuffing}}}
 
 {!proc make Pie
-         [_gloss {ru {t приготовление пирога}}]
-         {is Baking}
-         {effect Pie}
-         [arg    {body      {_c Dough}}
-                 {stuffing  {_c Food Product Stuffing}}]}
+       [_gloss {ru {t приготовление пирога}}]
+       {is Baking}
+       [effect {product   {_c Pie}}]
+       [arg    {body      {_c Dough}}
+               {stuffing  {_c Food Product Stuffing}}]}
 
 {!class Cake
         [_gloss {ru {t торт}}]

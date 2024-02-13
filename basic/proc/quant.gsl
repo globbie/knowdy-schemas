@@ -2,24 +2,26 @@
 
 {-- образует упорядоченную линейную последовательность --}
 {!proc Quant Increment
-       [_gloss {ru {t операция инкремента, увеличения на 1}}]
+       [_gloss {ru {t операция инкремента, увеличения на единицу}}]
    {is Mental Process}
        {-- effect seq {_c Number} --}
-       [arg {base   {_c Number}}
-            {result {_c Number}} ]}
+       [arg {base {_c Number}}
+            {next {_c Number}} ]}
 
-{!proc Quant Decrement
-       [_gloss {ru {t операция декремента, уменьшения на 1}}]
-   {is Mental Process}
+  {!proc Quant Decrement
+       [_gloss {ru {t операция декремента, уменьшения на единицу}}]
+    {is Mental Process}
        {-- effect seq {_c Number} --}
-       [arg {base   {_c Number}}
-            {result {_c Number}} ]}
+       [arg {base {_c Number}}
+            {next {_c Number}} ]
+  }
 
-{!proc Quant Addition
+  {!proc Quant Addition
        [_gloss {ru {t операция сложения}}]
-   {is Mental Process}
-       {-- effect sum {_c Number} --}
+     {is Mental Process}
        [arg {base     {_c Number}}
-            {addendum {_c Number}}]}
+            {addendum {_c Number}}]
+       [effect {sum  {_c Number}}]
+  }
 
 }

@@ -14,6 +14,10 @@
    {!proc Process
           [_gloss {ru {t процесс как изменение реальности}}]}
 
+   {!proc Stative Process
+          [_gloss {ru {t состояние вещей на определенный период времени}}]
+      {is Process}}
+
    {!proc Natural Process
           [_gloss {ru {t естественный процесс, без явного агента-каузатора}}]
       {is Process}}
@@ -56,7 +60,7 @@
     {!proc Creative Process
            [_gloss {ru {t созидательный процесс}}]
        {is Agent Driven Process}
-           {effect Material Product}
+           [effect {product {_c Material Product}}]
            [arg    {resource {_c Material Resource}}
                    {method   {_c Information}}
                    {instr    {_c Tool}}]}

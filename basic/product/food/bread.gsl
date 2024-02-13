@@ -7,7 +7,7 @@
 {!proc Bread Making
        [_gloss {ru {t приготовление хлеба}}]
    {is Baking}
-   {effect Bread}
+   [effect {product {_c Bread}}]
    [arg {resource {_c Flour}}]}
 
 {!class Rye Bread

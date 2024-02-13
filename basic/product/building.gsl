@@ -14,10 +14,11 @@
     {is Physical Structure
         {purpose Shelter}}
     {inner floor {c Building Floor}}
-    {ref located-at
-         [_gloss {ru {t расположено}}]
-         {inst-of Street}
-         {idx}}
+    {-- rel street-address
+         [_gloss {ru {t адресная регистрация по улице}}]
+         {proc Street Adressing
+               {subj property}}
+         {idx} --}
     {str adm-id}}
 
 {!class Building Floor

@@ -1,26 +1,36 @@
 {schema knd-basic
 
+{!class Geo Coords
+    {is Information}
+    {str name {impl}}
+    {str loc}}
+
 {!class City
         [_gloss {ru {t город}}]
     {is Geographical Region
         {-- definition --}}
-    {ref partof
+    {inner coords {c Geo Coords}}
+    }
+
+{-- ref partof
          [_gloss {ru {t входит в состав региона}}]
          {inst-of Country}
-         {idx} }}
+         {idx} --}
 
 {!class Russian City
         [_gloss {ru {t российский город}}]
     {is City
-        {partof Country {_inst Piter}}}}
+        {coords GPS}
+        {-- partof Country {_inst Piter}--} }}
 
 {!class Street
         [_gloss {ru {t улица}}]
     {is Geographical Region}
-    {ref partof
+    {-- ref partof
          [_gloss {ru {t входит в состав населенного пункта}}]
          {inst-of City}
-         {idx} }}
+         {idx}
+    --}}
 
 {!class Prospect
         [_gloss {ru {t проспект}}]
