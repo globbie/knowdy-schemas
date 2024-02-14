@@ -6,6 +6,7 @@
 {include physics}
 
 {-- sensors --}
+{include visual}
 {include color}
 {include taste}
 {include temperature}
