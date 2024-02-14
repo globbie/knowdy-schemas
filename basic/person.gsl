@@ -1,50 +1,50 @@
 {schema knd
 
 {!class Human
-        [_gloss {ru {t человек}}]
+        [gloss {ru {t человек}}]
     {is Agent}
     {is Human Organism}
-    {inner biometrics {c Personal Biometrics} {idx}}}
+    {inner biometrics {cls Personal Biometrics} {idx}}}
 
 {!class Gender
-        [_gloss {ru {t гендерная принадлежность}}]
+        [gloss {ru {t гендерная принадлежность}}]
     {is Information}}
 
 {!class Sex
-        [_gloss {ru {t пол}}]
+        [gloss {ru {t пол}}]
     {is Information}}
 
 {!class Female Gender
-        [_gloss {ru {t женский гендер}}]
+        [gloss {ru {t женский гендер}}]
     {is Gender}}
 
 {!class Male Gender
-        [_gloss {ru {t мужской гендер}}]
+        [gloss {ru {t мужской гендер}}]
     {is Gender}}
 
 {!class Neutral Gender
-        [_gloss {ru {t нейтральный гендер}}]
+        [gloss {ru {t нейтральный гендер}}]
     {is Gender}}
 
 {!class Female Sex
-        [_gloss {ru {t женский пол}}]
+        [gloss {ru {t женский пол}}]
     {is Sex}}
 
 {!class Male Sex
-        [_gloss {ru {t мужской пол}}]
+        [gloss {ru {t мужской пол}}]
     {is Sex}}
 
 {!class Personal Name
-        [_gloss {ru {t имя персоны}}]
+        [gloss {ru {t имя персоны}}]
     {is Information}}
 
 {!class Nickname
-        [_gloss {ru {t псевдоним}}]
+        [gloss {ru {t псевдоним}}]
     {is Personal Name}
     {str nick}}
 
 {!class Official Russian Citizen Name
-        [_gloss {ru {t имя гражданина РФ}}]
+        [gloss {ru {t имя гражданина РФ}}]
     {is Personal Name}
     {str forename}
     {str patronymic}
@@ -55,12 +55,12 @@
     {str maiden-name}}
 
 {!class Personal Biometrics
-        [_gloss {ru {t биометрические данные}}]
+        [gloss {ru {t биометрические данные}}]
     {is Abstraction}
-    {ref  system {c Biometrics System} {impl}}
+    {ref  system {cls Biometrics System} {impl}}
     {date birth-date}
     {num  age}
-    {ref  sex {c Sex} {idx}}}
+    {ref  sex {cls Sex} {idx}}}
 
 {!class Female Human
     {is Human

@@ -10,21 +10,21 @@
 
 {!class Figure
     {is Information}
-    {ref  visual  {c Graphic Content}}
+    {ref  visual  {cls Graphic Content}}
     {text caption {idx}}}
 
 {!class Static Content
     {is Information}
-    {ref  author {c Content Author} {t set}}
+    {ref  author {cls Content Author} {t set}}
     {str  uid  {impl}}
-    {ref  source {c Static Content}}
+    {ref  source {cls Static Content}}
     {text head {idx}}
     {text body {idx}}
-    {inner figure {c Figure} {t set}}}
+    {inner figure {cls Figure} {t set}}}
 
 {!class Content Section
     {is Static Content}
-    {inner epigraph {c Content Section}}
-    {inner div      {c Content Section}}}
+    {inner epigraph {cls Content Section}}
+    {inner div      {cls Content Section}}}
 
 }

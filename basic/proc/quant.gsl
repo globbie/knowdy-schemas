@@ -4,24 +4,24 @@
 {!proc Quant Increment
        [_gloss {ru {t операция инкремента, увеличения на единицу}}]
    {is Mental Process}
-       {-- effect seq {_c Number} --}
-       [arg {base {_c Number}}
-            {next {_c Number}} ]}
+       {-- effect seq {cls Number} --}
+       [arg {base {cls Number}}
+            {next {cls Number}} ]}
 
   {!proc Quant Decrement
        [_gloss {ru {t операция декремента, уменьшения на единицу}}]
     {is Mental Process}
-       {-- effect seq {_c Number} --}
-       [arg {base {_c Number}}
-            {next {_c Number}} ]
+       {-- effect seq {cls Number} --}
+       [arg {base {cls Number}}
+            {next {cls Number}} ]
   }
 
   {!proc Quant Addition
        [_gloss {ru {t операция сложения}}]
      {is Mental Process}
-       [arg {base     {_c Number}}
-            {addendum {_c Number}}]
-       [effect {sum  {_c Number}}]
+       [arg {base     {cls Number}}
+            {addendum {cls Number}}]
+       [effect {sum  {cls Number}}]
   }
 
 }

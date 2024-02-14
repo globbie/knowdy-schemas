@@ -1,16 +1,16 @@
 {schema knd-basic
 
    {!proc Communication Process
-          [_gloss {ru {t осуществлять коммуникацию}}]
+          [gloss {ru {t осуществлять коммуникацию}}]
       {is Social Process}
-      [arg {msg   {_c Situation}} ] }
+      [arg {msg   {cls Situation}} ] }
 
    {!proc Speaking Process
-          [_gloss {ru {t говорить}}]
+          [gloss {ru {t говорить}}]
       {is  Communication Process}}
 
    {!proc Challenge Smb
-          [_gloss {ru {t предлагать состязание}}]
+          [gloss {ru {t предлагать состязание}}]
       {is Communication Process}  }
 
 }

@@ -2,17 +2,17 @@
 
 {!class Document
     {is Static Content}
-    {ref   topic    {c Concept} {t set}}
-    {inner div      {c Content Section} {t set}}}
+    {ref   topic    {cls Concept} {t set}}
+    {inner div      {cls Content Section} {t set}}}
 
 {!class Legal Document
     {is Document}
     {-- time validity-period constraints --}
-    {inner issue    {c Document Issue}}}
+    {inner issue    {cls Document Issue}}}
 
 {!class Document Issue
     {is Information}
-    {ref issuer {c Agent}}
+    {ref issuer {cls Agent}}
     {-- date issue-date --}
     {-- date expiration-date NB: may be dependent on Legal Doc constraints --}
     {-- date cancellation-date --}

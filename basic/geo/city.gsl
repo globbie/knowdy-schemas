@@ -6,86 +6,86 @@
     {str loc}}
 
 {!class City
-        [_gloss {ru {t город}}]
+        [gloss {ru {t город}}]
     {is Geographical Region
         {-- definition --}}
-    {inner coords {c Geo Coords}}
+    {inner coords {cls Geo Coords}}
     }
 
 {-- ref partof
-         [_gloss {ru {t входит в состав региона}}]
+         [gloss {ru {t входит в состав региона}}]
          {inst-of Country}
          {idx} --}
 
 {!class Russian City
-        [_gloss {ru {t российский город}}]
+        [gloss {ru {t российский город}}]
     {is City
         {coords GPS}
         {-- partof Country {_inst Piter}--} }}
 
 {!class Street
-        [_gloss {ru {t улица}}]
+        [gloss {ru {t улица}}]
     {is Geographical Region}
     {-- ref partof
-         [_gloss {ru {t входит в состав населенного пункта}}]
+         [gloss {ru {t входит в состав населенного пункта}}]
          {inst-of City}
          {idx}
     --}}
 
 {!class Prospect
-        [_gloss {ru {t проспект}}]
+        [gloss {ru {t проспект}}]
     {is Street
         {-- def --}
 }}
 
 {!class Boulevard
-        [_gloss {ru {t бульвар}}]
+        [gloss {ru {t бульвар}}]
     {is Street
         {-- def green trees --}
 }}
 
 {!class Line as Street Type
-        [_gloss {ru {t линия}}]
+        [gloss {ru {t линия}}]
     {is Street
 }}
 
 {!class Alleyway
-        [_gloss {ru {t переулок}}]
+        [gloss {ru {t переулок}}]
     {is Street
 }}
 
 {!class Passing Way
-        [_gloss {ru {t проезд}}]
+        [gloss {ru {t проезд}}]
     {is Street
 }}
 
 {!class Waterfront Street
-        [_gloss {ru {t улица вдоль реки или моря}}]
+        [gloss {ru {t улица вдоль реки или моря}}]
     {is Street
 }}
 
 {!class Embankment
-        [_gloss {ru {t набережная}}]
+        [gloss {ru {t набережная}}]
     {is Street
 }}
 
 {!class Bridge Way
-        [_gloss {ru {t мост}}]
+        [gloss {ru {t мост}}]
     {is Street
 }}
 
 {!class Highway
-        [_gloss {ru {t шоссе}}]
+        [gloss {ru {t шоссе}}]
     {is Street
 }}
 
 {!class Cul-de-sac
-        [_gloss {ru {t тупик}}]
+        [gloss {ru {t тупик}}]
     {is Street
 }}
 
 {!class Land Lot
-        [_gloss {ru {t земельный участок}}]
+        [gloss {ru {t земельный участок}}]
     {is Geographical Region}}
 
 

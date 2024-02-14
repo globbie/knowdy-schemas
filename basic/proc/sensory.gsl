@@ -7,8 +7,8 @@
    {!proc Visual Process
           [_gloss {ru {t процесс визуального восприятия}}]
       {is Sensory Process}
-      [arg {Target {_c Physical Matter}}
-           {Instrument {_c Visual Tool}}  ]}
+      [arg {Target     {cls Physical Matter}}
+           {Instrument {cls Visual Tool}}  ]}
 
    {!proc Auditory Process
           [_gloss {ru {t процесс слухового восприятия}}]

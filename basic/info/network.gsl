@@ -1,23 +1,23 @@
 {schema knd
 
 {!class IP Address v4
-        [_gloss {ru {t адрес IP, версия 4}}]
+        [gloss {ru {t адрес IP, версия 4}}]
     {is Information}
     {str code {impl} {req}}}
 
 {!class IP Address v6
-        [_gloss {ru {t адрес IP, версия 6}}]
+        [gloss {ru {t адрес IP, версия 6}}]
     {is Information}
     {str code {impl} {req}}}
 
 {!class Internet Domain Name
-        [_gloss {ru {t доменное имя}}]
+        [gloss {ru {t доменное имя}}]
     {is Information}
     {str name {req}}
     {bool exists}}
 
 {!class URL
-        [_gloss {ru {t идентификатор информационного ресурса}}]
+        [gloss {ru {t идентификатор информационного ресурса}}]
     {is Information}
     {str auth}
     {str protocol}
@@ -27,26 +27,26 @@
          {-- max 65535 --}}}
 
 {!class Email Address
-        [_gloss {ru {t адрес электронной почты}}]
+        [gloss {ru {t адрес электронной почты}}]
     {is Information}
     {str  name    {impl}                   {req}}
-    {ref  at      {c Internet Domain Name} {req}}
+    {ref  at      {cls Internet Domain Name} {req}}
     {bool verified}
     {uniq _name {name} {at}}}
 
 {!class Phone Contacts
-        [_gloss {ru {t телефонный номер}}]
+        [gloss {ru {t телефонный номер}}]
     {is Information}
     {str country-code}
     {str prefix}
     {str number {req}}}
 
-{!class Geospatial Address
-        [_gloss {ru {t почтовый адрес}}]
+{!class Postal Geospatial Address
+        [gloss {ru {t почтовый адрес}}]
     {is Information}}
 
 {!class Messenger Account
-        [_gloss {ru {t аккаунт мессенджера}}]
+        [gloss {ru {t аккаунт мессенджера}}]
     {is Information}
     {str service}
     {str login}

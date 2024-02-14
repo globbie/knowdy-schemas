@@ -4,7 +4,7 @@
     {is Activity}}
 
 {!class Encoded Data
-        [_gloss {ru {t кодированная информация}}]
+        [gloss {ru {t кодированная информация}}]
     {is     Information}
     {str    mimetype}
     {bool   is-binary}
@@ -35,10 +35,10 @@
 
 {!class Message
     {is Information}
-    {ref  author    {c Message Author}}
-    {ref  addressee {c Message Addressee}}
-    {ref  stimulus  {c Message}}
-    {ref  activity  {c Communication Activity}}
+    {ref  author    {cls Message Author}}
+    {ref  addressee {cls Message Addressee}}
+    {ref  stimulus  {cls Message}}
+    {ref  activity  {cls Communication Activity}}
     {text subj {idx}}
     {text body {idx}} }
 
@@ -49,6 +49,6 @@
 {!class Comment
     {is Message
         {activity Discussion}}
-    {ref topic {c Concept}}}
+    {ref topic {cls Concept}}}
 
 }

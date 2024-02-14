@@ -12,10 +12,9 @@
 {!rel Direct Biological Kinship
       [gloss {ru {t прямое биологическое родство}}]
   {is Biological Kinship}
-      [arg {mother  {_c Female Human}}
-           {father  {_c Male Human}}
-           {child   {_c Human Being}}]
-      
+      [arg {mother  {cls Female Human}}
+           {father  {cls Male Human}}
+           {child   {cls Human Being}}]
 }
 
 {!rel Parental Relation
@@ -24,6 +23,5 @@
 
 {!rel Property Ownership
   {is Social Relation}}
-
 
 }

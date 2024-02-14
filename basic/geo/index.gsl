@@ -3,21 +3,21 @@
 {schema knd-basic
 
 {!class Spatial Object
-        [_gloss {ru {t пространственный объект}}]
+        [gloss {ru {t пространственный объект}}]
   {is Abstraction}}
 
 {!class Geographical Region
-    [_gloss {ru {t географический регион}}]
+    [gloss {ru {t географический регион}}]
     {is Spatial Object}}
 
 {!class Country
-        [_gloss {ru {t страна}}]
+        [gloss {ru {t страна}}]
     {is Geographical Region}
-    {ref repub {c Republic} {t set}}
+    {ref repub {cls Republic} {t set}}
 }
 
 {!class Republic
-        [_gloss {ru {t республика}}]
+        [gloss {ru {t республика}}]
   {is Geographical Region}
 }
 

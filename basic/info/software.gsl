@@ -1,64 +1,64 @@
 {schema knd
 
 {!class Software
-        [_gloss {ru {t программное обеспечение}}]
+        [gloss {ru {t программное обеспечение}}]
     {is Intellectual Product}
     {str name {impl}}
-    {inner version {c Semantic Software Version}}
+    {inner version {cls Semantic Software Version}}
     {str func}}
 
 {!class System Software
-        [_gloss {ru {t системное ПО}}]
+        [gloss {ru {t системное ПО}}]
     {is Software}}
 
 {!class Application
-        [_gloss {ru {t прикладное ПО}}]
+        [gloss {ru {t прикладное ПО}}]
     {is Software}
     {-- user interaction --}}
 
 {!class Semantic Software Version
-        [_gloss {ru {t семантическая версия ПО}}]
+        [gloss {ru {t семантическая версия ПО}}]
     {is Information}
     {num major}
     {num minor}
     {num patch}}
 
 {!class Hardware Platform
-        [_gloss {ru {t аппаратная платформа}}]
+        [gloss {ru {t аппаратная платформа}}]
     {is Hardware Device}}
 
 {!class Formal Language
-        [_gloss {ru {t формальный язык}}]
+        [gloss {ru {t формальный язык}}]
     {is Intellectual Product}}
 
 {!class Programming Language
-        [_gloss {ru {t язык программирования}}]
+        [gloss {ru {t язык программирования}}]
     {is Formal Language}}
 
 {!class Logical Markup Language
-        [_gloss {ru {t язык логической разметки}}]
+        [gloss {ru {t язык логической разметки}}]
     {is Formal Language}}
 
 {!class Operating System
-        [_gloss {ru {t операционная система}}]
+        [gloss {ru {t операционная система}}]
     {is System Software}}
 
 {!class Binary Code
-        [_gloss {ru {t бинарный машинный код}}]
+        [gloss {ru {t бинарный машинный код}}]
     {is Software}
-    {ref platform {c Hardware Platform}}}
+    {ref platform {cls Hardware Platform}}}
 
 {!class Source Code
-        [_gloss {ru {t исходный программный код}}]
+        [gloss {ru {t исходный программный код}}]
     {is Software}
-    {ref lang {c Programming Language} }}
+    {ref lang {cls Programming Language} }}
 
 {!class Web Browser
-        [_gloss {ru {t веб-браузер}}]
+        [gloss {ru {t веб-браузер}}]
     {is Application}}
 
 {!class Firefox
-        [_gloss {ru {t веб-браузер Firefox}}]
+        [gloss {ru {t веб-браузер Firefox}}]
     {is Web Browser}}
 
 {!class Firefox 78.0
@@ -66,14 +66,14 @@
         {version {major 78}}}}
 
 {!class Chrome
-        [_gloss {ru {t веб-браузер Chrome}}]
+        [gloss {ru {t веб-браузер Chrome}}]
     {is Web Browser}}
 
 {!class Software Stack
-        [_gloss {ru {t рабочий набор программного обеспечения}}]
+        [gloss {ru {t рабочий набор программного обеспечения}}]
     {is Information}
     {str code {impl} {uniq}}
-    {ref os {c Operating System}}
-    {ref browser {c Web Browser}}}
+    {ref os {cls Operating System}}
+    {ref browser {cls Web Browser}}}
 
 }

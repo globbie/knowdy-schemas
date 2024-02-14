@@ -10,7 +10,7 @@
 {schema knd-basic
 
 {!class Edible Object
-        [_gloss {ru {t съедобный продукт}}]
+        [gloss {ru {t съедобный продукт}}]
     {is Organic Object}
     {num mass-avg}}
 
@@ -18,38 +18,38 @@
     {is Material Product}
     {is Edible Object}
     {proc-ref prepar {proc Food Processing}}
-    {inner    nutr   {c Nutritional Value} {t set}}
-    {ref      taste  {c Taste}}}
+    {inner    nutr   {cls Nutritional Value} {t set}}
+    {ref      taste  {cls Taste}}}
 
 {!proc Food Processing
-       [_gloss {ru {t изготовление пищевого продукта}}]
+       [gloss {ru {t изготовление пищевого продукта}}]
    {is Creative Process}
-   [effect {product {_c Food Product}}] }
+   [effect {product {cls Food Product}}] }
 
 {!class Dish
-        [_gloss {ru {t кулинарное блюдо}}]
+        [gloss {ru {t кулинарное блюдо}}]
     {is Material Product}
     {is Edible Object}
-    {ref taste    {c Taste} {idx}}
-    {--- {ref cuisine   {c Regional Cuisine} {t set} {idx}}
-    {ref occasion  {c Occasion}         {t set} {idx}}
-    {ref diet      {c Dietary Cuisine}}---} }
+    {ref taste    {cls Taste} {idx}}
+    {--- {ref cuisine   {cls Regional Cuisine} {t set} {idx}}
+    {ref occasion  {cls Occasion}         {t set} {idx}}
+    {ref diet      {cls Dietary Cuisine}}---} }
 
 {!proc Cooking
-       [_gloss {ru {t приготовление блюда}}]
+       [gloss {ru {t приготовление блюда}}]
    {is Creative Process}
-   [effect {dish {_c  Dish}}]}
+   [effect {dish {cls  Dish}}]}
 
 {!proc Baking
-       [_gloss {ru {t процесс выпекания}}]
+       [gloss {ru {t процесс выпекания}}]
    {is Cooking
        {-- instr Oven --}}
-   [effect {product {_c Baked Food Product}}] }
+   [effect {product {cls Baked Food Product}}] }
 
 {!class Nutritional Value
-    [_gloss {ru {t пищевая ценность}}]
+    [gloss {ru {t пищевая ценность}}]
     {is Information}
-    {ref source {c Authoritative Source} {impl} {req}}
+    {ref source {cls Authoritative Source} {impl} {req}}
     {proc-ref prepar {proc Food Processing}}
     {num energy}
     {float carbs}
@@ -63,73 +63,73 @@
     {is Authoritative Source}}
 
 {!class Processed Food Product
-        [_gloss {ru {t пищевой продукт}}]
+        [gloss {ru {t пищевой продукт}}]
         {is Food Product
             {prepar Food Processing}}}
 
 {!class Solid State Food Product
-      [_gloss {ru {t твердый пищевой продукт}}]
+      [gloss {ru {t твердый пищевой продукт}}]
         {is Food Product}}
 
 {!class Liquid State Food Product
-        [_gloss {ru {t жидкий пищевой продукт}}]
+        [gloss {ru {t жидкий пищевой продукт}}]
     {is Food Product}}
 
 {!class Baked Food Product
-        [_gloss {ru {t продукт выпекания}}]
+        [gloss {ru {t продукт выпекания}}]
     {is Solid State Food Product}}
 
 {!class Food Product Stuffing
-        [_gloss {ru {t начинка для закрытых блюд}}]
+        [gloss {ru {t начинка для закрытых блюд}}]
     {is Food Product
         {purpose  provide main ingredient to a dish}}
     {-- def {class Food Product {inst FP}}--} }
 
 {!proc make Food Product Stuffing
-       [_gloss {ru {t приготовление начинки}}]
+       [gloss {ru {t приготовление начинки}}]
    {is Food Processing}
-   [effect {stuffing {_c  Food Product Stuffing}}]
-   [arg    {resource  {_c Edible Object}}]}
+   [effect {stuffing {cls  Food Product Stuffing}}]
+   [arg    {resource  {cls Edible Object}}]}
 
 {!class Nourishing Stuffing
-        [_gloss {ru {t сытная начинка}}]
+        [gloss {ru {t сытная начинка}}]
     {is Food Product Stuffing
         {purpose  provide a nourishing ingredient}}}
 
 {!class Sweet Stuffing
-        [_gloss {ru {t сладкая начинка}}]
+        [gloss {ru {t сладкая начинка}}]
     {is Food Product Stuffing
         {purpose  provide sweet taste to a product}}}
 
 {!proc make Sweet Stuffing
-       [_gloss {ru {t приготовление сладкой начинки}}]
+       [gloss {ru {t приготовление сладкой начинки}}]
    {is make Food Product Stuffing}
-   [effect {stuffing {_c  Sweet Stuffing}}]
-   [arg    {aux-resource  {_c Sugar}}]}
+   [effect {stuffing {cls  Sweet Stuffing}}]
+   [arg    {aux-resource  {cls Sugar}}]}
 
 {!class Fruit Stuffing
-        [_gloss {ru {t фруктовая начинка}}]
+        [gloss {ru {t фруктовая начинка}}]
     {is Sweet Stuffing
         {purpose  provide fruit aroma and taste to a sweet product}}}
 
 {!proc make Fruit Stuffing
-       [_gloss {ru {t приготовление фруктовой начинки}}]
+       [gloss {ru {t приготовление фруктовой начинки}}]
    {is make Sweet Stuffing}
-   [effect {stuffing {_c  Fruit Stuffing}}]
-   [arg {resource {_c Fruit}}]}
+   [effect {stuffing {cls  Fruit Stuffing}}]
+   [arg {resource {cls Fruit}}]}
 
 {!class Berry Stuffing
-        [_gloss {ru {t ягодная начинка}}]
+        [gloss {ru {t ягодная начинка}}]
     {is Sweet Stuffing}}
 
 {!proc make Berry Stuffing
-       [_gloss {ru {t приготовление ягодной начинки}}]
+       [gloss {ru {t приготовление ягодной начинки}}]
    {is make Sweet Stuffing}
-   [effect {stuffing {_c  Berry Stuffing}}]
-   [arg {resource {_c Berries}}]}
+   [effect {stuffing {cls  Berry Stuffing}}]
+   [arg {resource {cls Berries}}]}
 
 {!class Dried fruit
-    [_gloss {ru {t Сухофрукты}}]
+    [gloss {ru {t Сухофрукты}}]
     {is Food Product 
         [nutr {USDA
             {prepar Food Processing}
@@ -140,7 +140,7 @@
         }]  }}
 
 {!class Greens
-   [_gloss {ru {t Зелень}}]
+   [gloss {ru {t Зелень}}]
     {is Food Product 
         [nutr {USDA
             {energy 22}
@@ -150,7 +150,7 @@
         }]  }}
 
 {!class Spices
-        [_gloss {ru {t Специи}}]
+        [gloss {ru {t Специи}}]
     {is Food Product 
         [nutr {USDA
             {energy 178}
@@ -160,7 +160,7 @@
         }]}}
 
 {!class Mushrooms
-        [_gloss {ru {t грибы}}]
+        [gloss {ru {t грибы}}]
     {is Food Product 
         [nutr {USDA
             {energy 35}
@@ -170,28 +170,28 @@
         }]}}
 
 {!class Yeast dough
-        [_gloss {ru {t дрожжевое тесто}}]
+        [gloss {ru {t дрожжевое тесто}}]
     {is Food Product}}
 
 {!class Seafood
-        [_gloss {ru {t морепродукты}}]
+        [gloss {ru {t морепродукты}}]
     {is Food Product }}
 
 {!class Semi-finished products
-     [_gloss {ru {t полуфабрикаты}}]
+     [gloss {ru {t полуфабрикаты}}]
     {is Food Product}}
 
 {!class Fruit
-        [_gloss {ru {t фрукты}}]
+        [gloss {ru {t фрукты}}]
     {is Solid State Food Product}
     {is Edible Plant}}
 
 {!class Berries
-        [_gloss {ru {t ягоды}}]
+        [gloss {ru {t ягоды}}]
     {is Food Product}}
 
 {!class Flour
-        [_gloss {ru {t мука}}]
+        [gloss {ru {t мука}}]
     {is Food Product 
         [nutr {USDA
             {energy 331}
@@ -201,21 +201,21 @@
         }] }}
 
 {!class Rye Flour
-        [_gloss {ru {t ржаная мука}}]
+        [gloss {ru {t ржаная мука}}]
     {is Flour}}
 
 {!proc Rye Flour Making
-       [_gloss {ru {t приготовление ржаной муки}}]
+       [gloss {ru {t приготовление ржаной муки}}]
    {is Baking}
-   [effect {product {_c  Rye Flour}}]
-   [arg {resource {_c Rye}}]}
+   [effect {product {cls  Rye Flour}}]
+   [arg {resource {cls Rye}}]}
 
 {!class Poultry
-       [_gloss {ru {t птица}}]
+       [gloss {ru {t птица}}]
     {is Food Product}}
 
 {!class Tea
-        [_gloss {ru {t чай}}]
+        [gloss {ru {t чай}}]
     {is Food Product 
         [nutr {USDA
             {energy 1}
@@ -232,45 +232,45 @@
             {fat 30}
             {protein 8}
         }] }
-     [_gloss {ru {t кофейные зерна}}]}
+     [gloss {ru {t кофейные зерна}}]}
 
 {!class Sauce
-    [_gloss {ru {t соус}}]
+    [gloss {ru {t соус}}]
     {is Food Product}}
 
 {!class Stock
-        [_gloss {ru {t бульонный отвар}}]
+        [gloss {ru {t бульонный отвар}}]
     {is Food Product}}
 
 {!class Broth
-        [_gloss {ru {t бульон}}]
+        [gloss {ru {t бульон}}]
     {is Food Product}}
 
 {!class Drinking Water
-        [_gloss {ru {t питьевая вода}}]
+        [gloss {ru {t питьевая вода}}]
     {is Food Product}}
 
 {!class Sugar
-        [_gloss {ru {t сахар}}]
+        [gloss {ru {t сахар}}]
     {is Food Product}}
 
 {!class Dough
-        [_gloss {ru {t тесто}}]
+        [gloss {ru {t тесто}}]
     {is Food Product}}
 
 {!proc make Dough
-       [_gloss {ru {t приготовление теста}}]
+       [gloss {ru {t приготовление теста}}]
    {is Food Processing}
-   [effect {dough {_c Dough}}]
-   [arg {body  {_c Flour}}
-        {water {_c Drinking Water}}]}
+   [effect {dough {cls Dough}}]
+   [arg {body  {cls Flour}}
+        {water {cls Drinking Water}}]}
 
 {!class Fish Product
-        [_gloss {ru {t рыба как пищевой продукт}}]
+        [gloss {ru {t рыба как пищевой продукт}}]
     {is Food Product}}
 
 {!class Rye
-        [_gloss {ru {t рожь}}]
+        [gloss {ru {t рожь}}]
     {is Food Product}}
 
 

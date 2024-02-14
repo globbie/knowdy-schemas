@@ -11,7 +11,7 @@
    {!proc Feel Necessity
           [_gloss {ru {t осознавать потребность}}]
       {is Mental Process}
-      [arg {target  {_c Situation}}] }
+      [arg {target  {cls Situation}}] }
 
 
 

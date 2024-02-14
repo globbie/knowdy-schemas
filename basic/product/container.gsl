@@ -1,13 +1,13 @@
 {schema glt
 
 {!class Container
-        [_gloss {ru {t емкость для физических объектов}}]
+        [gloss {ru {t емкость для физических объектов}}]
     {is Solid State Material Product
         {design Protective Cover with Space Inside}}
-    {ref content {c Physical Matter}}}
+    {ref content {cls Physical Matter}}}
 
 {!class Container for Liquids
-        [_gloss {ru {t емкость для жидкостей}}]
+        [gloss {ru {t емкость для жидкостей}}]
     {is Container
         {content Liquid}}}
 

@@ -13,7 +13,7 @@
    {!proc Planning Process
           [_gloss {ru {t  планирование}}]
       {is Social Process}
-      [arg {situation  {_c Situation}}
-           {timeFrame  {_c Time Line View}} ]}
+      [arg {situation  {cls Situation}}
+           {timeFrame  {cls Time Line View}} ]}
 
 }

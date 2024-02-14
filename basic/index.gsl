@@ -34,15 +34,15 @@
 {schema knd
 
 {!class Concept
-        [_gloss {ru {t концепт}}]}
+        [gloss {ru {t концепт}}]}
 
 {-- Agent vs Object / Me vs It --}
 {!class Agent
-        [_gloss {ru {t деятель, субъект действия} {abbr ДЕЯТ}}]
+        [gloss {ru {t деятель, субъект действия} {abbr ДЕЯТ}}]
     {is Concept}}
 
 {!class Object
-        [_gloss {ru {t объект}}
+        [gloss {ru {t объект}}
                 {ja {t 物体}}]
     {is Concept}
     {-- совокупность сенсорных восприятий и
@@ -51,7 +51,7 @@
     {--_state_top--}}
 
 {!class Abstraction
-        [_gloss {ru {t абстракция}}
+        [gloss {ru {t абстракция}}
                 {ja {t 概念}}]
     {-- [_summary {ru {t абстрактное понятие, формируемое сознанием человека
                          путем обобщения признаков конкретных объектов}}
@@ -60,7 +60,7 @@
     {is Object}}
 
 {!class Physical Matter
-        [_gloss {ru {t физическая материя}}]
+        [gloss {ru {t физическая материя}}]
     {is     Object}
     {str    img  {concise 1}}
     {inner  color           {cls Color}}
@@ -69,7 +69,7 @@
     {inner  aggr-state      {cls Physical Aggregate State}}}
 
 {!class Solid Physical Object
-        [_gloss {ru {t твердый физический объект}}]
+        [gloss {ru {t твердый физический объект}}]
     {is     Physical Matter}
     {ref    flatshape {cls 2D Shape}}
     {ref    shape     {cls 3D Shape}}
@@ -77,88 +77,88 @@
     {str    img       {concise 1}}}
 
 {!class Physical Substance
-    [_gloss {ru {t физическое вещество}}]
+        [gloss {ru {t физическое вещество}}]
     {is  Physical Matter}}
 
 {!class Granular Substance
-    [_gloss {ru {t сыпучее физическое вещество}}]
+        [gloss {ru {t сыпучее физическое вещество}}]
     {is  Physical Substance
          {aggr-state Granular State}}}
 
 {!class Liquid
-        [_gloss {ru {t жидкость}}]
+        [gloss {ru {t жидкость}}]
     {is Physical Substance
         {aggr-state Liquid State}}}
 
 {!class Gas
-        [_gloss {ru {t газообразное вещество}}]
+        [gloss {ru {t газообразное вещество}}]
     {is Physical Substance
         {aggr-state Gas State}}}
 
 {!class Information
-        [_gloss {ru {t информация}}]
+        [gloss {ru {t информация}}]
     {is   Abstraction}}
 
 {!class Digital Object
-    [_gloss {ru {t цифровой объект}}]
+    [gloss {ru {t цифровой объект}}]
     {is Information}}
 
 {!class Situation
-    [_gloss {ru {t ситуация}}]
+    [gloss {ru {t ситуация}}]
     {is Abstraction}}
 
 {!class System
-    [_gloss {ru {t система}}]
+    [gloss {ru {t система}}]
     {is Abstraction}
     {str name}}
 
 {!class Collection
-    [_gloss {ru {t множество}}]
+    [gloss {ru {t множество}}]
     {is Abstraction}
     {ref unit-type {cls Object}}}
 
 {!class Custom Class
-    [_gloss {ru {t класс с произвольной семантикой}}]
+    [gloss {ru {t класс с произвольной семантикой}}]
     {is Abstraction}}
 
 {!class Organic Object
-        [_gloss {ru {t органический объект}}]
+        [gloss {ru {t органический объект}}]
     {is Solid Physical Object}}
 
 {!class Eukaryote
     {is Organic Object}}
 
 {!class Plant
-       [_gloss {ru {t растение}}]
+       [gloss {ru {t растение}}]
     {is Eukaryote}}
 
 {!class Fungi
-        [_gloss {ru {t гриб}}]
+        [gloss {ru {t гриб}}]
     {is Organic Object}}
 
 {!class Group
-        [_gloss {ru {t группа объектов}}]
+        [gloss {ru {t группа объектов}}]
     {is Abstraction}}
 
 {!class Linear Sequence
     {is Group}}
 
 {!class    Sensory Object
-           [_gloss    {ru {t объект восприятия}}]
+           [gloss    {ru {t объект восприятия}}]
     {is    Object}}
 
 {!class  Activity
-         [_gloss    {ru {t деятельность}}]
+         [gloss    {ru {t деятельность}}]
     {is  Abstraction}
     {ref emotion  {cls Agent Emotion}}
     {ref dynamics {cls Change Dynamics}}}
 
 {!class  Change Dynamics
-         [_gloss    {ru {t динамика изменений состояния}}]
+         [gloss    {ru {t динамика изменений состояния}}]
     {is  Abstraction}}
 
 {!class  Highly Dynamic Change
-         [_gloss    {ru {t высокая динамика изменений}}]
+         [gloss    {ru {t высокая динамика изменений}}]
     {is  Change Dynamics}}
 
 }

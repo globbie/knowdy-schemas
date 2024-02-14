@@ -25,8 +25,8 @@
    {!proc Motion
           [_gloss {ru {t перемещение физического объекта в пространстве}}]
       {is Natural Process}
-      [arg {obj       {_c Physical Matter}}
-           {targetLoc {_c Spatial Location}} ]
+      [arg {obj       {cls Physical Matter}}
+           {targetLoc {cls Spatial Location}} ]
       [do {_move
              {obj      obj}
              {where-to TargetLoc}} ]}
@@ -34,7 +34,7 @@
    {!proc Agent Driven Process
           [_gloss {ru {t агентивный процесс с участием каузатора}}]
       {is Process}
-      [arg {agent {_c Agent}}]}
+      [arg {agent {cls Agent}}]}
 
    {!proc Human Agent Driven Process
           [_gloss {ru {t процесс, инициируемый человеком}}]
@@ -44,8 +44,8 @@
    {!proc Agent Driven Obj Process
           [_gloss {ru {t агентивный процесс, направленный на внешний объект}}]
       {is Agent Driven Process}
-      [arg {obj   {_c Object}}
-           {benef {_c Agent}}]}
+      [arg {obj   {cls Object}}
+           {benef {cls Agent}}]}
 
    {!proc Human Agent Driven Obj Process
           [_gloss {ru {t процесс воздействия человека на внешний объект}}]
@@ -60,17 +60,17 @@
     {!proc Creative Process
            [_gloss {ru {t созидательный процесс}}]
        {is Agent Driven Process}
-           [effect {product {_c Material Product}}]
-           [arg    {resource {_c Material Resource}}
-                   {method   {_c Information}}
-                   {instr    {_c Tool}}]}
+           [effect {product {cls Material Product}}]
+           [arg    {resource {cls Material Resource}}
+                   {method   {cls Information}}
+                   {instr    {cls Tool}}]}
 
     {!proc change physical state
            [_gloss {ru {t процесс изменения физического состояния объекта}}]
        {is Physical Impact Process}
            {--effect {_state {obj}}--}
-           [arg    {resource {_c Material Resource}}
-                   {instr    {_c Tool}}]}
+           [arg    {resource {cls Material Resource}}
+                   {instr    {cls Tool}}]}
 
    {!proc add physical object
           [_gloss {ru {t добавление физического объекта}}]
