@@ -152,4 +152,34 @@
     {is Normal Number
         {base-ten-position 10}}}
 
+{!class Numeric Operation
+        [gloss {ru {t числовая операция}}]
+    {is Abstraction}}
+
+{!class Numeric Equality
+     {is Numeric Operation}}
+
+{!class Numeric Less Than
+     {is Numeric Operation}}
+
+{!class Numeric Greater Than
+     {is Numeric Operation}}
+
+{!class Numeric Addition
+     {is Numeric Operation}}
+
+{!class Numeric Subtraction
+     {is Numeric Operation}}
+
+{!class Numeric Multiplication
+     {is Numeric Operation}}
+
+{!class Numeric Division
+     {is Numeric Operation}}
+
+{!class Fraction Denominator
+     {is Numeric Operation}}
+
+{!class Real Number Radix Point
+     {is Visual Borderline}}
 }
