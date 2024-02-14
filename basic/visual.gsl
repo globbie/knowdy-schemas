@@ -1,0 +1,13 @@
+{include color}
+
+{schema knd-basic
+
+{!class Visual Perception Object
+        [_gloss {ru {t объект зрительного восприятия}}]
+    {is Sensory Object}}
+
+{!class Visual Borderline
+        [_gloss {ru {t граница визуального разделения объектов}}]
+    {is Visual Perception Object}}
+
+}

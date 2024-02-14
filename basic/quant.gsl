@@ -9,12 +9,13 @@
     {is Quantity}
     {str unit}}
 
-{--{!class nn42
-   {_c {nn10
-           {_mult nn4}}
-        {_add nn2}}
-}
---}
+{!class Percent
+        [gloss {ru {t процент, результат измерения в сотых долях целого}}]
+   {is Measure}}
+
+{!class Unit of Measure
+        [gloss {ru {t единица измерения}}]
+    {is Measure}}
 
 {!class Multiple Quantity
         [gloss {ru {t множество}}]
@@ -39,6 +40,19 @@
     {is Number}
     {num base-ten-position}
     {num numval}}
+
+{!class Integer Quant
+        [gloss {ru {t целое число}}]
+    {is Normal Number}}
+
+{!class Integer Ordinal Quant
+        [gloss {ru {t целое порядковое число}}]
+    {is Normal Number}}
+
+{!class Real Quant
+        [gloss {ru {t вещественное число}}]
+    {is Normal Number}
+    {float fractional}}
 
 {!class Number Zero
         [gloss {ru {t число 0}}]
@@ -117,6 +131,16 @@
         [gloss {ru {t тысяча = число 1000}}]
     {is Normal Number
         {base-ten-position 4}}}
+
+{!class Number Ten Thousand
+        [gloss {ru {t десять тысяч = число 10,000}}]
+    {is Normal Number
+        {base-ten-position 5}}}
+
+{!class Number One Hundred Thousand
+        [gloss {ru {t сто тысяч = число 100,000}}]
+    {is Normal Number
+        {base-ten-position 6}}}
 
 {!class Number Million
         [gloss {ru {t миллион = число 1,000,000}}]
