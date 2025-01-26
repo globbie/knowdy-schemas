@@ -1,6 +1,6 @@
 {schema knd
 
-{!class User Access Policy
+{!cls User Access Policy
         [gloss {ru {t политика полномочий пользователя}}]
     {is Information}}
 

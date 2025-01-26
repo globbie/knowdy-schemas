@@ -1,11 +1,11 @@
 {schema knd-basic
 
-{!class Physical Media
-        [_gloss {ru {t физический носитель информации}}]
+{!cls Physical Media
+        [gloss {ru {t физический носитель информации}}]
      {is Solid State Material Product}}
 
-{!class Paper Page
-        [_gloss {ru {t бумажный носитель}}]
+{!cls Paper Page
+        [gloss {ru {t бумажный носитель}}]
      {is Physical Media}}
 
 

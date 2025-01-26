@@ -1,34 +1,34 @@
 {schema knd-basic
 
-{!class  Market #place
+{!cls  Market #place
          [gloss {ru {t рынок, место общественной торговли}}]
     {is  Abstraction}}
 
-{!class  Market #economy
+{!cls  Market #economy
          [gloss {ru {t рыночная экономика}}]
     {is  Activity}}
 
-{!class  Price
+{!cls  Price
          [gloss {ru {t цена товара}}]
     {is  Measure}}
 
-{!class  Low Price
+{!cls  Low Price
          [gloss {ru {t низкая, более выгодная цена}}]
     {is  Price}}
 
-{!class  Financial Asset
+{!cls  Financial Asset
          [gloss {ru {t финансовый актив}}]
      {is Abstraction}}
 
-{!class  Profit
+{!cls  Profit
          [gloss {ru {t доход, прибыль}}]
     {is  Financial Asset}}
 
-{!class Currency Unit
+{!cls Currency Unit
         [gloss {ru {t валютная единица измерения}}]
     {is Unit of Measure}}
 
-{!class Dollar
+{!cls Dollar
         [gloss {ru {t доллар как валютная единица измерения}}]
     {is Currency Unit}}
 

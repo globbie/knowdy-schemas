@@ -1,44 +1,44 @@
 {schema knd-basic
 
-{!class Communication System
+{!cls Communication System
     {is System}}
 
-{!class Natural Language
+{!cls Natural Language
     {is Communication System}
     {inner code {cls Language Id Code} {t set}}}
 
-{!class Code Standard
+{!cls Code Standard
     {is Information}
     {str name}}
 
-{!class ISO 639-1
+{!cls ISO 639-1
     {is Code Standard
        {name ISO 639-1}}}
 
-{!class Language Id Code
+{!cls Language Id Code
     {is Information}
-    {ref standard {cls Code Standard} {impl}}
+    {cls-ref standard {cls Code Standard} {impl}}
     {str name}}
 
-{!class Chinese Language
+{!cls Chinese Language
         [gloss {ru {t китайский}}
                {en {t Chinese}}]
     {is Natural Language
         [code {ISO 639-1 {name zh}}] }}
 
-{!class English Language
+{!cls English Language
         [gloss {ru {t английский}}
                {en {t English}} ]
     {is Natural Language
         [code {ISO 639-1 {name en}}] }}
 
-{!class French Language
+{!cls French Language
         [gloss {ru {t французский}}
                {en {t French}}]
     {is Natural Language
         [code {ISO 639-1 {name fr}}] }}
 
-{!class Russian Language
+{!cls Russian Language
         [gloss {ru {t русский}}
                {en {t Russian}}]
     {is Natural Language

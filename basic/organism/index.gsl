@@ -2,32 +2,32 @@
 
 {schema knd-basic
 
-{!class Animal Organism
-        [_gloss {ru {t живой организм}}]
+{!cls Animal Organism
+        [gloss {ru {t живой организм}}]
     {is Eukaryote}}
 
-{!class Human Organism
-        [_gloss {ru {t человеческий организм}}]
+{!cls Human Organism
+        [gloss {ru {t человеческий организм}}]
     {is Animal Organism}}
 
-{!class Human Body
-        [_gloss {ru {t человеческое тело}}]
+{!cls Human Body
+        [gloss {ru {t человеческое тело}}]
     {is Human Organism}}
 
-{!class Human Hair
-        [_gloss {ru {t волосы}}]
+{!cls Human Hair
+        [gloss {ru {t волосы}}]
     {is Organic Object}}
 
-{!class Human Skin
-        [_gloss {ru {t кожа}}]
+{!cls Human Skin
+        [gloss {ru {t кожа}}]
     {is Organic Object}}
 
-{!class Human Teeth
-        [_gloss {ru {t зубы}}]
+{!cls Human Teeth
+        [gloss {ru {t зубы}}]
     {is Organic Object}}
 
-{!class Human Hair with Lost Pigmentation
-        [_gloss {ru {t седые волосы}}]
+{!cls Human Hair with Lost Pigmentation
+        [gloss {ru {t седые волосы}}]
     {is Human Hair}}
 
 }

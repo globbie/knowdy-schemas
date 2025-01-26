@@ -2,14 +2,14 @@
 
 {-- образует упорядоченную линейную последовательность --}
 {!proc Quant Increment
-       [_gloss {ru {t операция инкремента, увеличения на единицу}}]
+       [gloss {ru {t операция инкремента, увеличения на единицу}}]
    {is Mental Process}
        {-- effect seq {cls Number} --}
        [arg {base {cls Number}}
             {next {cls Number}} ]}
 
   {!proc Quant Decrement
-       [_gloss {ru {t операция декремента, уменьшения на единицу}}]
+       [gloss {ru {t операция декремента, уменьшения на единицу}}]
     {is Mental Process}
        {-- effect seq {cls Number} --}
        [arg {base {cls Number}}
@@ -17,11 +17,10 @@
   }
 
   {!proc Quant Addition
-       [_gloss {ru {t операция сложения}}]
+       [gloss {ru {t операция сложения}}]
      {is Mental Process}
-       [arg {base     {cls Number}}
-            {addendum {cls Number}}]
-       [effect {sum  {cls Number}}]
+         [arg {base     {cls Number}}
+              {addendum {cls Number}}]
+         [effect {sum  {cls Number}}]
   }
-
 }

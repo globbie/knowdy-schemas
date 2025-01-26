@@ -2,27 +2,27 @@
 
 {schema knd
 
-{!class Content Author
+{!cls Content Author
     {is Agent}}
 
-{!class Graphic Content
+{!cls Graphic Content
     {is Information}}
 
-{!class Figure
+{!cls Figure
     {is Information}
-    {ref  visual  {cls Graphic Content}}
+    {cls-ref  visual  {cls Graphic Content}}
     {text caption {idx}}}
 
-{!class Static Content
+{!cls Static Content
     {is Information}
-    {ref  author {cls Content Author} {t set}}
+    {cls-ref  author {cls Content Author} {t set}}
     {str  uid  {impl}}
-    {ref  source {cls Static Content}}
+    {cls-ref  source {cls Static Content}}
     {text head {idx}}
     {text body {idx}}
     {inner figure {cls Figure} {t set}}}
 
-{!class Content Section
+{!cls Content Section
     {is Static Content}
     {inner epigraph {cls Content Section}}
     {inner div      {cls Content Section}}}

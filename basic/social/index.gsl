@@ -1,2 +1,56 @@
 {include economy/index}
 {include kinship}
+
+{schema knd
+
+{!cls Organization
+      {is Agent}
+      {str name}
+      {uint rating}}
+
+{!cls Authoritative Source
+      {is Organization }}
+
+{-- tests --}
+
+{!cls S2
+      {is Authoritative Source
+          {rating 3490}}}
+
+{!cls S3
+      {is Authoritative Source
+          {rating 3491}}}
+
+{!cls S3.1
+      {is Authoritative Source
+          {rating 3492}}}
+
+{!cls S3.2
+      {is Authoritative Source
+          {rating 3500}}}
+
+{!cls S3.3
+      {is Authoritative Source
+          {rating 3501}}}
+
+{!cls S3.4
+      {is Authoritative Source
+          {rating 3502}}}
+
+{!cls S4
+      {is Authoritative Source
+          {rating 3503}}}
+
+{!cls S5
+      {is Authoritative Source
+          {rating 42}}}
+
+{!cls S6
+      {is Authoritative Source
+          {rating 42}}}
+
+{!cls S7
+      {is Authoritative Source
+          {rating 44}}}
+
+}

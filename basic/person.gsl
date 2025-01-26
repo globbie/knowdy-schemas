@@ -1,73 +1,73 @@
 {schema knd
 
-{!class Human
-        [gloss {ru {t человек}}]
+{!cls Human
+        [gloss {ru {t человек}} ]
     {is Agent}
     {is Human Organism}
     {inner biometrics {cls Personal Biometrics} {idx}}}
 
-{!class Gender
-        [gloss {ru {t гендерная принадлежность}}]
+{!cls Gender
+        [gloss {ru {t гендерная принадлежность}} ]
     {is Information}}
 
-{!class Sex
-        [gloss {ru {t пол}}]
+{!cls Sex
+        [gloss {ru {t пол}} ]
     {is Information}}
 
-{!class Female Gender
-        [gloss {ru {t женский гендер}}]
+{!cls Female Gender
+        [gloss {ru {t женский гендер}} ]
     {is Gender}}
 
-{!class Male Gender
-        [gloss {ru {t мужской гендер}}]
+{!cls Male Gender
+        [gloss {ru {t мужской гендер}} ]
     {is Gender}}
 
-{!class Neutral Gender
-        [gloss {ru {t нейтральный гендер}}]
+{!cls Neutral Gender
+        [gloss {ru {t нейтральный гендер}} ]
     {is Gender}}
 
-{!class Female Sex
-        [gloss {ru {t женский пол}}]
+{!cls Female Sex
+        [gloss { ru {t женский пол}} ]
     {is Sex}}
 
-{!class Male Sex
-        [gloss {ru {t мужской пол}}]
+{!cls Male Sex
+        [gloss { ru {t мужской пол}} ]
     {is Sex}}
 
-{!class Personal Name
-        [gloss {ru {t имя персоны}}]
+{!cls Personal Name
+        [gloss { ru {t имя персоны}} ]
     {is Information}}
 
-{!class Nickname
-        [gloss {ru {t псевдоним}}]
+{!cls Nickname
+        [gloss { ru {t псевдоним}} ]
     {is Personal Name}
-    {str nick}}
+    {str nick} }
 
-{!class Official Russian Citizen Name
-        [gloss {ru {t имя гражданина РФ}}]
+{!cls Official Russian Citizen Name
+        [gloss { ru {t имя гражданина РФ}} ]
     {is Personal Name}
     {str forename}
     {str patronymic}
     {str surname}}
 
-{!class Official Russian Female Name
+{!cls Official Russian Female Name
     {is Official Russian Citizen Name}
     {str maiden-name}}
 
-{!class Personal Biometrics
-        [gloss {ru {t биометрические данные}}]
+{!cls Personal Biometrics
+        [gloss { ru {t биометрические данные}} ]
     {is Abstraction}
-    {ref  system {cls Biometrics System} {impl}}
-    {date birth-date}
-    {num  age}
-    {ref  sex {cls Sex} {idx}}}
+    {cls-ref  biosystem  {cls Biometrics System} {impl}}
+    {date birth-date {format UTC Date Format}}
+    {uint  age {calc t}}
+    {cls-ref  sex  {cls Sex} {idx}}}
 
-{!class Female Human
+{!cls Female Human
     {is Human
         {biometrics Legacy Biometrics
                     {sex Female Sex}}}}
 
-{!class Male Human
+{!cls Male Human
     {is Human
         {biometrics Legacy Biometrics
                     {sex Male Sex}}}}

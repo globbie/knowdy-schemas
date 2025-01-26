@@ -1,10 +1,10 @@
 {schema knd-basic
 
-{!class Pastry
+{!cls Pastry
         [gloss {ru {t мучная выпечка}}]
     {is Baked Food Product}}
 
-{!class Pie
+{!cls Pie
         [gloss {ru {t пирог}}]
     {is Pastry}
     {is Container}
@@ -17,7 +17,7 @@
        [arg    {body      {cls Dough}}
                {stuffing  {cls Food Product Stuffing}}]}
 
-{!class Cake
+{!cls Cake
         [gloss {ru {t торт}}]
     {is Pastry}}
 

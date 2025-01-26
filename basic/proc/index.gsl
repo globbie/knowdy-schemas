@@ -12,18 +12,18 @@
 {schema knd-basic
 
    {!proc Process
-          [_gloss {ru {t процесс как изменение реальности}}]}
+          [gloss {ru {t процесс как изменение реальности}}]}
 
    {!proc Stative Process
-          [_gloss {ru {t состояние вещей на определенный период времени}}]
+          [gloss {ru {t состояние вещей на определенный период времени}}]
       {is Process}}
 
    {!proc Natural Process
-          [_gloss {ru {t естественный процесс, без явного агента-каузатора}}]
+          [gloss {ru {t естественный процесс, без явного агента-каузатора}}]
       {is Process}}
 
    {!proc Motion
-          [_gloss {ru {t перемещение физического объекта в пространстве}}]
+          [gloss {ru {t перемещение физического объекта в пространстве}}]
       {is Natural Process}
       [arg {obj       {cls Physical Matter}}
            {targetLoc {cls Spatial Location}} ]
@@ -32,33 +32,33 @@
              {where-to TargetLoc}} ]}
 
    {!proc Agent Driven Process
-          [_gloss {ru {t агентивный процесс с участием каузатора}}]
+          [gloss {ru {t агентивный процесс с участием каузатора}}]
       {is Process}
       [arg {agent {cls Agent}}]}
 
    {!proc Human Agent Driven Process
-          [_gloss {ru {t процесс, инициируемый человеком}}]
+          [gloss {ru {t процесс, инициируемый человеком}}]
       {is Agent Driven Process
           {agent Human}}}
 
    {!proc Agent Driven Obj Process
-          [_gloss {ru {t агентивный процесс, направленный на внешний объект}}]
+          [gloss {ru {t агентивный процесс, направленный на внешний объект}}]
       {is Agent Driven Process}
       [arg {obj   {cls Object}}
            {benef {cls Agent}}]}
 
    {!proc Human Agent Driven Obj Process
-          [_gloss {ru {t процесс воздействия человека на внешний объект}}]
+          [gloss {ru {t процесс воздействия человека на внешний объект}}]
       {is Agent Driven Obj Process}
       {is Human Agent Driven Process}}
 
    {!proc Physical Impact Process
-          [_gloss {ru {t процесс физического воздействия на объект}}]
+          [gloss {ru {t процесс физического воздействия на объект}}]
       {is Agent Driven Obj Process
           {obj Physical Matter}}}
 
     {!proc Creative Process
-           [_gloss {ru {t созидательный процесс}}]
+           [gloss {ru {t созидательный процесс}}]
        {is Agent Driven Process}
            [effect {product {cls Material Product}}]
            [arg    {resource {cls Material Resource}}
@@ -66,17 +66,17 @@
                    {instr    {cls Tool}}]}
 
     {!proc change physical state
-           [_gloss {ru {t процесс изменения физического состояния объекта}}]
+           [gloss {ru {t процесс изменения физического состояния объекта}}]
        {is Physical Impact Process}
            {--effect {_state {obj}}--}
            [arg    {resource {cls Material Resource}}
                    {instr    {cls Tool}}]}
 
    {!proc add physical object
-          [_gloss {ru {t добавление физического объекта}}]
+          [gloss {ru {t добавление физического объекта}}]
        {is Agent Driven Process}}
 
-   {!class ProcLog
+   {!cls ProcLog
        {is Information}
        {str startAt}
        {str pausedAt}

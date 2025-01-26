@@ -1,4 +1,5 @@
 {-- abstract --}
+
 {include quant}
 {include time}
 {include math/index}
@@ -6,11 +7,13 @@
 {include physics}
 
 {-- sensors --}
+
 {include visual}
 {include taste}
 {include temperature}
 
 {-- objects --}
+
 {include substance}
 {include nature}
 {include geo/index}
@@ -33,15 +36,16 @@
 
 {schema knd
 
-{!class Concept
+{-- root class --}
+{!cls Concept
         [gloss {ru {t концепт}}]}
 
 {-- Agent vs Object / Me vs It --}
-{!class Agent
+{!cls Agent
         [gloss {ru {t деятель, субъект действия} {abbr ДЕЯТ}}]
     {is Concept}}
 
-{!class Object
+{!cls Object
         [gloss {ru {t объект}}
                 {ja {t 物体}}]
     {is Concept}
@@ -50,7 +54,7 @@
         о любой части внешнего мира --}
     {--_state_top--}}
 
-{!class Abstraction
+{!cls Abstraction
         [gloss {ru {t абстракция}}
                 {ja {t 概念}}]
     {-- [_summary {ru {t абстрактное понятие, формируемое сознанием человека
@@ -59,7 +63,7 @@
                        from   specific examples}}] --}
     {is Object}}
 
-{!class Physical Matter
+{!cls Physical Matter
         [gloss {ru {t физическая материя}}]
     {is     Object}
     {str    img  {concise 1}}
@@ -68,96 +72,95 @@
     {inner  temperature-rel {cls Relative Temperature}}
     {inner  aggr-state      {cls Physical Aggregate State}}}
 
-{!class Solid Physical Object
+{!cls Solid Physical Object
         [gloss {ru {t твердый физический объект}}]
     {is     Physical Matter}
-    {ref    flatshape {cls 2D Shape}}
-    {ref    shape     {cls 3D Shape}}
-    {inner  location  {cls Spatial Location}}
-    {str    img       {concise 1}}}
+    {cls-ref    flatshape {cls 2D Shape}}
+    {cls-ref    shape     {cls 3D Shape}}
+    {inner  location  {cls Spatial Location}}}
 
-{!class Physical Substance
+{!cls Physical Substance
         [gloss {ru {t физическое вещество}}]
     {is  Physical Matter}}
 
-{!class Granular Substance
-        [gloss {ru {t сыпучее физическое вещество}}]
+{!cls Granular Substance
+      [gloss {ru {t сыпучее физическое вещество}}]
     {is  Physical Substance
          {aggr-state Granular State}}}
 
-{!class Liquid
-        [gloss {ru {t жидкость}}]
+{!cls Liquid
+      [gloss {ru {t жидкость}}]
     {is Physical Substance
         {aggr-state Liquid State}}}
 
-{!class Gas
-        [gloss {ru {t газообразное вещество}}]
+{!cls Gas
+      [gloss {ru {t газообразное вещество}}]
     {is Physical Substance
         {aggr-state Gas State}}}
 
-{!class Information
-        [gloss {ru {t информация}}]
-    {is   Abstraction}}
-
-{!class Digital Object
-    [gloss {ru {t цифровой объект}}]
-    {is Information}}
-
-{!class Situation
-    [gloss {ru {t ситуация}}]
+{!cls Information
+      [gloss {ru {t информация}}]
     {is Abstraction}}
 
-{!class System
+{!cls Digital Object
+      [gloss {ru {t цифровой объект}}]
+    {is Information}}
+
+{!cls Situation
+      [gloss {ru {t ситуация}}]
+    {is Abstraction}}
+
+{!cls System
     [gloss {ru {t система}}]
     {is Abstraction}
     {str name}}
 
-{!class Collection
-    [gloss {ru {t множество}}]
+{!cls Collection
+      [gloss {ru {t множество}}]
     {is Abstraction}
-    {ref unit-type {cls Object}}}
+    {cls-ref unit-type {cls Object}}}
 
-{!class Custom Class
+{!cls Custom Class
     [gloss {ru {t класс с произвольной семантикой}}]
     {is Abstraction}}
 
-{!class Organic Object
+{!cls Organic Object
         [gloss {ru {t органический объект}}]
     {is Solid Physical Object}}
 
-{!class Eukaryote
+{!cls Eukaryote
     {is Organic Object}}
 
-{!class Plant
+{!cls Plant
        [gloss {ru {t растение}}]
     {is Eukaryote}}
 
-{!class Fungi
+{!cls Fungi
         [gloss {ru {t гриб}}]
     {is Organic Object}}
 
-{!class Group
+{!cls Group
         [gloss {ru {t группа объектов}}]
     {is Abstraction}}
 
-{!class Linear Sequence
+{!cls Linear Sequence
     {is Group}}
 
-{!class    Sensory Object
+{!cls    Sensory Object
            [gloss    {ru {t объект восприятия}}]
     {is    Object}}
 
-{!class  Activity
-         [gloss    {ru {t деятельность}}]
+{!cls  Activity
+       [gloss    {ru {t деятельность}}]
     {is  Abstraction}
-    {ref emotion  {cls Agent Emotion}}
-    {ref dynamics {cls Change Dynamics}}}
+    {cls-ref emotion  {cls Agent Emotion}}
+    {cls-ref dynamics {cls Change Dynamics}}}
 
-{!class  Change Dynamics
+{!cls  Change Dynamics
          [gloss    {ru {t динамика изменений состояния}}]
     {is  Abstraction}}
 
-{!class  Highly Dynamic Change
+{!cls  Highly Dynamic Change
          [gloss    {ru {t высокая динамика изменений}}]
     {is  Change Dynamics}}
 

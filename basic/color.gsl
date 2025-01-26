@@ -1,51 +1,51 @@
 {schema knd
 
-  {!class Color
+  {!cls Color
     [gloss {ru {t объект цветового восприятия}}]
     {is Sensory Object}
     {str intensity}}
 
-  {!class White Color
+  {!cls White Color
     [gloss {ru {t белый}}]
     {is Color}}
 
-  {!class Black Color
+  {!cls Black Color
     [gloss {ru {t черный}}]
     {is Color}}
 
-  {!class Gray Color
+  {!cls Gray Color
     [gloss {ru {t серый}}]
     {is Color}}
 
-  {!class Brown Color
+  {!cls Brown Color
     [gloss {ru {t коричневый}}]
     {is Color}}
 
-  {!class Red Color
+  {!cls Red Color
     [gloss {ru {t красный}}]
     {is Color}}
 
-  {!class Green Color
+  {!cls Green Color
     [gloss {ru {t зеленый}}]
     {is Color}}
 
-  {!class Blue Color
+  {!cls Blue Color
           [gloss {ru {t синий}}]
       {is Color}}
 
-  {!class Yellow Color
+  {!cls Yellow Color
           [gloss {ru {t желтый}}]
       {is Color}}
 
-  {!class Light Wheat Color
+  {!cls Light Wheat Color
           [gloss {ru {t светло-пшеничный}}]
       {is Color}}
 
-  {!class Orange Color
+  {!cls Orange Color
           [gloss {ru {t оранжевый}}]
       {is Color}}
 
-  {!class Dark Orange
+  {!cls Dark Orange
           [gloss {ru {t темно-оранжевый}}]
       {is Orange Color
           {intensity low}}}

@@ -1,23 +1,23 @@
 {schema knd
 
-{!class Time Flow View
-        [_gloss {ru {t восприятие протекания временного процесса}}]
+{!cls Time Flow View
+        [gloss {ru {t восприятие протекания временного процесса}}]
     {is Abstraction}}
 
-{!class Abstract Time Flow View
-        [_gloss {ru {t отвлеченное восприятие временного процесса}}]
+{!cls Abstract Time Flow View
+        [gloss {ru {t отвлеченное восприятие временного процесса}}]
     {is Time Flow View}}
 
-{!class Specific Time Flow View
-        [_gloss {ru {t временной процесс в конкретный момент времени}}]
+{!cls Specific Time Flow View
+        [gloss {ru {t временной процесс в конкретный момент времени}}]
     {is Time Flow View}}
 
-{!class Streamlined Time Flow View
-        [_gloss {ru {t однонаправленное восприятие временного процесса}}]
+{!cls Streamlined Time Flow View
+        [gloss {ru {t однонаправленное восприятие временного процесса}}]
     {is Time Flow View}}
 
-{!class Continual Time Flow View
-        [_gloss {ru {t длительное, многонаправленное восприятие временного процесса}}]
+{!cls Continual Time Flow View
+        [gloss {ru {t длительное, многонаправленное восприятие временного процесса}}]
     {is Time Flow View}}
 
 }

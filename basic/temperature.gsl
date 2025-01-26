@@ -1,27 +1,26 @@
 {schema knd
 
-  {!class Temperature
-          [_gloss {ru {t температура физического объекта}}]
+  {!cls Temperature
+          [gloss {ru {t температура физического объекта}}]
       {is Abstraction}
       {str intensity}}
 
-  {!class Absolute Temperature
-          [_gloss {ru {t абсолютная температура}}]
+  {!cls Absolute Temperature
+          [gloss {ru {t абсолютная температура}}]
       {is Temperature}
       {str system}
-      {float numval}}
+      {real numval}}
 
-  {!class Relative Temperature
-          [_gloss {ru {t относительная температура}}]
-      {is Absolute Temperature}
-      {float normal}}
+  {!cls Relative Temperature
+          [gloss {ru {t относительная температура}}]
+      {is Temperature}}
 
-  {!class Warm Temperature
-          [_gloss {ru {t температура слегка выше нормы}}]
+  {!cls Warm Temperature
+          [gloss {ru {t температура слегка выше нормы}}]
       {is Relative Temperature}}
 
-  {!class Hot Temperature
-          [_gloss {ru {t температура существенно выше нормы}}]
+  {!cls Hot Temperature
+          [gloss {ru {t температура существенно выше нормы}}]
       {is Relative Temperature}}
 
 }

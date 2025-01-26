@@ -1,62 +1,62 @@
 {schema knd-basic
 
-{!class Spatial Location
+{!cls Spatial Location
         [gloss {ru {t пространственное положение}}]
     {is Abstraction}}
 
-{!class 3D Spatial Location
+{!cls 3D Spatial Location
         [gloss {ru {t локализация физического тела в пространстве}}]
     {is Spatial Location}
-    {ref origin {cls 3D Spatial Location}}
-    {num x}
-    {num y}
-    {num z}}
+    {cls-ref origin {cls 3D Spatial Location}}
+    {ureal x}
+    {ureal y}
+    {ureal z}}
 
-{!class Substance Quantity
+{!cls Substance Quantity
         [gloss {ru {t количественная характеристика вещества}}]
     {is Quantity}
-    {num mass}
-    {ref unitref {cls Mass Measure Unit}}}
+    {ureal mass}
+    {cls-ref unitref {cls Mass Measure Unit}}}
 
-{!class Countable Quantity
+{!cls Countable Quantity
     [gloss {ru {t количественная характеристика счетных объектов}}]
     {is Quantity}
-    {num count} }
+    {uint count} }
 
-{!class Physical Aggregate State
+{!cls Physical Aggregate State
         [gloss {ru {t агрегатное состояние вещества}}]
     {is Abstraction}}
 
-{!class Liquid State
+{!cls Liquid State
         [gloss {ru {t жидкое состояние вещества}}]
     {is Physical Aggregate State}}
 
-{!class Solid State
+{!cls Solid State
         [gloss {ru {t твердое состояние вещества}}]
     {is Physical Aggregate State}}
 
-{!class Gas State
+{!cls Gas State
         [gloss {ru {t газообразное состояние вещества}}]
     {is Physical Aggregate State}}
 
-{!class Volatile Gas State
+{!cls Volatile Gas State
         [gloss {ru {t летучее газообразное состояние}}
                 {en {t easily evaporated gas state}}]
     {is Gas State}}
 
-{!class Plasma State
+{!cls Plasma State
         [gloss {ru {t плазменное состояние вещества}}]
     {is Physical Aggregate State}}
 
-{!class Physical Mass Quantity
+{!cls Physical Mass Quantity
     [gloss {ru {t масса физического тела}}]
     {is Abstraction}
     {str calc}
     {-- ref measure-proc {cls Mass Measurement Procedure} --}
-    {num mass {impl}}
-    {num count}
+    {ureal mass {impl}}
+    {uint count}
     {str unit}
-    {ref unitref {cls Mass Measure Unit}}}
+    {cls-ref unitref {cls Mass Measure Unit}}}
 
 {-- {proc Compute Physical Mass
     [gloss {ru {t расчет физической массы объекта}}]
@@ -72,15 +72,15 @@
                       {times {q{count}}}} }} }
 --}
 
-{!class Mass Measure Unit
+{!cls Mass Measure Unit
     [gloss {ru {t единица измерения массы}}]
     {is Abstraction}}
 
-{!class Gram
+{!cls Gram
     [gloss {ru {t грамм}}]
     {is Mass Measure Unit}}
 
-{!class Liter
+{!cls Liter
     [gloss {ru {t литр}}]
     {is Mass Measure Unit}}
 

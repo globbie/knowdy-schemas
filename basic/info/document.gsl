@@ -1,18 +1,18 @@
 {schema knd
 
-{!class Document
+{!cls Document
     {is Static Content}
-    {ref   topic    {cls Concept} {t set}}
+    {cls-ref   topic    {cls Concept} {t set}}
     {inner div      {cls Content Section} {t set}}}
 
-{!class Legal Document
+{!cls Legal Document
     {is Document}
     {-- time validity-period constraints --}
     {inner issue    {cls Document Issue}}}
 
-{!class Document Issue
+{!cls Document Issue
     {is Information}
-    {ref issuer {cls Agent}}
+    {cls-ref issuer {cls Agent}}
     {-- date issue-date --}
     {-- date expiration-date NB: may be dependent on Legal Doc constraints --}
     {-- date cancellation-date --}

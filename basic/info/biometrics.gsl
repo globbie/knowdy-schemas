@@ -1,9 +1,9 @@
 {schema knd-basic
 
-{!class Biometrics System
+{!cls Biometrics System
     {is System}}
 
-{!class Legacy Biometrics
+{!cls Legacy Biometrics
     {is Biometrics System
         {name LB}}}
 

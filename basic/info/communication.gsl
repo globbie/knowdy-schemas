@@ -1,54 +1,54 @@
 {schema knd
 
-{!class Communication Activity
+{!cls Communication Activity
     {is Activity}}
 
-{!class Encoded Data
+{!cls Encoded Data
         [gloss {ru {t кодированная информация}}]
     {is     Information}
     {str    mimetype}
     {bool   is-binary}
     {cdata  body}}
 
-{!class Chat
+{!cls Chat
     {is Communication Activity}}
 
-{!class Discussion
+{!cls Discussion
     {is Communication Activity}}
 
-{!class Discourse Ref
+{!cls Discourse Ref
     {is Information}}
 
-{!class Message Author
+{!cls Message Author
     {is Agent}
     {is Discourse Ref}}
 
-{!class Message Addressee
+{!cls Message Addressee
     {is Agent}
     {is Discourse Ref}}
 
-{!class Message Ref Obj
+{!cls Message Ref Obj
     {is Discourse Ref}}
 
-{!class Discourse Context
+{!cls Discourse Context
     {is Information}}
 
-{!class Message
+{!cls Message
     {is Information}
-    {ref  author    {cls Message Author}}
-    {ref  addressee {cls Message Addressee}}
-    {ref  stimulus  {cls Message}}
-    {ref  activity  {cls Communication Activity}}
+    {cls-ref  author    {cls Message Author}}
+    {cls-ref  addressee {cls Message Addressee}}
+    {cls-ref  stimulus  {cls Message}}
+    {cls-ref  activity  {cls Communication Activity}}
     {text subj {idx}}
     {text body {idx}} }
 
-{!class Chat Message
+{!cls Chat Message
     {is Message
         {activity Chat}}}
 
-{!class Comment
+{!cls Comment
     {is Message
         {activity Discussion}}
-    {ref topic {cls Concept}}}
+    {cls-ref topic {cls Concept}}}
 
 }

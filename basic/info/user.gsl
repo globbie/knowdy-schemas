@@ -1,7 +1,7 @@
 {schema knd-basic
 
-{!class User
-        [gloss {ru {t пользователь сервиса}}]
+{!cls User
+        [gloss { ru {t пользователь сервиса}}]
     {is Agent
         {_pred S1
                {class Info Service {!var service}}
@@ -9,37 +9,42 @@
                    {subj _this}
                    {obj  service}}}
     }
-    {inner contacts   {cls User Contacts}}
-    {inner ident      {cls User Ident}}
-    {ref   device     {cls Hardware Device}  {t set}}
-    {inner soft       {cls Software Stack}   {t set}}
-    {inner ip-allow   {cls IP Address v4}    {t set}}
-    {str   lang {t set}} }
+    {inner contacts  [gloss {ru {t контактные данные пользователя }}]
+                     {cls Contact Details}}
+    {inner ident     [gloss {ru {t авторизационные сведения}}]
+                     {cls User Ident}}
+    {cls-ref   device [gloss {ru {t устройства подключения}}]
+                     {cls Hardware Device}  {t set}}
+    {inner soft      [gloss {ru {t программные средства}}]
+                     {cls Software Stack}   {t set}}
+    {inner ip-allow  [gloss {ru {t сетевые адреса}}]
+                     {cls IP Address v4}    {t set}}
+    {str   lang      [gloss {ru {t языки интерфейса}}] {t set}}}
 
-{!class Observer
+{!cls Observer
         [gloss {ru {t роль наблюдателя}}]
     {is User}}
 
-{!class Contributor
+{!cls Contributor
         [gloss {ru {t роль автора}}]
     {is User}}
 
-{!class Reviewer
+{!cls Reviewer
         [gloss {ru {t роль рецензента}}]
     {is User}}
 
-{!class Expert
+{!cls Expert
         [gloss {ru {t роль эксперта }}]
     {is User}}
 
-{!class User Ident
-    [gloss {ru {t идентификация пользователя }}]
+{!cls User Ident
+        [gloss {ru {t идентификация пользователя }}]
     {is Information}
     {inner cred   {cls User Credentials}}
-    {ref   gender {cls Gender}}
+    {cls-ref   gender {cls Gender}}
     {inner name   {cls Personal Name} {t set}}}
 
-{!class User Credentials
+{!cls User Credentials
         [gloss {ru {t аутентификационные данные учетной записи }}]
     {is Information}
     {str service}
@@ -54,8 +59,8 @@
     {bin hash
          [gloss {ru {t вычисленный хеш от пароля }}]}}
 
-{!class User Contacts
-        [gloss {ru {t контактные данные пользователя }}]
+{!cls Contact Details
+        [gloss {ru {t контактные данные}}]
     {is Information}
     {inner email       {cls Email Address}             {t set}}
     {inner messenger   {cls Messenger Account}         {t set}}

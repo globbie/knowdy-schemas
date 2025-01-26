@@ -1,6 +1,6 @@
 {schema knd-basic
 
-{!class Bread
+{!cls Bread
         [gloss {ru {t хлеб}}]
     {is Baked Food Product}}
 
@@ -10,7 +10,7 @@
    [effect {product  {cls Bread}}]
    [arg    {resource {cls Flour}}]}
 
-{!class Rye Bread
+{!cls Rye Bread
         [gloss {ru {t ржаной хлеб}}]
     {is Bread
         {-- _proc Bread Making

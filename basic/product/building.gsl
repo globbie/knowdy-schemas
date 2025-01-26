@@ -1,15 +1,15 @@
 {schema knd-basic
 
-{!class Physical Structure
+{!cls Physical Structure
      [gloss {ru {t материальное сооружение}}]
      {is Material Product}
      {is Spatial Object}}
 
-{!class Road
+{!cls Road
         [gloss {ru {t дорога}}]
     {is Physical Structure}}
 
-{!class Building
+{!cls Building
         [gloss {ru {t здание}}]
     {is Physical Structure
         {purpose Shelter}}
@@ -21,16 +21,16 @@
          {idx} --}
     {str adm-id}}
 
-{!class Building Floor
+{!cls Building Floor
         [gloss {ru {t этаж здания}}]
     {inner space {cls Building Space}}
     {str floor-id}}
 
-{!class Building Space
+{!cls Building Space
         [gloss {ru {t помещение}}]
     {str space-id}}
 
-{!class Office Space
+{!cls Office Space
         [gloss {ru {t офисное помещение}}]
     {is Building Space}
     {inner room {cls Office Room}}
@@ -38,16 +38,16 @@
 
 {-- rel: owner/renter: company --}
 
-{!class Storage Space
+{!cls Storage Space
         [gloss {ru {t складское помещение}}]
     {is Building Space}}
 
-{!class Office Room
+{!cls Office Room
         [gloss {ru {t кабинет офиса}}]
     {is Physical Structure}
     {str room-id}}
 
-{!class Building Section
+{!cls Building Section
         [gloss {ru {t секция}}]
     {str space-id}}
 }

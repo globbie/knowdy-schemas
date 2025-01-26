@@ -1,7 +1,7 @@
 {schema knd
 
-{!class Hardware Device
-        [_gloss {ru {t аппаратное устройство}}]
+{!cls Hardware Device
+        [gloss {ru {t аппаратное устройство}}]
     {is Tool}
     {str code {uniq}}}
 

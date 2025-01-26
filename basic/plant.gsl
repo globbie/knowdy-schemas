@@ -1,11 +1,11 @@
 {schema knd-basic
 
-{!class Tree
-        [_gloss {ru {t дерево}}]
+{!cls Tree
+        [gloss {ru {t дерево}}]
     {is Plant}}
 
-{!class Edible Plant
-        [_gloss {ru {t съедобное растение}}]
+{!cls Edible Plant
+        [gloss {ru {t съедобное растение}}]
     {is Plant}}
 
 }

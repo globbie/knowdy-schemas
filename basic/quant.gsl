@@ -1,185 +1,194 @@
 {schema knd-basic
 
-{!class Quantity
+{!cls Quantity
         [gloss {ru {t количественная характеристика объекта}}]
     {is Abstraction}}
 
-{!class Measure
+{!cls Measure
         [gloss {ru {t количественное измерение характеристики}}]
     {is Quantity}
     {str unit}}
 
-{!class Percent
+{!cls Percent
         [gloss {ru {t процент, результат измерения в сотых долях целого}}]
    {is Measure}}
 
-{!class Unit of Measure
+{!cls Unit of Measure
         [gloss {ru {t единица измерения}}]
     {is Measure}}
 
-{!class Multiple Quantity
+{!cls Multiple Quantity
         [gloss {ru {t множество}}]
     {is Quantity}}
 
-{!class Singular Quantity
+{!cls Singular Quantity
         [gloss {ru {t единственное количество}}]
     {is Quantity}}
 
-{-- абсолютная метрика количества, использующая единицы измерения,
-    в отличие от метрик относительных (много/мало) --}
-{!class Number
-        [gloss {ru {t число}}]
+{!cls Number
+      [gloss {ru {t число: абсолютная метрика количества, использующая единицы измерения,
+                    в отличие от метрик относительных (много/мало)}}]
     {is Quantity}
-    {rel incr-of
-         {proc Quant Increment
+    {cls-ref incr-of {cls Number}}}
+
+{-- {proc Quant Increment
                {subj next}
-               {impl-arg base}} }}
+               {impl-arg base}} } --}
 
-{!class Normal Number
-        [gloss {ru {t нормализованное число}}]
-    {is Number}
-    {num base-ten-position}
-    {num numval}}
+{!cls Normal Number
+      [gloss {ru {t нормализованное число}}]
+      {is Number}
+      {uint base-ten-position}
+      {uint numval}}
 
-{!class Integer Quant
+{!cls Integer Quant
         [gloss {ru {t целое число}}]
     {is Normal Number}}
 
-{!class Integer Ordinal Quant
+{!cls Integer Ordinal Quant
         [gloss {ru {t целое порядковое число}}]
+    {is Integer Quant}}
+
+{!cls Real Quant
+        [gloss {ru {t вещественное число}}]
     {is Normal Number}}
 
-{!class Real Quant
-        [gloss {ru {t вещественное число}}]
-    {is Normal Number}
-    {float fractional}}
-
-{!class Number Zero
+{!cls Number Zero
         [gloss {ru {t число 0}}]
     {is Normal Number
         {numval 0}}}
 
-{!class Number One
+{!cls Number One
         [gloss {ru {t число 1}}]
     {is Normal Number
         {base-ten-position 1}
         {numval 1}}}
 
-{!class Number Two
+{!cls Number Two
         [gloss {ru {t число 2}}]
     {is Normal Number
         {incr-of Number One}
         {numval 2}}}
 
-{!class Number Three
+{!cls Number Three
         [gloss {ru {t число 3}}]
     {is Normal Number
         {incr-of Number Two}
         {numval 3}}}
 
-{!class Number Four
+{!cls Number Four
         [gloss {ru {t число 4}}]
     {is Normal Number
         {incr-of Number Three}
         {numval 4}}}
 
-{!class Number Five
+{!cls Number Five
         [gloss {ru {t число 5}}]
     {is Normal Number
         {numval 5}}}
 
-{!class Number Six
+{!cls Number Six
         [gloss {ru {t число 6}}]
     {is Normal Number
         {numval 6}}}
 
-{!class Number Seven
+{!cls Number Seven
         [gloss {ru {t число 7}}]
     {is Normal Number
         {numval 7}}}
 
-{!class Number Eight
+{!cls Number Eight
         [gloss {ru {t число 8}}]
     {is Normal Number
         {numval 8}}}
 
-{!class Number Nine
+{!cls Number Nine
         [gloss {ru {t число 9}}]
     {is Normal Number
         {numval 9}}}
 
-{!class Number Ten
+{!cls Number Ten
         [gloss {ru {t десять, число 10}}]
     {is Normal Number
         {base-ten-position 2}
         {numval 10}}}
 
-{!class Number Eleven
+{!cls Number Eleven
         [gloss {ru {t число 11}}]
     {is Normal Number}}
 
-{!class Number Twelve
+{!cls Number Twelve
         [gloss {ru {t число 12}}]
     {is Normal Number}}
 
-{!class Number Hundred
+{!cls Number Hundred
         [gloss {ru {t сто = число 100}}]
     {is Normal Number
         {base-ten-position 3}}}
 
-{!class Number Thousand
+{!cls Number Thousand
         [gloss {ru {t тысяча = число 1000}}]
     {is Normal Number
         {base-ten-position 4}}}
 
-{!class Number Ten Thousand
+{!cls Number Ten Thousand
         [gloss {ru {t десять тысяч = число 10,000}}]
     {is Normal Number
         {base-ten-position 5}}}
 
-{!class Number One Hundred Thousand
+{!cls Number One Hundred Thousand
         [gloss {ru {t сто тысяч = число 100,000}}]
     {is Normal Number
         {base-ten-position 6}}}
 
-{!class Number Million
+{!cls Number Million
         [gloss {ru {t миллион = число 1,000,000}}]
     {is Normal Number
         {base-ten-position 7}}}
 
-{!class Number Billion
-        [gloss {ru {t  миллиард = число 1,000,000,000}}]
+{!cls Number Ten Million
+        [gloss {ru {t десять миллионов = число 10,000,000}}]
+    {is Normal Number
+        {base-ten-position 8}}}
+
+{!cls Number One Hundred Million
+        [gloss {ru {t сто миллионов = число 100,000,000}}]
+    {is Normal Number
+        {base-ten-position 9}}}
+
+{!cls Number Billion
+        [gloss {ru {t миллиард = число 1,000,000,000}}]
     {is Normal Number
         {base-ten-position 10}}}
 
-{!class Numeric Operation
+{!cls Numeric Operation
         [gloss {ru {t числовая операция}}]
     {is Abstraction}}
 
-{!class Numeric Equality
+{!cls Numeric Equality
      {is Numeric Operation}}
 
-{!class Numeric Less Than
+{!cls Numeric Less Than
      {is Numeric Operation}}
 
-{!class Numeric Greater Than
+{!cls Numeric Greater Than
      {is Numeric Operation}}
 
-{!class Numeric Addition
+{!cls Numeric Addition
      {is Numeric Operation}}
 
-{!class Numeric Subtraction
+{!cls Numeric Subtraction
      {is Numeric Operation}}
 
-{!class Numeric Multiplication
+{!cls Numeric Multiplication
      {is Numeric Operation}}
 
-{!class Numeric Division
+{!cls Numeric Division
      {is Numeric Operation}}
 
-{!class Fraction Denominator
+{!cls Fraction Denominator
      {is Numeric Operation}}
 
-{!class Real Number Radix Point
+{!cls Real Number Radix Point
      {is Visual Borderline}}
 }

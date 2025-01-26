@@ -1,0 +1,19 @@
+{schema knd
+
+{!cls Digital Format
+    {is Information}
+    {str name}}
+
+{!cls UTC Date Format 
+    {is Digital Format
+       {name UTC}}}
+
+{!cls IP4 String Format 
+    {is Digital Format
+       {name IP4}}}
+
+{!cls IP6 String Format 
+    {is Digital Format
+       {name IP6}}}
+
+}

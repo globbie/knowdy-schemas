@@ -1,26 +1,26 @@
 {schema glt
 
-{!class Container
+{!cls Container
         [gloss {ru {t емкость для физических объектов}}]
     {is Solid State Material Product
         {design Protective Cover with Space Inside}}
-    {ref content {cls Physical Matter}}}
+    {cls-ref content {cls Physical Matter}}}
 
-{!class Container for Liquids
+{!cls Container for Liquids
         [gloss {ru {t емкость для жидкостей}}]
     {is Container
         {content Liquid}}}
 
-{!class Bottle
+{!cls Bottle
    {is Container for Liquids}}
 
-{!class Jar
+{!cls Jar
    {is Container for Liquids}}
 
-{!class Jug
+{!cls Jug
    {is Container for Liquids}}
 
-{!class Vase
+{!cls Vase
    {is Container for Liquids}}
 
 

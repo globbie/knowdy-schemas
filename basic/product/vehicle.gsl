@@ -1,44 +1,44 @@
 {schema knd-basic
 
-{!class Vehicle
-        [_gloss {ru {t транспортное средство}}]
+{!cls Vehicle
+        [gloss {ru {t транспортное средство}}]
      {is Solid State Material Product}}
 
-{!class Road Vehicle
-        [_gloss {ru {t транспорт для передвижения по дорогам}}]
+{!cls Road Vehicle
+        [gloss {ru {t транспорт для передвижения по дорогам}}]
      {is Vehicle}}
 
-{!class Railroad Vehicle
-        [_gloss {ru {t транспорт для передвижения по рельсам}}]
+{!cls Railroad Vehicle
+        [gloss {ru {t транспорт для передвижения по рельсам}}]
      {is Vehicle}}
 
-{!class Monorail Vehicle
-        [_gloss {ru {t монорельсовый транспорт}}]
+{!cls Monorail Vehicle
+        [gloss {ru {t монорельсовый транспорт}}]
      {is Vehicle}}
 
-{!class Aerial Lift
-        [_gloss {ru    {t подвесной транспорт}}
+{!cls Aerial Lift
+        [gloss {ru    {t подвесной транспорт}}
                 {en_UK {t cable car}}]
      {is Vehicle}}
 
-{!class Water Vehicle
-        [_gloss {ru {t транспорт для передвижения по воде}}]
+{!cls Water Vehicle
+        [gloss {ru {t транспорт для передвижения по воде}}]
      {is Vehicle}}
 
-{!class Aircraft Vehicle
-        [_gloss {ru {t транспорт для передвижения по воздуху}}]
+{!cls Aircraft Vehicle
+        [gloss {ru {t транспорт для передвижения по воздуху}}]
      {is Vehicle}}
 
-{!class Spacecraft Vehicle
-        [_gloss {ru {t космический транспорт}}]
+{!cls Spacecraft Vehicle
+        [gloss {ru {t космический транспорт}}]
      {is Vehicle}}
 
-{!class Automobile
-        [_gloss {ru {t автомобиль}}]
+{!cls Automobile
+        [gloss {ru {t автомобиль}}]
      {is Road Vehicle}}
 
-{!class Bicycle
-        [_gloss {ru {t велосипед}}]
+{!cls Bicycle
+        [gloss {ru {t велосипед}}]
      {is Road Vehicle}}
 
 

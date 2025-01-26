@@ -1,17 +1,17 @@
 {schema knd-basic
 
    {!proc Sensory Process
-          [_gloss {ru {t сенсорный процесс}}]
+          [gloss {ru {t сенсорный процесс}}]
       {is Agent Driven Obj Process}}
 
    {!proc Visual Process
-          [_gloss {ru {t процесс визуального восприятия}}]
+          [gloss {ru {t процесс визуального восприятия}}]
       {is Sensory Process}
       [arg {Target     {cls Physical Matter}}
            {Instrument {cls Visual Tool}}  ]}
 
    {!proc Auditory Process
-          [_gloss {ru {t процесс слухового восприятия}}]
+          [gloss {ru {t процесс слухового восприятия}}]
       {is Sensory Process} }
 
 }

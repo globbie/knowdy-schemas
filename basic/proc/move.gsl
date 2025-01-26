@@ -1,24 +1,24 @@
 {schema knd-basic
 
-{!class INWARDS as MOVEMENT DIRECTION
+{!cls INWARDS as MOVEMENT DIRECTION
    {is Abstraction}}
-{!class UPWARDS as MOVEMENT DIRECTION
+{!cls UPWARDS as MOVEMENT DIRECTION
    {is Abstraction}}
-{!class OUTWARDS as MOVEMENT DIRECTION
+{!cls OUTWARDS as MOVEMENT DIRECTION
    {is Abstraction}}
-{!class ON TOP as MOVEMENT DIRECTION
+{!cls ON TOP as MOVEMENT DIRECTION
    {is Abstraction}}
-{!class OVER as MOVEMENT DIRECTION
+{!cls OVER as MOVEMENT DIRECTION
    {is Abstraction}}
-{!class AROUND as MOVEMENT DIRECTION
+{!cls AROUND as MOVEMENT DIRECTION
    {is Abstraction}}
-{!class FROM as MOVEMENT DIRECTION
+{!cls FROM as MOVEMENT DIRECTION
    {is Abstraction}}
-{!class CROSSING as MOVEMENT DIRECTION
+{!cls CROSSING as MOVEMENT DIRECTION
    {is Abstraction}}
-{!class DOWNWARDS as MOVEMENT DIRECTION
+{!cls DOWNWARDS as MOVEMENT DIRECTION
    {is Abstraction}}
-{!class AWAY FROM as MOVEMENT DIRECTION
+{!cls AWAY FROM as MOVEMENT DIRECTION
    {is Abstraction}}
 
 {!proc Transportation Process

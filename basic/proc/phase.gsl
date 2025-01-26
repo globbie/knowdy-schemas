@@ -1,27 +1,27 @@
 {schema glt
 
-{!class Proc Phase View
-        [_gloss {ru {t восприятие фазы процесса}}]
+{!cls Proc Phase View
+        [gloss {ru {t восприятие фазы процесса}}]
     {is Abstraction}}
 
-{!class Beginning Proc Phase View
-        [_gloss {ru {t начальная фаза процесса}}]
+{!cls Beginning Proc Phase View
+        [gloss {ru {t начальная фаза процесса}}]
     {is Proc Phase View}}
 
-{!class Progressive Proc Phase View
-        [_gloss {ru {t фаза продолжающегося процесса}}]
+{!cls Progressive Proc Phase View
+        [gloss {ru {t фаза продолжающегося процесса}}]
     {is Proc Phase View}}
 
-{!class Paused Proc Phase View
-        [_gloss {ru {t фаза приостановленного процесса (с возможностью продолжения)}}]
+{!cls Paused Proc Phase View
+        [gloss {ru {t фаза приостановленного процесса (с возможностью продолжения)}}]
     {is Proc Phase View}}
 
-{!class Interrputed Proc Phase View
-        [_gloss {ru {t фаза прерванного процесса (без возможности продолжения)}}]
+{!cls Interrputed Proc Phase View
+        [gloss {ru {t фаза прерванного процесса (без возможности продолжения)}}]
     {is Proc Phase View}}
 
-{!class Completed Proc Phase View
-        [_gloss {ru {t фаза результативного завершения процесса}}]
+{!cls Completed Proc Phase View
+        [gloss {ru {t фаза результативного завершения процесса}}]
     {is Proc Phase View}}
 
 }

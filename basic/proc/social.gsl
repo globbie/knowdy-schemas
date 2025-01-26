@@ -3,15 +3,15 @@
 {schema knd-basic
 
    {!proc Social Process
-          [_gloss {ru {t осуществлять социальное взаимодействие}}]
+          [gloss {ru {t осуществлять социальное взаимодействие}}]
       {is Human Agent Driven Process} }
 
    {!proc Provide Help
-          [_gloss {ru {t  помогать}}]
+          [gloss {ru {t  помогать}}]
       {is Social Process}  }
 
    {!proc Planning Process
-          [_gloss {ru {t  планирование}}]
+          [gloss {ru {t  планирование}}]
       {is Social Process}
       [arg {situation  {cls Situation}}
            {timeFrame  {cls Time Line View}} ]}

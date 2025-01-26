@@ -1,7 +1,7 @@
 {schema knd-basic
 
-{!class Porridge
-        [_gloss {ru {t каша}}]
+{!cls Porridge
+        [gloss {ru {t каша}}]
     {is Food Product}}
 
 }

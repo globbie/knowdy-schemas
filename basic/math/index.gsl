@@ -1,46 +1,46 @@
 {schema knd-basic
 
-{!class Mathematical Object
+{!cls Mathematical Object
         [gloss {ru {t математический объект}}]
     {is Abstraction}
-    {ref system {cls Numeral System}}}
+    {cls-ref system {cls Numeral System}}}
 
-{!class Numeral System
+{!cls Numeral System
         [gloss {ru {t система счисления}}]
     {is System}}
 
-{!class Positional Numeral System
+{!cls Positional Numeral System
         [gloss {ru {t позиционная система счисления}}]
     {is Numeral System}
     {str base}}
 
-{!class Roman System
+{!cls Roman System
         [gloss {ru {t римская система счисления}}]
     {is Numeral System}}
 
-{!class Decimal System
+{!cls Decimal System
         [gloss {ru {t арабская система счисления}}]
     {is Positional Numeral System
         {base 10}}}
 
-{!class Binary System
+{!cls Binary System
         [gloss {ru {t двоичная система счисления}}]
     {is Positional Numeral System
         {base 2}}}
 
-{!class Hexadecimal System
+{!cls Hexadecimal System
         [gloss {ru {t шестнадцатиричная система счисления}}]
     {is Numeral System}}
 
-{!class Number #math
+{!cls Number #math
         [gloss {ru {t математическое число}}]
     {is Mathematical Object}}
 
-{!class Fraction #math
+{!cls Fraction #math
         [gloss {ru {t дробь}}]
     {is Number #math}}
 
-{!class Decimal Fraction
+{!cls Decimal Fraction
         [gloss {ru {t десятичная дробь}}]
     {is Fraction #math
          {system Decimal System}}}

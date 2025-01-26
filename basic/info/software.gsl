@@ -1,79 +1,79 @@
 {schema knd
 
-{!class Software
+{!cls Software
         [gloss {ru {t программное обеспечение}}]
     {is Intellectual Product}
     {str name {impl}}
     {inner version {cls Semantic Software Version}}
     {str func}}
 
-{!class System Software
+{!cls System Software
         [gloss {ru {t системное ПО}}]
     {is Software}}
 
-{!class Application
+{!cls Application
         [gloss {ru {t прикладное ПО}}]
     {is Software}
     {-- user interaction --}}
 
-{!class Semantic Software Version
+{!cls Semantic Software Version
         [gloss {ru {t семантическая версия ПО}}]
     {is Information}
-    {num major}
-    {num minor}
-    {num patch}}
+    {uint major}
+    {uint minor}
+    {uint patch}}
 
-{!class Hardware Platform
+{!cls Hardware Platform
         [gloss {ru {t аппаратная платформа}}]
     {is Hardware Device}}
 
-{!class Formal Language
+{!cls Formal Language
         [gloss {ru {t формальный язык}}]
     {is Intellectual Product}}
 
-{!class Programming Language
+{!cls Programming Language
         [gloss {ru {t язык программирования}}]
     {is Formal Language}}
 
-{!class Logical Markup Language
+{!cls Logical Markup Language
         [gloss {ru {t язык логической разметки}}]
     {is Formal Language}}
 
-{!class Operating System
+{!cls Operating System
         [gloss {ru {t операционная система}}]
     {is System Software}}
 
-{!class Binary Code
+{!cls Binary Code
         [gloss {ru {t бинарный машинный код}}]
     {is Software}
-    {ref platform {cls Hardware Platform}}}
+    {cls-ref platform {cls Hardware Platform}}}
 
-{!class Source Code
+{!cls Source Code
         [gloss {ru {t исходный программный код}}]
     {is Software}
-    {ref lang {cls Programming Language} }}
+    {cls-ref lang {cls Programming Language} }}
 
-{!class Web Browser
+{!cls Web Browser
         [gloss {ru {t веб-браузер}}]
     {is Application}}
 
-{!class Firefox
+{!cls Firefox
         [gloss {ru {t веб-браузер Firefox}}]
     {is Web Browser}}
 
-{!class Firefox 78.0
+{!cls Firefox 78.0
     {is Firefox
         {version {major 78}}}}
 
-{!class Chrome
+{!cls Chrome
         [gloss {ru {t веб-браузер Chrome}}]
     {is Web Browser}}
 
-{!class Software Stack
+{!cls Software Stack
         [gloss {ru {t рабочий набор программного обеспечения}}]
     {is Information}
     {str code {impl} {uniq}}
-    {ref os {cls Operating System}}
-    {ref browser {cls Web Browser}}}
+    {cls-ref os {cls Operating System}}
+    {cls-ref browser {cls Web Browser}}}
 
 }

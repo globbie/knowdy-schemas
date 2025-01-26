@@ -12,36 +12,36 @@
 
 {schema knd-basic
 
-{!class Product of Labor
-        [_gloss {ru {t продукт труда}}]
+{!cls Product of Labor
+        [gloss {ru {t продукт труда}}]
     {-- [_summary {ru {t результат целенаправленной деятельности Агента,
                       пригодный для решения какой-либо задачи}}] --}
     {str purpose}}
 
-{!class Intellectual Product
-        [_gloss {ru {t продукт интеллектуального труда}}]
+{!cls Intellectual Product
+        [gloss {ru {t продукт интеллектуального труда}}]
     {is Information}
     {is Product of Labor}}
 
-{!class Material Product
-        [_gloss {ru {t изделие}}]
+{!cls Material Product
+        [gloss {ru {t изделие}}]
     {is Physical Matter}
     {is Product of Labor}
     {str design}}
 
-{!class Solid State Material Product
-        [_gloss {ru {t твердотельное изделие}}]
+{!cls Solid State Material Product
+        [gloss {ru {t твердотельное изделие}}]
     {is Solid Physical Object}
     {is Material Product}}
 
 {-- part - whole
-{!class Solid Structure
-        [_gloss {ru {t структура физического изделия}}]
+{!cls Solid Structure
+        [gloss {ru {t структура физического изделия}}]
     {is Solid Physical Object}}
 --}
 
-{!class Material Resource
-        [_gloss {ru {t материальный ресурс}}]
+{!cls Material Resource
+        [gloss {ru {t материальный ресурс}}]
     {is Material Product}}
 
 }

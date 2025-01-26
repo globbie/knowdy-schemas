@@ -1,75 +1,75 @@
 {schema knd
 
-{!class Shape
-        [_gloss {ru {t связанная часть пространства}}]
+{!cls Shape
+        [gloss {ru {t связанная часть пространства}}]
     {is Abstraction}
     {str abs-unit-type}}
 
-{!class 1D Shape
-        [_gloss {ru {t одномерная форма: прямая}}]
+{!cls 1D Shape
+        [gloss {ru {t одномерная форма: прямая}}]
     {is Shape}
-    {num x-dim}}
+    {real x-dim}}
 
-{!class 2D Shape
-        [_gloss {ru {t двумерная форма объекта}}]
+{!cls 2D Shape
+        [gloss {ru {t двумерная форма объекта}}]
     {is 1D Shape}
-    {num y-dim}}
+    {real y-dim}}
 
-{!class 3D Shape
-        [_gloss {ru {t трехмерная форма объекта}}]
+{!cls 3D Shape
+        [gloss {ru {t трехмерная форма объекта}}]
     {is 2D Shape}
-    {num z-dim}}
+    {real z-dim}}
 
-{!class 2D Line
-        [_gloss {ru {t двумерная форма: линия}}]
+{!cls 2D Line
+        [gloss {ru {t двумерная форма: линия}}]
     {is 2D Shape}}
 
-{!class 2D Figure
-        [_gloss {ru {t двумерная форма: фигура}}]
+{!cls 2D Figure
+        [gloss {ru {t двумерная форма: фигура}}]
     {is 2D Shape}}
 
-{!class Sharp Shape
-        [_gloss {ru {t заостренная форма объекта}}]
+{!cls Sharp Shape
+        [gloss {ru {t заостренная форма объекта}}]
     {is 3D Shape}}
 
-{!class Spheric Shape
-        [_gloss {ru {t сферообразная форма объекта}}]
+{!cls Spheric Shape
+        [gloss {ru {t сферообразная форма объекта}}]
     {is 3D Shape}}
 
-{!class Curved Shape
-        [_gloss {ru {t область, замкнутая кривыми линиями}}]
+{!cls Curved Shape
+        [gloss {ru {t область, замкнутая кривыми линиями}}]
     {is 2D Shape}}
 
-{!class Round Shape
-        [_gloss {ru {t окружность}}]
+{!cls Round Shape
+        [gloss {ru {t окружность}}]
     {is Curved Shape}}
 
-{!class Polygon Shape
-        [_gloss {ru {t многоугольник}}]
+{!cls Polygon Shape
+        [gloss {ru {t многоугольник}}]
     {is 2D Shape}}
 
-{!class Equiangular
-        [_gloss {ru {t равноугольный многоугольник}}]
+{!cls Equiangular
+        [gloss {ru {t равноугольный многоугольник}}]
     {is Polygon Shape}}
     
 {-- 3 edges / paths --}
-{!class Triangle Shape
-        [_gloss {ru {t треугольник}}]
+{!cls Triangle Shape
+        [gloss {ru {t треугольник}}]
     {is Polygon Shape}}
 
 {-- 4 edges (paths) --}
-{!class Four Angle Shape
-        [_gloss {ru {t четырехугольник}}]
+{!cls Four Angle Shape
+        [gloss {ru {t четырехугольник}}]
     {is Polygon Shape}}
 
 {-- 4 edges (paths) : same rotation each --}
-{!class Rectangular Shape
-        [_gloss {ru {t прямоугольник}}]
+{!cls Rectangular Shape
+        [gloss {ru {t прямоугольник}}]
     {is Four Angle Shape}}
 
 {-- 4 edges (paths) : same rotation each : same length each --}
-{!class Square Shape
-        [_gloss {ru {t квадрат}}]
+{!cls Square Shape
+        [gloss {ru {t квадрат}}]
     {is Rectangular Shape}}
 
 }

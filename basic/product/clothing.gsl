@@ -1,27 +1,27 @@
 {schema knd-basic
 
-{!class Clothing
-        [_gloss {ru {t одежда}}]
+{!cls Clothing
+        [gloss {ru {t одежда}}]
      {is Solid State Material Product}}
 
-{!class Upper Body Clothing
-        [_gloss {ru {t одежда для торса}}]
+{!cls Upper Body Clothing
+        [gloss {ru {t одежда для торса}}]
      {is Clothing}}
 
-{!class Hats
-        [_gloss {ru {t головные уборы}}]
+{!cls Hats
+        [gloss {ru {t головные уборы}}]
      {is Clothing}}
 
-{!class Footware
-        [_gloss {ru {t обувь}}]
+{!cls Footware
+        [gloss {ru {t обувь}}]
     {is Clothing}}
 
-{!class Boots
-        [_gloss {ru {t ботинки}}]
+{!cls Boots
+        [gloss {ru {t ботинки}}]
     {is Footware}}
 
-{!class High Boots
-        [_gloss {ru {t сапоги}}]
+{!cls High Boots
+        [gloss {ru {t сапоги}}]
     {is Boots}}
 
 

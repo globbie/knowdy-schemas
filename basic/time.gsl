@@ -1,39 +1,38 @@
 {schema knd-basic
 
-{!class Time Line View
-        [_gloss {ru {t восприятие временной шкалы}}]
+{!cls Time Line View
+        [gloss {ru {t восприятие временной шкалы}}]
     {is Abstraction}}
 
-{!class Present Moment
-        [_gloss {ru {t настоящий момент времени}}]
+{!cls Present Moment
+        [gloss {ru {t настоящий момент времени}}]
     {is Time Line View}}
 
-{!class Past
-        [_gloss {ru {t прошлое}}]
+{!cls Past
+        [gloss {ru {t прошлое}}]
     {is Time Line View}}
 
-{!class Future
-        [_gloss {ru {t будущее}}]
+{!cls Future
+        [gloss {ru {t будущее}}]
     {is Time Line View}}
 
-{!class Today
-        [_gloss {ru {t текущий день в момент речи}}]
+{!cls Today
+        [gloss {ru {t текущий день в момент речи}}]
     {is Present Moment}}
 
-{!class Yestersday
-        [_gloss {ru {t вчера, предыдущий день от момента речи}}]
+{!cls Yestersday
+        [gloss {ru {t вчера, предыдущий день от момента речи}}]
     {is Past}}
 
-{!class Tomorrow
-        [_gloss {ru {t завтра, следующий день от момента речи}}]
+{!cls Tomorrow
+        [gloss {ru {t завтра, следующий день от момента речи}}]
     {is Future}}
 
-
-{!class Calendar Date
-        [_gloss {ru {t календарная дата}}]
+{!cls Calendar Date
+        [gloss {ru {t календарная дата}}]
     {is Information}
-        {num year}
-        {num month}
-        {num date} }
+        {uint year}
+        {uint month}
+        {uint date} }
 
 }
