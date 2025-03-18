@@ -11,16 +11,16 @@
 {!cls Figure
     {is Information}
     {cls-ref  visual  {cls Graphic Content}}
-    {text caption {idx}}}
+    {text caption }}
 
 {!cls Static Content
     {is Information}
-    {cls-ref  author {cls Content Author} {t set}}
-    {str  uid  {impl}}
+    {cls-ref  author {cls Content Author} {mult}}
+    {str  uid}
     {cls-ref  source {cls Static Content}}
-    {text head {idx}}
-    {text body {idx}}
-    {inner figure {cls Figure} {t set}}}
+    {text head }
+    {text body }
+    {inner figure {cls Figure} {mult}}}
 
 {!cls Content Section
     {is Static Content}

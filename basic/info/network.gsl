@@ -3,12 +3,12 @@
 {!cls IP Address v4
         [gloss {ru {t адрес IP, версия 4}}]
     {is Information}
-    {str code {impl} {req} {format IP4 String Format}}}
+    {str code {req} {format IP4 String Format}}}
 
 {!cls IP Address v6
         [gloss {ru {t адрес IP, версия 6}}]
     {is Information}
-    {str code {impl} {req} {format IP6 String Format}}}
+    {str code {req} {format IP6 String Format}}}
 
 {!cls Internet Domain Name
         [gloss {ru {t доменное имя}}]
@@ -29,8 +29,8 @@
 {!cls Email Address
         [gloss {ru {t адрес электронной почты}}]
     {is Information}
-    {str  name    {impl}                   {req}}
-    {cls-ref  at      {cls Internet Domain Name} {req}}
+    {str  name   {req}}
+    {cls-ref  at {cls Internet Domain Name} {req}}
     {bool verified}
     {uniq _name {name} {at}}}
 

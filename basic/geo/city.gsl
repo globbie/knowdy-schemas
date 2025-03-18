@@ -2,15 +2,14 @@
 
 {!cls Geo Coords
     {is Information}
-    {str name {impl}}
+    {str name}
     {str loc}}
 
 {!cls City
-        [gloss {ru {t город}}]
-    {is Geographical Region
-        {-- definition --}}
-    {inner coords {cls Geo Coords}}
-    }
+      [gloss {ru {t город}}]
+      {is Geographical Region
+          {-- definition --}}
+      {inner coords {cls Geo Coords}} }
 
 {-- ref partof
          [gloss {ru {t входит в состав региона}}]
@@ -20,7 +19,7 @@
 {!cls Russian City
         [gloss {ru {t российский город}}]
     {is City
-        {coords GPS}
+        {coords {name GPS}}
         {-- partof Country {_inst Piter}--} }}
 
 {!cls Street

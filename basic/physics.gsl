@@ -24,8 +24,8 @@
     {uint count} }
 
 {!cls Physical Aggregate State
-        [gloss {ru {t агрегатное состояние вещества}}]
-    {is Abstraction}}
+      [gloss {ru {t агрегатное состояние вещества}}]
+      {is Abstraction}}
 
 {!cls Liquid State
         [gloss {ru {t жидкое состояние вещества}}]
@@ -35,9 +35,13 @@
         [gloss {ru {t твердое состояние вещества}}]
     {is Physical Aggregate State}}
 
+{!cls Granular State
+        [gloss {ru {t сыпучее вещество}}]
+    {is Solid State}}
+
 {!cls Gas State
-        [gloss {ru {t газообразное состояние вещества}}]
-    {is Physical Aggregate State}}
+      [gloss {ru {t газообразное состояние вещества}}]
+      {is Physical Aggregate State}}
 
 {!cls Volatile Gas State
         [gloss {ru {t летучее газообразное состояние}}
@@ -53,7 +57,7 @@
     {is Abstraction}
     {str calc}
     {-- ref measure-proc {cls Mass Measurement Procedure} --}
-    {ureal mass {impl}}
+    {ureal mass}
     {uint count}
     {str unit}
     {cls-ref unitref {cls Mass Measure Unit}}}

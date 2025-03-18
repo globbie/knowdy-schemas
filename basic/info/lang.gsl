@@ -5,7 +5,7 @@
 
 {!cls Natural Language
     {is Communication System}
-    {inner code {cls Language Id Code} {t set}}}
+    {inner code {cls Language Id Code} {mult}}}
 
 {!cls Code Standard
     {is Information}
@@ -17,30 +17,31 @@
 
 {!cls Language Id Code
     {is Information}
-    {cls-ref standard {cls Code Standard} {impl}}
+    {cls-ref standard {cls Code Standard}}
     {str name}}
 
 {!cls Chinese Language
         [gloss {ru {t китайский}}
                {en {t Chinese}}]
     {is Natural Language
-        [code {ISO 639-1 {name zh}}] }}
+        [code {
+                {standard ISO 639-1} {name zh}} ]}}
 
 {!cls English Language
         [gloss {ru {t английский}}
                {en {t English}} ]
     {is Natural Language
-        [code {ISO 639-1 {name en}}] }}
+        [code {  {standard ISO 639-1} {name en}}] }}
 
 {!cls French Language
         [gloss {ru {t французский}}
                {en {t French}}]
     {is Natural Language
-        [code {ISO 639-1 {name fr}}] }}
+        [code {  {standard ISO 639-1} {name fr}}] }}
 
 {!cls Russian Language
         [gloss {ru {t русский}}
                {en {t Russian}}]
     {is Natural Language
-        [code {ISO 639-1 {name ru}}] }}
+        [code {  {standard ISO 639-1} {name ru}}] }}
 }

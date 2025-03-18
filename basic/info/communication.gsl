@@ -39,8 +39,8 @@
     {cls-ref  addressee {cls Message Addressee}}
     {cls-ref  stimulus  {cls Message}}
     {cls-ref  activity  {cls Communication Activity}}
-    {text subj {idx}}
-    {text body {idx}} }
+    {text subj }
+    {text body } }
 
 {!cls Chat Message
     {is Message

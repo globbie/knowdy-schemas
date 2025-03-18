@@ -1,9 +1,9 @@
 {schema knd-basic
 
 {!cls Physical Structure
-     [gloss {ru {t материальное сооружение}}]
-     {is Material Product}
-     {is Spatial Object}}
+      [gloss {ru {t материальное сооружение}}]
+      {is Material Product}
+      {is Spatial Object}}
 
 {!cls Road
         [gloss {ru {t дорога}}]
@@ -18,7 +18,7 @@
          [gloss {ru {t адресная регистрация по улице}}]
          {proc Street Adressing
                {subj property}}
-         {idx} --}
+          --}
     {str adm-id}}
 
 {!cls Building Floor

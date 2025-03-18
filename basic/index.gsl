@@ -55,8 +55,8 @@
     {--_state_top--}}
 
 {!cls Abstraction
-        [gloss {ru {t абстракция}}
-                {ja {t 概念}}]
+      [gloss {ru {t абстракция}}
+             {ja {t 概念}}]
     {-- [_summary {ru {t абстрактное понятие, формируемое сознанием человека
                          путем обобщения признаков конкретных объектов}}
                  {en {t a general concept formed by extracting common features
@@ -64,29 +64,28 @@
     {is Object}}
 
 {!cls Physical Matter
-        [gloss {ru {t физическая материя}}]
-    {is     Object}
-    {str    img  {concise 1}}
-    {inner  color           {cls Color}}
-    {inner  temperature     {cls Absolute Temperature}}
-    {inner  temperature-rel {cls Relative Temperature}}
-    {inner  aggr-state      {cls Physical Aggregate State}}}
+      [gloss {ru {t физическая материя}}]
+      {is     Object}
+      {str    img}
+      {inner  color           {cls Color}}
+      {inner  temperature     {cls Absolute Temperature}}
+      {inner  temperature-rel {cls Relative Temperature}}
+      {cls-ref aggr-state      {cls Physical Aggregate State}}}
 
 {!cls Solid Physical Object
-        [gloss {ru {t твердый физический объект}}]
-    {is     Physical Matter}
-    {cls-ref    flatshape {cls 2D Shape}}
-    {cls-ref    shape     {cls 3D Shape}}
-    {inner  location  {cls Spatial Location}}}
+      [gloss {ru {t твердый физический объект}}]
+      {is     Physical Matter}
+      {cls-ref shape     {cls 3D Shape}}
+      {inner   location  {cls Spatial Location}}}
 
 {!cls Physical Substance
-        [gloss {ru {t физическое вещество}}]
-    {is  Physical Matter}}
+      [gloss {ru {t физическое вещество}}]
+      {is  Physical Matter}}
 
 {!cls Granular Substance
       [gloss {ru {t сыпучее физическое вещество}}]
-    {is  Physical Substance
-         {aggr-state Granular State}}}
+      {is Physical Substance
+          {aggr-state Granular State}}}
 
 {!cls Liquid
       [gloss {ru {t жидкость}}]
@@ -95,8 +94,8 @@
 
 {!cls Gas
       [gloss {ru {t газообразное вещество}}]
-    {is Physical Substance
-        {aggr-state Gas State}}}
+      {is Physical Substance
+          {aggr-state Gas State}}}
 
 {!cls Information
       [gloss {ru {t информация}}]

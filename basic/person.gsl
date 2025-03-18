@@ -4,7 +4,7 @@
         [gloss {ru {t человек}} ]
     {is Agent}
     {is Human Organism}
-    {inner biometrics {cls Personal Biometrics} {idx}}}
+    {inner biometrics {cls Personal Biometrics} }}
 
 {!cls Gender
         [gloss {ru {t гендерная принадлежность}} ]
@@ -35,17 +35,20 @@
     {is Sex}}
 
 {!cls Personal Name
-        [gloss { ru {t имя персоны}} ]
-    {is Information}}
+      [gloss { ru {t имя персоны}} ]
+      {is Information}}
 
 {!cls Nickname
-        [gloss { ru {t псевдоним}} ]
-    {is Personal Name}
-    {str nick} }
+      [gloss { ru {t псевдоним}} ]
+      {is Personal Name}
+      {str nick} }
+
+{!cls Legal Name
+      {is Personal Name}}
 
 {!cls Official Russian Citizen Name
-        [gloss { ru {t имя гражданина РФ}} ]
-    {is Personal Name}
+      [gloss { ru {t имя гражданина РФ}} ]
+    {is Legal Name}    
     {str forename}
     {str patronymic}
     {str surname}}
@@ -55,21 +58,21 @@
     {str maiden-name}}
 
 {!cls Personal Biometrics
-        [gloss { ru {t биометрические данные}} ]
-    {is Abstraction}
-    {cls-ref  biosystem  {cls Biometrics System} {impl}}
-    {date birth-date {format UTC Date Format}}
-    {uint  age {calc t}}
-    {cls-ref  sex  {cls Sex} {idx}}}
+      [gloss { ru {t биометрические данные}} ]
+      {is Abstraction}
+      {cls-ref  biosystem  {cls Biometrics System}}
+      {date birth-date {format UTC Date Format}}
+      {uint  age {calc t}}
+      {cls-ref  sex  {cls Sex} }}
 
 {!cls Female Human
-    {is Human
-        {biometrics Legacy Biometrics
-                    {sex Female Sex}}}}
+      {is Human
+          {biometrics {biosystem Legacy Biometrics}
+                      {sex Female Sex}}}}
 
 {!cls Male Human
     {is Human
-        {biometrics Legacy Biometrics
+        {biometrics {biosystem Legacy Biometrics}
                     {sex Male Sex}}}}
 
 }

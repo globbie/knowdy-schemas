@@ -14,12 +14,12 @@
     {inner ident     [gloss {ru {t авторизационные сведения}}]
                      {cls User Ident}}
     {cls-ref   device [gloss {ru {t устройства подключения}}]
-                     {cls Hardware Device}  {t set}}
+                     {cls Hardware Device}  {mult}}
     {inner soft      [gloss {ru {t программные средства}}]
-                     {cls Software Stack}   {t set}}
+                     {cls Software Stack}   {mult}}
     {inner ip-allow  [gloss {ru {t сетевые адреса}}]
-                     {cls IP Address v4}    {t set}}
-    {str   lang      [gloss {ru {t языки интерфейса}}] {t set}}}
+                     {cls IP Address v4}    {mult}}
+    {str   lang      [gloss {ru {t языки интерфейса}}] {mult}}}
 
 {!cls Observer
         [gloss {ru {t роль наблюдателя}}]
@@ -42,7 +42,7 @@
     {is Information}
     {inner cred   {cls User Credentials}}
     {cls-ref   gender {cls Gender}}
-    {inner name   {cls Personal Name} {t set}}}
+    {inner name   {cls Personal Name} {mult}}}
 
 {!cls User Credentials
         [gloss {ru {t аутентификационные данные учетной записи }}]
@@ -50,8 +50,7 @@
     {str service}
     {str login}
     {str token
-         [gloss {ru {t постоянный ключ доступа к ресурсу }}]
-         {impl}}
+         [gloss {ru {t постоянный ключ доступа к ресурсу }}] }
     {str salt
          [gloss {ru {t случайные символы для усложнения пароля }}]}
     {str hash-method
@@ -62,8 +61,8 @@
 {!cls Contact Details
         [gloss {ru {t контактные данные}}]
     {is Information}
-    {inner email       {cls Email Address}             {t set}}
-    {inner messenger   {cls Messenger Account}         {t set}}
-    {inner postal-addr {cls Postal Geospatial Address} {t set}}
-    {inner phone       {cls Phone Contacts}            {t set}} }
+    {inner email       {cls Email Address}             {mult}}
+    {inner messenger   {cls Messenger Account}         {mult}}
+    {inner postal-addr {cls Postal Geospatial Address} {mult}}
+    {inner phone       {cls Phone Contacts}            {mult}} }
 }

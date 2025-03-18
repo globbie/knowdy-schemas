@@ -15,10 +15,10 @@
       {ureal mass-avg}}
 
 {!cls Food Product
-    {is Material Product}
-    {is Edible Object}
-    {inner    nutr   {cls Nutritional Value} {t set}}
-    {cls-ref      taste  {cls Taste}}}
+      {is Material Product}
+      {is Edible Object}
+      {inner    nutr   {cls Nutritional Value} {mult} }
+      {cls-ref  taste  {cls Taste}}}
 
 {!proc Food Processing
        [gloss {ru {t изготовление пищевого продукта}}]
@@ -29,9 +29,9 @@
         [gloss {ru {t кулинарное блюдо}}]
     {is Material Product}
     {is Edible Object}
-    {cls-ref taste    {cls Taste} {idx}}
-    {--- {cls-ref cuisine   {cls Regional Cuisine} {t set} {idx}}
-         {cls-ref occasion  {cls Occasion}         {t set} {idx}}
+    {cls-ref taste    {cls Taste} }
+    {--- {cls-ref cuisine   {cls Regional Cuisine} {mult} }
+         {cls-ref occasion  {cls Occasion}         {mult} }
          {cls-ref diet      {cls Dietary Cuisine}}
     ---} }
 
@@ -49,19 +49,27 @@
 {!cls Nutritional Value
       [gloss {ru {t пищевая ценность}}]
       {is Information}
-      {cls-ref   source  {cls Authoritative Source} {impl} {req}}
-      {ureal energy  {idx}}
-      {ureal carbs   {idx}}
-      {ureal fat     {idx}}
-      {ureal protein {idx}}}
+      {cls-ref source  {cls Authoritative Source} {req}}
+      {ureal energy  }
+      {ureal carbs   }
+      {ureal fat     }
+      {ureal protein }}
 
 {!cls USDA
       {is Authoritative Source
           {rating 42}}}
 
+{!cls FDA
+      {is Authoritative Source
+          {rating 41}}}
+
 {!cls USDA Nutritional Value
-    {is Nutritional Value
-        {source USDA}}}
+      {is Nutritional Value
+          {source USDA}}}
+
+{!cls FDA Nutritional Value
+      {is USDA Nutritional Value
+          {source FDA}}}
 
 {!cls Processed Food Product
       [gloss {ru {t пищевой продукт}}]
@@ -129,9 +137,9 @@
    [arg {resource    {cls Berries}}]}
 
 {!cls Dried fruit
-    [gloss {ru {t Сухофрукты}}]
+      [gloss {ru {t Сухофрукты}}]
     {is Food Product 
-        [nutr {USDA
+        [nutr { USDA Nutritional Value
                 {energy 359}
                 {carbs 83}
                 {fat 2.7}
@@ -142,7 +150,7 @@
    [gloss {ru {t Зелень}}]
     {is Food Product 
         [nutr
-           { USDA
+           {  USDA Nutritional Value
              {energy 22}
              {carbs 2.7}
              {fat 0.6}
@@ -153,22 +161,22 @@
         [gloss {ru {t Специи}}]
     {is Food Product 
         [nutr
-           { USDA
-             {energy 178}
-             {carbs 29}
-             {fat 1.7}
-             {protein 11.7}
+           {  USDA Nutritional Value
+              {energy 178}
+              {carbs 29}
+              {fat 1.7}
+              {protein 11.7}
         }]}}
 
 {!cls Mushrooms
       [gloss { ru {t грибы}} ]
       {is Food Product 
-          [nutr { USDA
+          [nutr {  USDA Nutritional Value
                   {energy 35}
                   {carbs 3.9}
                   {fat 0.7}
-                  {protein 2.2}
-        }]}}
+                  {protein 2.2} }
+          ]}}
 
 {!cls Yeast dough
       [gloss {ru {t дрожжевое тесто}}]
@@ -188,18 +196,18 @@
       {is Edible Plant} }
 
 {!cls Berries
-        [gloss {ru {t ягоды}}]
-    {is Food Product}}
+      [gloss {ru {t ягоды}}]
+      {is Food Product}}
 
 {!cls Flour
-        [gloss {ru {t мука}}]
+      [gloss {ru {t мука}}]
     {is Food Product 
-        [nutr {USDA
-            {energy 331}
-            {carbs 67.6}
-            {fat 1.3}
-            {protein 10.6}
-        }] }}
+        [nutr { FDA Nutritional Value
+                {energy 331}
+                {carbs 67.6}
+                {fat 1.3}
+                {protein 10.6}}
+        ] }}
 
 {!cls Rye Flour
         [gloss {ru {t ржаная мука}}]
@@ -207,18 +215,18 @@
 
 {!proc Rye Flour Making
        [gloss {ru {t приготовление ржаной муки}}]
-   {is Baking}
-   [effect {product {cls  Rye Flour}}]
-   [arg {resource {cls Rye}}]}
+       {is Baking}
+       [effect {product {cls Rye Flour}}]
+       [arg {resource {cls Rye}}]}
 
 {!cls Poultry
-       [gloss {ru {t птица}}]
-    {is Food Product}}
+      [gloss {ru {t птица}}]
+      {is Food Product}}
 
 {!cls Tea
         [gloss {ru {t чай}}]
     {is Food Product 
-        [nutr {USDA
+        [nutr {  FDA Nutritional Value
             {energy 1}
             {carbs 0.2}
             {fat 0}
@@ -226,12 +234,12 @@
         }] }}
 
 {!cls Coffee beans
-    {is Food Product 
-        [nutr {USDA
-            {energy 540}
-            {carbs 60}
-            {fat 30}
-            {protein 8}
+      {is Food Product 
+          [nutr {  FDA Nutritional Value
+                {energy 540}
+                {carbs 60}
+                {fat 30}
+                {protein 8}
         }] }
      [gloss {ru {t кофейные зерна}}]}
 

@@ -13,7 +13,7 @@
 {!cls Country
         [gloss {ru {t страна}}]
     {is Geographical Region}
-    {cls-ref repub {cls Republic} {t set}}
+    {cls-ref repub {cls Republic} {mult}}
 }
 
 {!cls Republic

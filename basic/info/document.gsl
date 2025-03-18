@@ -2,8 +2,8 @@
 
 {!cls Document
     {is Static Content}
-    {cls-ref   topic    {cls Concept} {t set}}
-    {inner div      {cls Content Section} {t set}}}
+    {cls-ref   topic {cls Concept} {mult}}
+    {inner div       {cls Content Section} {mult}}}
 
 {!cls Legal Document
     {is Document}

@@ -3,7 +3,7 @@
 {!cls Software
         [gloss {ru {t программное обеспечение}}]
     {is Intellectual Product}
-    {str name {impl}}
+    {str name}
     {inner version {cls Semantic Software Version}}
     {str func}}
 
@@ -72,7 +72,7 @@
 {!cls Software Stack
         [gloss {ru {t рабочий набор программного обеспечения}}]
     {is Information}
-    {str code {impl} {uniq}}
+    {str code}
     {cls-ref os {cls Operating System}}
     {cls-ref browser {cls Web Browser}}}
 
